@@ -11,7 +11,7 @@ export const HomeCard = ({ title, body, className = "" }: HomeCardProps) => {
   return (
     <div
       className={cn(
-        "text-center p-8 bg-white/50 backdrop-blur-sm rounded-xl max-w-[400px] sticky",
+        "p-8 bg-white/80 backdrop-blur-sm rounded-xl max-w-[400px] sticky",
         className
       )}
     >

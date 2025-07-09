@@ -1,66 +1,50 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { H1, H3 } from "@/components/ui/heading";
+import { H1 } from "@/components/ui/heading";
 import { HomeCard } from "@/components/ui/home-card";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-purple-50 to-pink-50">
-      <div className="flex items-center justify-center min-h-screen px-4">
-        <div className="max-w-4xl mx-auto">
-          <H1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-800 leading-tight mb-8">
-            Apps, AI & Websites built with you.
-          </H1>
+    <div className="min-h-screen flex flex-col justify-between mt-20">
+      {/* Hero Section */}
+      <main className="flex flex-col items-start max-w-4xl mx-auto w-full px-8 mt-8">
+        <H1 className="text-5xl md:text-7xl font-extrabold text-[#181848] leading-tight mb-4 text-left">
+          Apps, AI & Websites built with you.
+        </H1>
+        <p className="text-2xl text-gray-700 mb-6 text-left max-w-2xl">
+          We create digital products with a focus on future proofing, with
+          analytics as the growth-engine.
+        </p>
+        <Link
+          href="#contact"
+          className="bg-[#3f1e9d] text-white px-6 py-2 rounded font-medium hover:bg-[#2d217c] transition-colors mb-16"
+        >
+          Get in touch
+        </Link>
+      </main>
 
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl">
-            Your digital partner specializing in AI-enabled applications, mobile
-            development, and web solutions.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/approach"
-              className="inline-flex items-center px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors group"
-            >
-              Our Approach
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="/cases"
-              className="inline-flex items-center px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
-            >
-              View Cases
-            </Link>
-          </div>
+      {/* Service Cards - sticky/overlapping effect restored */}
+      <section className="py-12 px-4">
+        <div
+          className="flex flex-col items-center w-full mx-auto max-w-md relative gap-8"
+          style={{ minHeight: "700px" }}
+        >
+          <HomeCard
+            className="sticky top-36 z-10"
+            title="Mobile apps"
+            body="Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for idea validation and full-scale deployment."
+          />
+          <HomeCard
+            className="sticky top-36 z-20"
+            title="Web Development"
+            body="We build fast, responsive websites that look great and perform even better. Whether you need a custom web-app, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered."
+          />
+          <HomeCard
+            className="sticky top-36 z-30"
+            title="Ai powered applications"
+            body="Unlock the power of the technology of the future: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making."
+          />
         </div>
-      </div>
-
-      <div className="py-20 px-4">
-        <div className="flex flex-col items-center w-full mx-auto max-w-md gap-0 relative">
-          <HomeCard
-            className="top-24 z-10"
-            title={"Mobile apps"}
-            body={
-              "HValidate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for idea validation and full-scale deployment."
-            }
-          />
-          <HomeCard
-            className="top-24 z-20"
-            title={"Web development"}
-            body={
-              "We build fast, responsive websites that look great and perform even better. Whether you need a custom web-app, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered."
-            }
-          />
-          <HomeCard
-            className="top-24 z-30"
-            title={"AI powered applications"}
-            body={
-              "Unlock the power of the technology of the future: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making."
-            }
-          />
-          <div className="h-[2000px]" />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
