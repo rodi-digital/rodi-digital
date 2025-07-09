@@ -1,15 +1,17 @@
+import { H3 } from "@/components/ui/heading";
+
 interface CTASectionProps {
-  title: string
-  description: string
+  title: string;
+  description: string;
   primaryButton?: {
-    text: string
-    href: string
-  }
+    text: string;
+    href: string;
+  };
   secondaryButton?: {
-    text: string
-    href: string
-  }
-  variant?: "purple" | "blue" | "green" | "pink" | "orange"
+    text: string;
+    href: string;
+  };
+  variant?: "purple" | "blue" | "green" | "pink" | "orange";
 }
 
 const variants = {
@@ -18,7 +20,7 @@ const variants = {
   green: "bg-gradient-to-r from-green-600 to-teal-600",
   pink: "bg-gradient-to-r from-pink-600 to-rose-600",
   orange: "bg-gradient-to-r from-orange-600 to-red-600",
-}
+};
 
 export function CTASection({
   title,
@@ -29,7 +31,7 @@ export function CTASection({
 }: CTASectionProps) {
   return (
     <div className={`${variants[variant]} text-white p-8 rounded-lg`}>
-      <h3 className="text-2xl font-bold mb-4">{title}</h3>
+      <H3>{title}</H3>
       <p className="text-lg mb-6">{description}</p>
       {(primaryButton || secondaryButton) && (
         <div className="flex flex-col sm:flex-row gap-4">
@@ -52,5 +54,5 @@ export function CTASection({
         </div>
       )}
     </div>
-  )
+  );
 }

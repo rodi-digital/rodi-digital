@@ -1,12 +1,14 @@
-import Link from "next/link"
-import type { LucideIcon } from "lucide-react"
+import Link from "next/link";
+import type { LucideIcon } from "lucide-react";
+import { Heading } from "@/components/ui/heading";
+import { H2 } from "@/components/ui/heading";
 
 interface ServiceCardProps {
-  title: string
-  description: string
-  href: string
-  icon: LucideIcon
-  iconColor: "blue" | "purple" | "green" | "pink" | "orange"
+  title: string;
+  description: string;
+  href: string;
+  icon: LucideIcon;
+  iconColor: "blue" | "purple" | "green" | "pink" | "orange";
 }
 
 const iconColors = {
@@ -15,7 +17,7 @@ const iconColors = {
   green: "bg-green-100 text-green-600",
   pink: "bg-pink-100 text-pink-600",
   orange: "bg-orange-100 text-orange-600",
-}
+};
 
 const linkColors = {
   blue: "text-blue-600 group-hover:text-blue-700",
@@ -23,9 +25,15 @@ const linkColors = {
   green: "text-green-600 group-hover:text-green-700",
   pink: "text-pink-600 group-hover:text-pink-700",
   orange: "text-orange-600 group-hover:text-orange-700",
-}
+};
 
-export function ServiceCard({ title, description, href, icon: Icon, iconColor }: ServiceCardProps) {
+export function ServiceCard({
+  title,
+  description,
+  href,
+  icon: Icon,
+  iconColor,
+}: ServiceCardProps) {
   return (
     <Link
       href={href}
@@ -35,10 +43,12 @@ export function ServiceCard({ title, description, href, icon: Icon, iconColor }:
         <div className={`p-3 ${iconColors[iconColor]} rounded-lg mr-4`}>
           <Icon className="h-8 w-8" />
         </div>
-        <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
+        <H2>{title}</H2>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-      <div className={`${linkColors[iconColor]} font-semibold`}>Learn more →</div>
+      <div className={`${linkColors[iconColor]} font-semibold`}>
+        Learn more →
+      </div>
     </Link>
-  )
+  );
 }

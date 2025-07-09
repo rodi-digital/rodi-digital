@@ -1,9 +1,11 @@
+import { H1 } from "@/components/ui/heading";
+
 interface PageHeaderProps {
-  title: string
-  subtitle?: string
-  description?: string
-  badge?: string
-  badgeColor?: "blue" | "purple" | "green" | "pink" | "orange"
+  title: string;
+  subtitle?: string;
+  description?: string;
+  badge?: string;
+  badgeColor?: "blue" | "purple" | "green" | "pink" | "orange";
 }
 
 const badgeColors = {
@@ -12,19 +14,29 @@ const badgeColors = {
   green: "bg-green-100 text-green-800",
   pink: "bg-pink-100 text-pink-800",
   orange: "bg-orange-100 text-orange-800",
-}
+};
 
-export function PageHeader({ title, subtitle, description, badge, badgeColor = "blue" }: PageHeaderProps) {
+export function PageHeader({
+  title,
+  subtitle,
+  description,
+  badge,
+  badgeColor = "blue",
+}: PageHeaderProps) {
   return (
     <div className="mb-8">
       {badge && (
-        <span className={`inline-block px-3 py-1 ${badgeColors[badgeColor]} text-sm font-semibold rounded-full mb-4`}>
+        <span
+          className={`inline-block px-3 py-1 ${badgeColors[badgeColor]} text-sm font-semibold rounded-full mb-4`}
+        >
           {badge}
         </span>
       )}
-      <h1 className="text-5xl font-bold text-gray-900 mb-4">{title}</h1>
+      <H1>{title}</H1>
       {subtitle && <p className="text-xl text-gray-600 mb-4">{subtitle}</p>}
-      {description && <p className="text-xl text-gray-600 max-w-2xl mx-auto">{description}</p>}
+      {description && (
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">{description}</p>
+      )}
     </div>
-  )
+  );
 }

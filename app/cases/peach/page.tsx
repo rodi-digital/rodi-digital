@@ -1,39 +1,46 @@
-import { GradientBackground } from "@/components/ui/gradient-background"
-import { PageHeader } from "@/components/ui/page-header"
-import { ContentCard } from "@/components/ui/content-card"
-import { FeatureGrid } from "@/components/ui/feature-grid"
-import { CTASection } from "@/components/ui/cta-section"
+import { GradientBackground } from "@/components/ui/gradient-background";
+import { PageHeader } from "@/components/ui/page-header";
+import { ContentCard } from "@/components/ui/content-card";
+import { FeatureGrid } from "@/components/ui/feature-grid";
+import { CTASection } from "@/components/ui/cta-section";
+import { Heading } from "@/components/ui/heading";
+import { H3 } from "@/components/ui/heading";
 
 const keyFeatures = [
   {
     title: "Personalized Education",
-    description: "Educational articles personalized to the user's specific condition and needs",
+    description:
+      "Educational articles personalized to the user's specific condition and needs",
     color: "pink" as const,
   },
   {
     title: "Symptom Tracking",
-    description: "Track symptoms and share capabilities with friends, family, and healthcare professionals",
+    description:
+      "Track symptoms and share capabilities with friends, family, and healthcare professionals",
     color: "pink" as const,
   },
   {
     title: "Appointment Logging",
-    description: "Log appointments for a clear overview of care plans and medical history",
+    description:
+      "Log appointments for a clear overview of care plans and medical history",
     color: "pink" as const,
   },
-]
+];
 
 const impactFeatures = [
   {
     title: "Empowered Decision Making",
-    description: "Users can understand their options and actively participate in their care journey",
+    description:
+      "Users can understand their options and actively participate in their care journey",
     color: "green" as const,
   },
   {
     title: "Improved Patient Engagement",
-    description: "Enhanced communication between patients and healthcare providers",
+    description:
+      "Enhanced communication between patients and healthcare providers",
     color: "green" as const,
   },
-]
+];
 
 export default function PeachCasePage() {
   return (
@@ -56,7 +63,7 @@ export default function PeachCasePage() {
             title="Solution"
             description="Rodi Digital developed PEACHealth, a free mobile application that provides personalized, expert-backed, and authoritative information for people concerned about or living with illness. The app consolidates guidance from world-renowned medical experts, making it accessible and tailored to individual needs."
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Key Features</h3>
+            <H3>Key Features</H3>
             <FeatureGrid features={keyFeatures} />
           </ContentCard>
 
@@ -75,5 +82,5 @@ export default function PeachCasePage() {
         </div>
       </div>
     </GradientBackground>
-  )
+  );
 }
