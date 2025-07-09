@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Heading } from "@/components/ui/heading";
 import { H2 } from "@/components/ui/heading";
 
 interface ServiceCardProps {
