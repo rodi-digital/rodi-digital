@@ -26,8 +26,8 @@ export default function HomePage() {
       {/* Service Cards - sticky/overlapping effect restored */}
       <section className="py-12 px-4">
         <div
-          className="flex flex-col items-center w-full mx-auto max-w-md relative gap-8"
-          style={{ minHeight: "700px" }}
+          className="flex flex-col items-center w-full mx-auto max-w-md relative gap-12"
+          style={{ minHeight: "1000px" }}
         >
           <HomeCard
             className="sticky top-36 z-10"
