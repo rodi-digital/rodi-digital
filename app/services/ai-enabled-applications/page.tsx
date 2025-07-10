@@ -2,15 +2,12 @@ import { H1, H2, H3 } from "@/components/ui/heading";
 
 export default function AIEnabledApplicationsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 pt-20">
+    <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>AI-Enabled Applications</H1>
-        <p className="text-xl text-gray-600 mb-12">
-          Unlocking New Possibilities with LLMs
-        </p>
-
+        <p className="text-xl mb-12">Unlocking New Possibilities with LLMs</p>
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 mb-8">
+          <p>
             At Rodi Digital, we harness the transformative power of Artificial
             Intelligence to build applications that redefine what's possible.
             Our expertise lies in developing AI-enabled applications,
@@ -18,14 +15,11 @@ export default function AIEnabledApplicationsPage() {
             backend, to unlock functionalities and insights far beyond
             traditional systems.
           </p>
-
           <H2>The Power of LLM-Backed Applications</H2>
-
-          <p className="text-gray-700 mb-8">
+          <p>
             Integrating LLMs into your applications provides a paradigm shift in
             functionality and user experience. This approach enables:
           </p>
-
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <H3>Intelligent Automation</H3>

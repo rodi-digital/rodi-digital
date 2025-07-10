@@ -1,9 +1,7 @@
-import { GradientBackground } from "@/components/ui/gradient-background";
 import { PageHeader } from "@/components/ui/page-header";
 import { ContentCard } from "@/components/ui/content-card";
 import { FeatureGrid } from "@/components/ui/feature-grid";
 import { CTASection } from "@/components/ui/cta-section";
-import { Heading } from "@/components/ui/heading";
 import { H3 } from "@/components/ui/heading";
 
 const keyFeatures = [
@@ -44,21 +42,17 @@ const impactFeatures = [
 
 export default function PeachCasePage() {
   return (
-    <GradientBackground variant="pink">
+    <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <PageHeader
           title="PEACHealth"
           subtitle="Formerly My Cancer Companion"
-          badge="Digital Health / Cancer Support"
-          badgeColor="pink"
         />
-
         <div className="space-y-12">
           <ContentCard
             title="Challenge"
             description="Individuals concerned about or living with illness often struggle to find trustworthy, up-to-date, and personalized health information. The challenge was to provide a reliable platform that empowers users to take charge of their care and participate in health decisions."
           />
-
           <ContentCard
             title="Solution"
             description="Rodi Digital developed PEACHealth, a free mobile application that provides personalized, expert-backed, and authoritative information for people concerned about or living with illness. The app consolidates guidance from world-renowned medical experts, making it accessible and tailored to individual needs."
@@ -66,14 +60,12 @@ export default function PeachCasePage() {
             <H3>Key Features</H3>
             <FeatureGrid features={keyFeatures} />
           </ContentCard>
-
           <ContentCard
             title="Results & Impact"
             description="PEACHealth empowers users to live longer and better by providing them with the knowledge and tools to manage their health effectively. It simplifies access to credible health information, fostering informed decision-making and improved patient engagement."
           >
             <FeatureGrid features={impactFeatures} columns={2} />
           </ContentCard>
-
           <CTASection
             title="Key Technologies Used"
             description="Built with modern mobile development frameworks and backend systems for content delivery and personalization:"
@@ -81,6 +73,6 @@ export default function PeachCasePage() {
           />
         </div>
       </div>
-    </GradientBackground>
+    </div>
   );
 }

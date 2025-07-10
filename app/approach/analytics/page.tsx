@@ -1,8 +1,7 @@
-import { GradientBackground } from "@/components/ui/gradient-background"
-import { PageHeader } from "@/components/ui/page-header"
-import { ContentCard } from "@/components/ui/content-card"
-import { FeatureGrid } from "@/components/ui/feature-grid"
-import { ProcessSteps } from "@/components/ui/process-steps"
+import { PageHeader } from "@/components/ui/page-header";
+import { ContentCard } from "@/components/ui/content-card";
+import { FeatureGrid } from "@/components/ui/feature-grid";
+import { ProcessSteps } from "@/components/ui/process-steps";
 
 const approachFeatures = [
   {
@@ -29,7 +28,7 @@ const approachFeatures = [
       "Analytics is not just for decision-makers; it's for everyone involved in building a digital product. We provide insights tailored to different needs across business, product, technical, and design teams.",
     color: "blue" as const,
   },
-]
+];
 
 const implementationSteps = [
   {
@@ -52,7 +51,7 @@ const implementationSteps = [
     description:
       "We conduct periodical check-ups and provide structured reports to our partners, focusing on KPIs and actionable insights.",
   },
-]
+];
 
 const tools = [
   {
@@ -67,27 +66,32 @@ const tools = [
       "Looker Studio (free dashboards, multiple data sources), Data Connectors (Improvado, Supermetrics for non-native integrations).",
     color: "green" as const,
   },
-]
+];
 
 export default function AnalyticsPage() {
   return (
-    <GradientBackground variant="blue">
+    <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader title="Analytics: Beyond Dashboards" subtitle="Driving Growth Through Data" />
-
+        <PageHeader
+          title="Analytics: Beyond Dashboards"
+          subtitle="Driving Growth Through Data"
+        />
         <div className="prose prose-lg max-w-none mb-12">
-          <p className="text-gray-700 mb-8">
-            At Rodi Digital, we believe analytics should go beyond static dashboards; they should be the engine that
-            drives continuous value creation and informed decision-making. We embed analytics into every layer of
-            product development, transforming assumptions into actionable insights and features into measurable
-            outcomes.
+          <p>
+            At Rodi Digital, we believe analytics should go beyond static
+            dashboards; they should be the engine that drives continuous value
+            creation and informed decision-making. We embed analytics into every
+            layer of product development, transforming assumptions into
+            actionable insights and features into measurable outcomes.
           </p>
         </div>
-
-        <ContentCard title="Our Approach to Analytics" description="" className="mb-12">
+        <ContentCard
+          title="Our Approach to Analytics"
+          description=""
+          className="mb-12"
+        >
           <FeatureGrid features={approachFeatures} columns={2} />
         </ContentCard>
-
         <ContentCard
           title="Our Implementation Plan"
           description="We believe in a 'better to get started than to be perfect' approach, allowing for continuous adjustments. Our process integrates analytics from the outset:"
@@ -95,11 +99,10 @@ export default function AnalyticsPage() {
         >
           <ProcessSteps steps={implementationSteps} color="blue" />
         </ContentCard>
-
         <ContentCard title="Tools We Utilize" description="">
           <FeatureGrid features={tools} columns={2} />
         </ContentCard>
       </div>
-    </GradientBackground>
-  )
+    </div>
+  );
 }
