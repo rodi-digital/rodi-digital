@@ -7,19 +7,16 @@ const keyFeatures = [
     title: "Personalized Training Plans",
     description:
       "AI-generated, highly customized training plans based on individual needs, availability, and goals.",
-    color: "purple" as const,
   },
   {
     title: "Strava Integration",
     description:
       "Connects with Strava to analyze fitness data and tailor training recommendations.",
-    color: "purple" as const,
   },
   {
     title: "Adaptive Scheduling",
     description:
       "Plans adapt dynamically as the athlete's data and preferences change.",
-    color: "purple" as const,
   },
 ];
 
@@ -28,19 +25,16 @@ const impactFeatures = [
     title: "Time Efficiency",
     description:
       "Eliminates hours of manual planning and research for athletes.",
-    color: "green" as const,
   },
   {
     title: "Improved Performance",
     description:
       "AI-driven approach leads to more effective and enjoyable training experiences.",
-    color: "green" as const,
   },
   {
     title: "Data-Driven Insights",
     description:
       "Leverages real training data for accurate fitness assessment and progress tracking.",
-    color: "green" as const,
   },
 ];
 

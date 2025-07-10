@@ -9,19 +9,16 @@ const keyFeatures = [
     title: "Personalized Education",
     description:
       "Educational articles personalized to the user's specific condition and needs",
-    color: "pink" as const,
   },
   {
     title: "Symptom Tracking",
     description:
       "Track symptoms and share capabilities with friends, family, and healthcare professionals",
-    color: "pink" as const,
   },
   {
     title: "Appointment Logging",
     description:
       "Log appointments for a clear overview of care plans and medical history",
-    color: "pink" as const,
   },
 ];
 
@@ -30,13 +27,11 @@ const impactFeatures = [
     title: "Empowered Decision Making",
     description:
       "Users can understand their options and actively participate in their care journey",
-    color: "green" as const,
   },
   {
     title: "Improved Patient Engagement",
     description:
       "Enhanced communication between patients and healthcare providers",
-    color: "green" as const,
   },
 ];
 

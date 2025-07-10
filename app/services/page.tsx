@@ -4,7 +4,7 @@ import { Brain, Smartphone, Globe } from "lucide-react";
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-20">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <PageHeader
           title="Our Services"

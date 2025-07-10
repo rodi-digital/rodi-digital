@@ -7,19 +7,16 @@ const keyFeatures = [
     title: "Plan and Discover Routes",
     description:
       "Find routes online or create your own with platforms like Komoot or Strava and upload them to Rodi for turn-by-turn guidance.",
-    color: "blue" as const,
   },
   {
     title: "Navigate and Track",
     description:
       "Utilize the phone's GPS sensor to display valuable insights during rides, including distance, average speed, elevation, duration, and max speed.",
-    color: "blue" as const,
   },
   {
     title: "Enjoy a Free Experience",
     description:
       "Rodi stands out by offering a completely free service with no ads, no subscriptions, and no data sharing, prioritizing user privacy and experience.",
-    color: "blue" as const,
   },
 ];
 
@@ -28,19 +25,16 @@ const impactFeatures = [
     title: "Privacy First",
     description:
       "No ads, subscriptions, or data sharing - prioritizing user privacy.",
-    color: "green" as const,
   },
   {
     title: "Community Impact",
     description:
       "Created a valuable tool for the cycling community without financial barriers.",
-    color: "green" as const,
   },
   {
     title: "Enhanced Experience",
     description:
       "Simplified route navigation and performance tracking for better cycling.",
-    color: "green" as const,
   },
 ];
 
