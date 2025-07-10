@@ -8,11 +8,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <main className="flex flex-col items-start max-w-4xl mx-auto w-full px-8 mt-8">
         <H1 className="text-5xl md:text-7xl font-extrabold text-[#181848] leading-tight mb-4 text-left">
-          Apps, AI & Websites built with you.
+          Apps, AI & Websites Built With You.
         </H1>
         <p className="text-2xl text-gray-700 mb-6 text-left max-w-2xl">
-          We create digital products with a focus on future proofing, with
-          analytics as the growth-engine.
+          We create digital products with a focus on future-proofing, driven by
+          analytics and built through close collaboration. Your vision, our
+          expertise, transformed into impactful digital solutions.
         </p>
         <Link
           href="#contact"
@@ -31,17 +32,17 @@ export default function HomePage() {
           <HomeCard
             className="sticky top-36 z-10"
             title="Mobile apps"
-            body="Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for idea validation and full-scale deployment."
+            body="Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for rapid idea validation and full-scale deployment."
           />
           <HomeCard
             className="sticky top-36 z-20"
             title="Web Development"
-            body="We build fast, responsive websites that look great and perform even better. Whether you need a custom web-app, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered."
+            body="We build fast, responsive websites that look great and perform even better. Whether you need a custom web application, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered."
           />
           <HomeCard
             className="sticky top-36 z-30"
             title="Ai powered applications"
-            body="Unlock the power of the technology of the future: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making."
+            body="Unlock the power of future-forward technology: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making."
           />
         </div>
       </section>

@@ -22,19 +22,19 @@ const keyFeatures = [
 
 const impactFeatures = [
   {
-    title: "Privacy First",
+    title: "Unwavering Privacy Commitment",
     description:
-      "No ads, subscriptions, or data sharing - prioritizing user privacy.",
+      "By offering a completely free service with no ads, subscriptions, or data sharing, Rodi prioritizes user privacy and fosters trust within the cycling community.",
   },
   {
-    title: "Community Impact",
+    title: "Empowering the Cycling Community",
     description:
-      "Created a valuable tool for the cycling community without financial barriers.",
+      "Rodi has become an invaluable, accessible tool for cyclists, removing financial barriers and enabling broader participation in route exploration and performance tracking.",
   },
   {
-    title: "Enhanced Experience",
+    title: "Streamlined Cycling Experience",
     description:
-      "Simplified route navigation and performance tracking for better cycling.",
+      "Rodi simplifies route navigation and provides intuitive performance tracking, significantly enhancing the overall cycling experience for users.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function RodiCasePage() {
         <div className="space-y-12">
           <ContentCard
             title="Challenge"
-            description="Cyclists often need a reliable and free bike computer app that can guide them on routes, track their performance, and integrate with popular cycling platforms without ads, subscriptions, or data sharing."
+            description="Cyclists often seek a reliable and free bike computer app that offers comprehensive route guidance, accurate performance tracking, and seamless integration with popular cycling platforms, all while ensuring privacy and avoiding intrusive ads or subscriptions."
           />
           <ContentCard
             title="Solution"

@@ -22,19 +22,19 @@ const keyFeatures = [
 
 const impactFeatures = [
   {
-    title: "Time Efficiency",
+    title: "Enhanced Time Efficiency",
     description:
-      "Eliminates hours of manual planning and research for athletes.",
+      "Trai eliminates countless hours of manual planning and research, allowing athletes to focus entirely on their training.",
   },
   {
-    title: "Improved Performance",
+    title: "Optimized Performance",
     description:
-      "AI-driven approach leads to more effective and enjoyable training experiences.",
+      "Our AI-driven approach leads to more effective, enjoyable, and ultimately, higher-performing training experiences.",
   },
   {
-    title: "Data-Driven Insights",
+    title: "Actionable Data-Driven Insights",
     description:
-      "Leverages real training data for accurate fitness assessment and progress tracking.",
+      "Trai leverages real training data for precise fitness assessment and continuous progress tracking, ensuring plans are always optimized.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function TraiCasePage() {
         <div className="space-y-12">
           <ContentCard
             title="Challenge"
-            description="Triathletes often struggle to create personalized and effective training plans that adapt to their individual needs, availability, preferences, and goals. The challenge was to develop an intelligent system that could automate the generation of such highly customized training schemas."
+            description="Triathletes often struggle to create personalized and effective training plans that truly adapt to their individual needs, availability, preferences, and evolving goals. The challenge was to develop an intelligent system capable of automating the generation of highly customized and dynamic training schemas."
           />
           <ContentCard
             title="Solution"

@@ -6,7 +6,8 @@ export default function WebPage() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>Web Development</H1>
         <p className="text-xl mb-12">
-          Building Robust and Engaging Online Experiences
+          Crafting fast, responsive, and visually stunning web solutions
+          precisely tailored to your unique business needs.
         </p>
         <div className="prose prose-lg max-w-none">
           <p>

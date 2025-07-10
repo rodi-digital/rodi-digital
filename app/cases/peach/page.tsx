@@ -13,7 +13,7 @@ const keyFeatures = [
   {
     title: "Symptom Tracking",
     description:
-      "Track symptoms and share capabilities with friends, family, and healthcare professionals",
+      "Track and share symptoms with friends, family, and healthcare professionals",
   },
   {
     title: "Appointment Logging",
@@ -26,12 +26,12 @@ const impactFeatures = [
   {
     title: "Empowered Decision Making",
     description:
-      "Users can understand their options and actively participate in their care journey",
+      "Empowers users to understand their options and actively participate in their care journey",
   },
   {
     title: "Improved Patient Engagement",
     description:
-      "Enhanced communication between patients and healthcare providers",
+      "Fosters enhanced communication between patients and healthcare providers through shared insights and progress tracking.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function PeachCasePage() {
         <div className="space-y-12">
           <ContentCard
             title="Challenge"
-            description="Individuals concerned about or living with illness often struggle to find trustworthy, up-to-date, and personalized health information. The challenge was to provide a reliable platform that empowers users to take charge of their care and participate in health decisions."
+            description="In an overwhelming landscape of health information, individuals concerned about or living with illness often face significant challenges in finding trustworthy, up-to-date, and personalized guidance. This lack of reliable resources can lead to anxiety, confusion, and hinder their ability to actively participate in crucial health decisions. The challenge was to develop a platform that cuts through this noise, empowering users with credible information and fostering proactive engagement in their care."
           />
           <ContentCard
             title="Solution"
-            description="Rodi Digital developed PEACHealth, a free mobile application that provides personalized, expert-backed, and authoritative information for people concerned about or living with illness. The app consolidates guidance from world-renowned medical experts, making it accessible and tailored to individual needs."
+            description="Rodi Digital developed PEACHealth, a free mobile application that provides personalized, expert-backed, and authoritative information for people concerned about or living with illness. The app consolidates guidance from world-renowned medical experts by leveraging a network of trusted sources, making it accessible and tailored to individual needs."
           >
             <H3>Key Features</H3>
             <FeatureGrid features={keyFeatures} />
@@ -63,7 +63,7 @@ export default function PeachCasePage() {
           </ContentCard>
           <CTASection
             title="Key Technologies Used"
-            description="Built with modern mobile development frameworks and backend systems for content delivery and personalization:"
+            description="Built with modern mobile development frameworks (e.g., React Native, Expo) and robust backend systems for seamless content delivery and personalized user experiences."
             variant="pink"
           />
         </div>

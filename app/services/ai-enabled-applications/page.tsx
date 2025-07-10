@@ -5,7 +5,11 @@ export default function AIEnabledApplicationsPage() {
     <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>AI-Enabled Applications</H1>
-        <p className="text-xl mb-12">Unlocking New Possibilities with LLMs</p>
+        <p className="text-xl mb-12">
+          Harness the transformative power of Large Language Models (LLMs) to
+          unlock new possibilities, intelligent automation, and advanced
+          insights for your business.
+        </p>
         <div className="prose prose-lg max-w-none">
           <p>
             At Rodi Digital, we harness the transformative power of Artificial

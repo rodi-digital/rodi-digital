@@ -4,9 +4,11 @@ export default function CollaborationPage() {
   return (
     <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <H1>Collaboration</H1>
+        <H1>Collaboration: Your Digital Partner</H1>
         <p className="text-xl mb-12">
-          Your Partner in Digital Product Development
+          We don’t just build for you; we build with you. Our collaborative
+          approach ensures a seamless partnership throughout your digital
+          product development journey.
         </p>
         <div className="prose prose-lg max-w-none">
           <p>

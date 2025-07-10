@@ -66,17 +66,12 @@ export default function AnalyticsPage() {
   return (
     <div className="bg-white min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader
-          title="Analytics: Beyond Dashboards"
-          subtitle="Driving Growth Through Data"
-        />
+        <PageHeader title="Analytics: Beyond Dashboards" subtitle="" />
         <div className="prose prose-lg max-w-none mb-12">
           <p>
-            At Rodi Digital, we believe analytics should go beyond static
-            dashboards; they should be the engine that drives continuous value
-            creation and informed decision-making. We embed analytics into every
-            layer of product development, transforming assumptions into
-            actionable insights and features into measurable outcomes.
+            We go beyond traditional dashboards, embedding analytics into every
+            layer of product development to drive continuous growth and informed
+            decision-making.
           </p>
         </div>
         <ContentCard

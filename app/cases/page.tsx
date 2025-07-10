@@ -7,23 +7,23 @@ export default function CasesPage() {
     <div className="bg-white min-h-screen pt-20">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <PageHeader
-          title="Case Studies"
-          description="Discover how we've helped clients transform their ideas into successful digital products."
+          title="Our Case Studies"
+          description="Explore how Rodi Digital has partnered with clients to transform their visions into successful, impactful digital products."
         />
         <div className="grid md:grid-cols-3 gap-8 mt-8">
           <ServiceCard
             title="PEACHealth"
-            description="A free mobile application providing personalized, expert-backed health information for people concerned about or living with illness."
+            description="Empowering individuals with personalized, expert-backed health information through a free mobile application, fostering informed decision-making and improved patient engagement."
             href="/cases/peach"
           />
           <ServiceCard
             title="Rodi"
-            description="A free bike computer app that provides route guidance, performance tracking, and Strava integration without ads or subscriptions."
+            description="A free, privacy-focused bike computer app offering seamless route guidance, comprehensive performance tracking, and Strava integration, all without ads or subscriptions."
             href="/cases/rodi"
           />
           <ServiceCard
             title="Trai"
-            description="AI-powered triathlon training plan generator for personalized, adaptive training."
+            description="An AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas, optimizing performance and simplifying planning for athletes."
             href="/cases/trai"
           />
         </div>

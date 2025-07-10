@@ -6,7 +6,9 @@ export default function MobilePage() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>Mobile Development</H1>
         <p className="text-xl mb-12">
-          Fast, Data-Driven, and Cost-Effective Solutions
+          Deliver fast, data-driven, and cost-effective mobile solutions with
+          our expertise in React Native and Expo for seamless cross-platform
+          development.
         </p>
         <div className="prose prose-lg max-w-none">
           <p>
