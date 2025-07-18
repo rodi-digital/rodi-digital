@@ -64,7 +64,7 @@ const tools = [
 
 export default function AnalyticsPage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <PageHeader title="Analytics: Beyond Dashboards" subtitle="" />
         <div className="prose prose-lg max-w-none mb-12">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,12 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <Link href="/" className="text-xl font-bold text-gray-900">
-              Rodi Digital
+              <Image
+                src="/rodi-digital-logo.svg"
+                width={100}
+                height={50}
+                alt="Logo of Rodi Digital"
+              />
             </Link>
 
             {/* Desktop Navigation */}

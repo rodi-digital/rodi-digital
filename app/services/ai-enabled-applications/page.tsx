@@ -2,7 +2,7 @@ import { H1, H2, H3 } from "@/components/ui/heading";
 
 export default function AIEnabledApplicationsPage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>AI-Enabled Applications</H1>
         <p className="text-xl mb-12">
@@ -25,7 +25,7 @@ export default function AIEnabledApplicationsPage() {
             functionality and user experience. This approach enables:
           </p>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Intelligent Automation</H3>
               <p className="text-gray-700">
                 Automate complex tasks that require understanding, reasoning,
@@ -35,7 +35,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Enhanced User Interaction</H3>
               <p className="text-gray-700">
                 Create highly intuitive and responsive interfaces that
@@ -44,7 +44,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Dynamic Content Generation</H3>
               <p className="text-gray-700">
                 Generate diverse and contextually relevant content on the fly,
@@ -53,7 +53,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Advanced Data Insights</H3>
               <p className="text-gray-700">
                 Process and derive insights from unstructured data, identifying
@@ -62,7 +62,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Personalization at Scale</H3>
               <p className="text-gray-700">
                 Deliver highly personalized experiences to individual users,
@@ -71,7 +71,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Problem Solving & Decision Support</H3>
               <p className="text-gray-700">
                 Develop applications that can analyze complex scenarios, provide
@@ -100,7 +100,7 @@ export default function AIEnabledApplicationsPage() {
           </p>
 
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-600">
+            <div className="p-6 rounded-lg shadow-md border-l-4 border-purple-600">
               <H3>Custom LLM Integration</H3>
               <p className="text-gray-700">
                 Seamlessly integrating state-of-the-art LLMs into your existing
@@ -108,7 +108,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-600">
+            <div className="p-6 rounded-lg shadow-md border-l-4 border-purple-600">
               <H3>Natural Language Processing (NLP)</H3>
               <p className="text-gray-700">
                 Building applications that understand, interpret, and generate
@@ -117,7 +117,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-600">
+            <div className="p-6 rounded-lg shadow-md border-l-4 border-purple-600">
               <H3>Machine Learning (ML) Integration</H3>
               <p className="text-gray-700">
                 Developing and deploying custom machine learning models for
@@ -126,7 +126,7 @@ export default function AIEnabledApplicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-600">
+            <div className="p-6 rounded-lg shadow-md border-l-4 border-purple-600">
               <H3>AI-Powered Automation Workflows</H3>
               <p className="text-gray-700">
                 Designing and implementing intelligent workflows that streamline

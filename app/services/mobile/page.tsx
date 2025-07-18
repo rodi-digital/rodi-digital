@@ -2,7 +2,7 @@ import { H1, H2, H3 } from "@/components/ui/heading";
 
 export default function MobilePage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>Mobile Development</H1>
         <p className="text-xl mb-12">
@@ -63,7 +63,7 @@ export default function MobilePage() {
           </div>
           <H2>Technologies We Use</H2>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>React Native & Expo</H3>
               <p className="text-gray-700">
                 Our primary stack for cross-platform mobile development,
@@ -72,7 +72,7 @@ export default function MobilePage() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="p-6 rounded-lg shadow-md">
               <H3>Analytics Integration</H3>
               <p className="text-gray-700">
                 Built-in analytics tracking from day one, using tools like

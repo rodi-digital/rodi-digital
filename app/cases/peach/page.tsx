@@ -37,12 +37,9 @@ const impactFeatures = [
 
 export default function PeachCasePage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader
-          title="PEACHealth"
-          subtitle="Formerly My Cancer Companion"
-        />
+        <PageHeader title="PEACHealth" subtitle="Living longer and better" />
         <div className="space-y-12">
           <ContentCard
             title="Challenge"

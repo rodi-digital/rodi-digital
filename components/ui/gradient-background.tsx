@@ -1,18 +1,44 @@
-import type React from "react"
+import type React from "react";
+
 interface GradientBackgroundProps {
-  variant: "purple" | "blue" | "green" | "pink" | "orange"
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
 }
 
-const gradients = {
-  purple: "bg-gradient-to-br from-purple-100 via-purple-50 to-pink-50",
-  blue: "bg-gradient-to-br from-blue-50 to-indigo-100",
-  green: "bg-gradient-to-br from-green-50 to-blue-100",
-  pink: "bg-gradient-to-br from-pink-50 to-rose-100",
-  orange: "bg-gradient-to-br from-orange-50 to-red-100",
-}
+export function GradientBackground({
+  children,
+}: Readonly<GradientBackgroundProps>) {
+  return (
+    <div className={`relative w-full min-h-screen`}>
+      <div
+        className="absolute inset-0 -z-10 overflow-hidden opacity-50 flex justify-center items-center"
+        style={{ filter: "blur(200px)" }}
+      >
+        <div
+          className="absolute left-0 top-0 w-[40vw] h-[40vw]"
+          style={{
+            borderRadius: "20%",
+            backgroundColor: "rgba(112, 86, 245, 0.50)",
+          }}
+        />
 
-export function GradientBackground({ variant, children, className = "" }: GradientBackgroundProps) {
-  return <div className={`min-h-screen ${gradients[variant]} pt-20 ${className}`}>{children}</div>
+        <div
+          className="absolute right-0 top-[300px] w-[40vw] h-[40vw]"
+          style={{
+            borderRadius: "20%",
+            backgroundColor: "rgba(112, 86, 245, 0.25)",
+          }}
+        />
+
+        <div
+          className="absolute right-[40%] bottom-[10px] w-[25vw] h-[40vw]"
+          style={{
+            borderRadius: "20%",
+            backgroundColor: "rgba(112, 86, 245, 0.75)",
+          }}
+        />
+      </div>
+      {/* Content above gradients */}
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
 }

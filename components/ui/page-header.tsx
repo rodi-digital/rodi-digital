@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, description }: PageHeaderProps) {
   return (
-    <div className="mb-8">
+    <div className="mb-20">
       <H1>{title}</H1>
       {subtitle && <p className="text-xl text-gray-600 mb-4">{subtitle}</p>}
       {description && (

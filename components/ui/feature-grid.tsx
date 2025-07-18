@@ -9,16 +9,10 @@ interface FeatureGridProps {
 }
 
 export function FeatureGrid({ features, columns = 3 }: FeatureGridProps) {
-  const gridCols = {
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-3",
-    4: "md:grid-cols-4",
-  };
-
   return (
-    <div className={`grid ${gridCols[columns]} gap-6`}>
+    <div className="flex flex-col gap-6">
       {features.map((feature, index) => (
-        <div key={index} className={`p-4 rounded-lg`}>
+        <div key={index}>
           <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
           <p className="text-gray-700 text-sm">{feature.description}</p>
         </div>

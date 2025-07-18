@@ -2,7 +2,7 @@ import { H1, H2, H3 } from "@/components/ui/heading";
 
 export default function CollaborationPage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <H1>Collaboration: Your Digital Partner</H1>
         <p className="text-xl mb-12">

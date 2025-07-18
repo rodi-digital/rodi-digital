@@ -40,7 +40,7 @@ const impactFeatures = [
 
 export default function TraiCasePage() {
   return (
-    <div className="bg-white min-h-screen pt-20">
+    <div className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <PageHeader
           title="Trai"

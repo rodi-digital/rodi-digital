@@ -14,9 +14,9 @@ export function ContentCard({
   className = "",
 }: ContentCardProps) {
   return (
-    <div className={`bg-white p-8 rounded-lg shadow-md ${className}`}>
+    <div className={`${className}`}>
       <H2>{title}</H2>
-      <p className="text-gray-700 mb-6">{description}</p>
+      <p className="text-gray-700 mb-6 text-lg">{description}</p>
       {children}
     </div>
   );

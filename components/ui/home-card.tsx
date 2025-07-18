@@ -16,7 +16,7 @@ export const HomeCard = ({ title, body, className = "" }: HomeCardProps) => {
       )}
     >
       <H3>{title}</H3>
-      <p className="text-gray-600">{body}</p>
+      <p className="text-gray-700">{body}</p>
     </div>
   );
 };
