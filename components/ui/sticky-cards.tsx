@@ -2,7 +2,7 @@ import { HomeCard } from "./home-card";
 
 export type StickyCard = {
   title: string;
-  body: string;
+  description: string;
 };
 
 type StickyCardsProps = {
@@ -17,12 +17,12 @@ export const StickyCards = ({ minHeight, cardContent }: StickyCardsProps) => {
         className="flex flex-col items-center w-full mx-auto max-w-md relative gap-12"
         style={{ minHeight: "1000px" }}
       >
-        {cardContent.map((card, index) => (
+        {cardContent.map((card) => (
           <HomeCard
             key={card.title}
             className="sticky top-36 z-10"
             title={card.title}
-            body={card.body}
+            body={card.description}
           />
         ))}
       </div>

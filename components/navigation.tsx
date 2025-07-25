@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { glassBackground } from "./ui/glass-background";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +46,9 @@ export function Navigation() {
     <div className="w-full flex justify-center pt-4">
       <nav
         className={cn(
-          "fixed z-50",
-          "max-w-6xl w-full mx-auto bg-white/60 backdrop-blur-sm border border-white/50 rounded-full shadow-lg p-2 text-white before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none"
+          "fixed z-50 rounded-full border border-white/50 shadow-lg ",
+          "max-w-6xl w-full mx-auto p-2",
+          glassBackground
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

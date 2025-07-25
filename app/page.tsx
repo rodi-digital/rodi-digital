@@ -5,15 +5,18 @@ import { StickyCard, StickyCards } from "@/components/ui/sticky-cards";
 const cards: StickyCard[] = [
   {
     title: "Mobile apps",
-    body: "Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for rapid idea validation and full-scale deployment.",
+    description:
+      "Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for rapid idea validation and full-scale deployment.",
   },
   {
     title: "Web Development",
-    body: "We build fast, responsive websites that look great and perform even better. Whether you need a custom web application, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered.",
+    description:
+      "We build fast, responsive websites that look great and perform even better. Whether you need a custom web application, a CMS-powered platform, or a pixel-perfect Webflow site, we’ve got you covered.",
   },
   {
     title: "Ai powered applications",
-    body: "Unlock the power of future-forward technology: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making.",
+    description:
+      "Unlock the power of future-forward technology: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making.",
   },
 ];
 
