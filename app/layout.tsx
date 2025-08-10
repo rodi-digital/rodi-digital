@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description:
     "Digital partner specializing in AI-enabled applications, mobile development, and web solutions. Building the future together.",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
