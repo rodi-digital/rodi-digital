@@ -47,7 +47,7 @@ export function Navigation() {
       <nav
         className={cn(
           "fixed z-50 rounded-full border border-white/50 shadow-lg ",
-          "max-w-6xl w-full mx-auto p-2",
+          "max-w-7xl w-full mx-auto p-2",
           glassBackground
         )}
       >

@@ -1,9 +1,10 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { H2 } from "@/components/ui/heading";
-import { StickyCards, StickyCard } from "@/components/ui/sticky-cards";
-import { ProcessSteps } from "@/components/ui/process-steps";
+import { ServiceHero } from "@/components/ui/service-hero";
+import { TwoColumnSection } from "@/components/ui/two-column-section";
+import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
+import { MinimalListSection } from "@/components/ui/minimal-list-section";
+import { FinalCTA } from "@/components/ui/final-cta";
 
-const expertiseCards: StickyCard[] = [
+const expertiseCards = [
   {
     title: "SaaS Platform Development",
     description:
@@ -31,29 +32,29 @@ const expertiseCards: StickyCard[] = [
   },
 ];
 
-const processCards: StickyCard[] = [
+const processCards = [
   {
-    title: "1. Discovery & Planning",
+    title: "Discovery & Planning",
     description:
       "We start by understanding your business goals, target audience, and technical requirements to create a comprehensive project roadmap.",
   },
   {
-    title: "2. Design & Architecture",
+    title: "Design & Architecture",
     description:
       "We create user-centered designs and establish a scalable technical architecture that supports your current needs and future growth.",
   },
   {
-    title: "3. Development & Integration",
+    title: "Development & Integration",
     description:
       "Our development process includes regular check-ins, live demos, and continuous integration of feedback to ensure alignment with your vision.",
   },
   {
-    title: "4. Testing & Optimization",
+    title: "Testing & Optimization",
     description:
       "Comprehensive testing across devices and browsers, performance optimization, and security audits before launch.",
   },
   {
-    title: "5. Launch & Support",
+    title: "Launch & Support",
     description:
       "Smooth deployment with ongoing support, monitoring, and maintenance to ensure optimal performance.",
   },
@@ -61,42 +62,38 @@ const processCards: StickyCard[] = [
 
 export default function WebPage() {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader
-          title="Web Development"
-          description="Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs."
-        />
-        <section>
-          <p>
-            At Rodi Digital, we craft dynamic and high-performing web solutions
-            tailored to your specific business needs. From sophisticated SaaS
-            platforms to visually stunning marketing sites, we deliver web
-            experiences that drive engagement and growth.
-          </p>
-        </section>
-        <section>
-          <H2>Our Web Development Expertise</H2>
-          <StickyCards minHeight={1500} cardContent={expertiseCards} />
-        </section>
-        <section>
-          <H2>Our Web Development Process</H2>
-          <ProcessSteps steps={processCards} />
-        </section>
-        <section>
-          <H2>Ready to Build Your Web Presence?</H2>
-          <p>
-            Partner with Rodi Digital to create a powerful online presence that
-            aligns with your strategic goals and delivers measurable results.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block mt-4 px-6 py-2 bg-primary text-white rounded"
-          >
-            Contact Us
-          </a>
-        </section>
-      </div>
+    <div className="min-h-screen">
+      <ServiceHero
+        title="Web Development"
+        subtitle="Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs."
+      />
+      
+      <TwoColumnSection
+        title="Digital Experiences That Drive Growth"
+        content="At Rodi Digital, we craft dynamic and high-performing web solutions tailored to your specific business needs. From sophisticated SaaS platforms to visually stunning marketing sites, we deliver web experiences that drive engagement and growth."
+        primaryCTA={{ text: "Start Your Web Project", href: "/contact" }}
+        secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
+      />
+      
+      <MinimalCardGrid
+        title="Our Web Development Expertise"
+        description="We combine technical excellence with strategic thinking to deliver web solutions that meet your business objectives."
+        cards={expertiseCards}
+        columns="2"
+      />
+      
+      <MinimalListSection
+        title="Our Web Development Process"
+        description="A structured approach that ensures quality, transparency, and successful delivery."
+        items={processCards}
+      />
+      
+      <FinalCTA
+        title="Ready to Build Your Web Presence?"
+        subtitle="Partner with Rodi Digital to create a powerful online presence that aligns with your strategic goals and delivers measurable results."
+        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        secondaryCTA={{ text: "View All Services", href: "/services" }}
+      />
     </div>
   );
 }

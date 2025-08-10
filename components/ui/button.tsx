@@ -6,14 +6,24 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: ReactNode;
   className?: string;
+  variant?: "default" | "outline" | "secondary";
 }
 
-export function Button({ href, children, className, ...props }: ButtonProps) {
+export function Button({ href, children, className, variant = "default", ...props }: ButtonProps) {
+  const baseClasses = "px-6 py-2 rounded font-medium transition-colors inline-block text-center";
+  
+  const variantClasses = {
+    default: "bg-primary text-white hover:bg-[#2d217c]",
+    outline: "bg-transparent border border-primary text-primary hover:bg-primary hover:text-white",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+  };
+
   return (
     <Link
       href={href}
       className={cn(
-        "bg-primary text-white px-6 py-2 rounded font-medium hover:bg-[#2d217c] transition-colors",
+        baseClasses,
+        variantClasses[variant],
         className
       )}
       {...props}

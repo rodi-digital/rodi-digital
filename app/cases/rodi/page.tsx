@@ -1,6 +1,4 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { ContentCard } from "@/components/ui/content-card";
-import { FeatureGrid } from "@/components/ui/feature-grid";
+import { CaseStudyLayout } from "@/components/ui/case-study-layout";
 
 const keyFeatures = [
   {
@@ -40,28 +38,15 @@ const impactFeatures = [
 
 export default function RodiCasePage() {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader title="Rodi" subtitle="Bike Computer App" />
-        <div className="space-y-12">
-          <ContentCard
-            title="Challenge"
-            description="Cyclists often seek a reliable and free bike computer app that offers comprehensive route guidance, accurate performance tracking, and seamless integration with popular cycling platforms, all while ensuring privacy and avoiding intrusive ads or subscriptions."
-          />
-          <ContentCard
-            title="Solution"
-            description="As the founder, Rodi Digital (Tijs Martens) designed, implemented, and strategized the development of Rodi, a free bike computer application. Rodi allows users to enjoy the following features:"
-          >
-            <FeatureGrid features={keyFeatures} />
-          </ContentCard>
-          <ContentCard
-            title="Results & Impact"
-            description="Rodi provides cyclists with a comprehensive, user-friendly, and privacy-focused bike computer solution. Its commitment to being free and ad-less has created a valuable tool for the cycling community, empowering users to explore new routes, track their progress, and share their passion without financial barriers or privacy concerns."
-          >
-            <FeatureGrid features={impactFeatures} columns={2} />
-          </ContentCard>
-        </div>
-      </div>
-    </div>
+    <CaseStudyLayout
+      title="Rodi"
+      subtitle="A privacy-focused bike computer app offering seamless route guidance and performance tracking."
+      challenge="Cyclists often seek a reliable and free bike computer app that offers comprehensive route guidance, accurate performance tracking, and seamless integration with popular cycling platforms, all while ensuring privacy and avoiding intrusive ads or subscriptions."
+      solution="As the founder, Rodi Digital (Tijs Martens) designed, implemented, and strategized the development of Rodi, a free bike computer application that prioritizes user privacy and experience above all else."
+      keyFeatures={keyFeatures}
+      impact={impactFeatures}
+      ctaTitle="Ready to Build Your Mobile App?"
+      ctaSubtitle="Let's create a privacy-focused mobile application that puts user experience first, without ads or subscriptions."
+    />
   );
 }

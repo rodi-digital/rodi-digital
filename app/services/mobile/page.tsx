@@ -1,8 +1,10 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { H2 } from "@/components/ui/heading";
-import { StickyCards, StickyCard } from "@/components/ui/sticky-cards";
+import { ServiceHero } from "@/components/ui/service-hero";
+import { TwoColumnSection } from "@/components/ui/two-column-section";
+import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
+import { MinimalListSection } from "@/components/ui/minimal-list-section";
+import { FinalCTA } from "@/components/ui/final-cta";
 
-const strengthsCards: StickyCard[] = [
+const strengthsCards = [
   {
     title: "Cross-Platform Expertise",
     description:
@@ -25,7 +27,7 @@ const strengthsCards: StickyCard[] = [
   },
 ];
 
-const technologiesCards: StickyCard[] = [
+const technologiesCards = [
   {
     title: "React Native & Expo",
     description:
@@ -40,50 +42,38 @@ const technologiesCards: StickyCard[] = [
 
 export default function MobilePage() {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader
-          title="Mobile Development"
-          description="Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development."
-        />
-        <section>
-          <p>
-            At Rodi Digital, we specialize in building high-performing mobile
-            applications that are not only fast to market but also designed for
-            continuous iteration and growth. We leverage cutting-edge
-            cross-platform technologies to deliver robust and engaging mobile
-            experiences.
-          </p>
-        </section>
-        <section>
-          <H2>Our Mobile Development Strengths</H2>
-          <StickyCards minHeight={1200} cardContent={strengthsCards} />
-        </section>
-        <section>
-          <H2>Technologies We Use</H2>
-          <StickyCards minHeight={600} cardContent={technologiesCards} />
-        </section>
-        <section>
-          <p>
-            Whether you're looking to validate a new concept or build a
-            full-scale mobile application, Rodi Digital provides the expertise
-            and efficiency to bring your vision to life.
-          </p>
-        </section>
-        <section className="mt-12">
-          <H2>Ready to Build Your Mobile App?</H2>
-          <p>
-            Work with Rodi Digital for efficient, high-quality mobile app
-            development.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block mt-4 px-6 py-2 bg-primary text-white rounded"
-          >
-            Contact Us
-          </a>
-        </section>
-      </div>
+    <div className="min-h-screen">
+      <ServiceHero
+        title="Mobile Development"
+        subtitle="Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development."
+      />
+      
+      <TwoColumnSection
+        title="Built for Growth & Speed"
+        content="At Rodi Digital, we specialize in building high-performing mobile applications that are not only fast to market but also designed for continuous iteration and growth. We leverage cutting-edge cross-platform technologies to deliver robust and engaging mobile experiences."
+        primaryCTA={{ text: "Start Your Mobile Project", href: "/contact" }}
+        secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
+      />
+      
+      <MinimalCardGrid
+        title="Our Mobile Development Strengths"
+        description="We combine technical expertise with strategic thinking to deliver mobile solutions that drive business value."
+        cards={strengthsCards}
+        columns="2"
+      />
+      
+      <MinimalListSection
+        title="Technologies We Use"
+        description="We leverage proven technologies to build scalable and performant mobile applications."
+        items={technologiesCards}
+      />
+      
+      <FinalCTA
+        title="Ready to Build Your Mobile App?"
+        subtitle="Whether you're looking to validate a new concept or build a full-scale mobile application, Rodi Digital provides the expertise and efficiency to bring your vision to life."
+        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        secondaryCTA={{ text: "View All Services", href: "/services" }}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { ContentCard } from "@/components/ui/content-card";
-import { ProcessSteps } from "@/components/ui/process-steps";
-import { StickyCards } from "@/components/ui/sticky-cards";
+import { ServiceHero } from "@/components/ui/service-hero";
+import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
+import { MinimalListSection } from "@/components/ui/minimal-list-section";
+import { FinalCTA } from "@/components/ui/final-cta";
 
 const approachFeatures = [
   {
@@ -30,7 +30,7 @@ const implementationSteps = [
   {
     title: "Start with Insights",
     description:
-      "From day one, tracking is in placee, ensuring no blind spots and enabling immediate visibility into user behavior. For every iteration, we decide what to measure and how to track.",
+      "From day one, tracking is in place, ensuring no blind spots and enabling immediate visibility into user behavior. For every iteration, we decide what to measure and how to track.",
   },
   {
     title: "Built-In Measurement",
@@ -51,27 +51,31 @@ const implementationSteps = [
 
 export default function AnalyticsPage() {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader title="Analytics" subtitle="" />
-        <div className="prose prose-lg max-w-none mb-12">
-          <p className="text-xl text-gray-600 mx-auto">
-            We go beyond traditional dashboards, embedding analytics into every
-            layer of product development to drive continuous growth and informed
-            decision-making.
-          </p>
-        </div>
+    <div className="min-h-screen">
+      <ServiceHero
+        title="Analytics"
+        subtitle="We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making."
+      />
+      
+      <MinimalCardGrid
+        title="Our Analytics Approach"
+        description="We believe in data-driven product development that creates lasting value for all stakeholders."
+        cards={approachFeatures}
+        columns="2"
+      />
 
-        <StickyCards minHeight={1000} cardContent={approachFeatures} />
+      <MinimalListSection
+        title="Our Implementation Plan"
+        description="We believe in a 'better to get started than to be perfect' approach, allowing for continuous adjustments. Our process integrates analytics from the outset:"
+        items={implementationSteps}
+      />
 
-        <ContentCard
-          title="Our Implementation Plan"
-          description="We believe in a 'better to get started than to be perfect' approach, allowing for continuous adjustments. Our process integrates analytics from the outset:"
-          className="mb-12"
-        >
-          <ProcessSteps steps={implementationSteps} />
-        </ContentCard>
-      </div>
+      <FinalCTA
+        title="Ready to Build Data-Driven Products?"
+        subtitle="Let's integrate analytics into every layer of your product development to drive continuous growth and informed decision-making."
+        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        secondaryCTA={{ text: "View Our Approach", href: "/approach" }}
+      />
     </div>
   );
 }

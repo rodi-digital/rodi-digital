@@ -1,6 +1,4 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { ContentCard } from "@/components/ui/content-card";
-import { FeatureGrid } from "@/components/ui/feature-grid";
+import { CaseStudyLayout } from "@/components/ui/case-study-layout";
 
 const keyFeatures = [
   {
@@ -40,31 +38,15 @@ const impactFeatures = [
 
 export default function TraiCasePage() {
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <PageHeader
-          title="Trai"
-          subtitle="AI-Powered Triathlon Training Plan Generator"
-        />
-        <div className="space-y-12">
-          <ContentCard
-            title="Challenge"
-            description="Triathletes often struggle to create personalized and effective training plans that truly adapt to their individual needs, availability, preferences, and evolving goals. The challenge was to develop an intelligent system capable of automating the generation of highly customized and dynamic training schemas."
-          />
-          <ContentCard
-            title="Solution"
-            description="Trai leverages AI to generate personalized, adaptive training plans for triathletes, taking into account their unique requirements and performance data. Key features include:"
-          >
-            <FeatureGrid features={keyFeatures} />
-          </ContentCard>
-          <ContentCard
-            title="Results & Impact"
-            description="Trai empowers triathletes to optimize their training by providing them with dynamic, personalized plans that evolve with their progress and needs. This eliminates the guesswork and time commitment associated with manual plan creation, allowing athletes to focus on their training with confidence."
-          >
-            <FeatureGrid features={impactFeatures} columns={2} />
-          </ContentCard>
-        </div>
-      </div>
-    </div>
+    <CaseStudyLayout
+      title="Trai"
+      subtitle="AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas."
+      challenge="Triathletes often struggle to create personalized and effective training plans that truly adapt to their individual needs, availability, preferences, and evolving goals. The challenge was to develop an intelligent system capable of automating the generation of highly customized and dynamic training schemas."
+      solution="Trai leverages AI to generate personalized, adaptive training plans for triathletes, taking into account their unique requirements and performance data."
+      keyFeatures={keyFeatures}
+      impact={impactFeatures}
+      ctaTitle="Ready to Build Your AI Solution?"
+      ctaSubtitle="Let's create an intelligent, AI-powered platform that adapts and evolves with your users' needs."
+    />
   );
 }
