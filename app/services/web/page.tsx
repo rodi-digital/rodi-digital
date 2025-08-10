@@ -1,7 +1,7 @@
 import { PageHeader } from "@/components/ui/page-header";
 import { H2 } from "@/components/ui/heading";
 import { StickyCards, StickyCard } from "@/components/ui/sticky-cards";
-import { ProcessVisualization } from "@/components/ui/process-visualization";
+import { ProcessSteps } from "@/components/ui/process-steps";
 
 const expertiseCards: StickyCard[] = [
   {
@@ -81,7 +81,7 @@ export default function WebPage() {
         </section>
         <section>
           <H2>Our Web Development Process</H2>
-          <ProcessVisualization steps={processCards} />
+          <ProcessSteps steps={processCards} />
         </section>
         <section>
           <H2>Ready to Build Your Web Presence?</H2>
