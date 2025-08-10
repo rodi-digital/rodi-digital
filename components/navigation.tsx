@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { glassBackground } from "./ui/glass-background";
+import { fadeIn } from "@/lib/scroll-animations";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,12 +46,16 @@ export function Navigation() {
 
   return (
     <div className="w-full flex justify-center pt-4">
-      <nav
+      <motion.nav
         className={cn(
           "fixed z-50 rounded-full border border-white/50 shadow-lg ",
           "max-w-7xl w-full mx-auto p-2",
           glassBackground
         )}
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        custom={1}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -135,7 +141,7 @@ export function Navigation() {
             </div>
           )}
         </div>
-      </nav>
+      </motion.nav>
     </div>
   );
 }

@@ -1,5 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { ServiceHero } from "@/components/ui/service-hero";
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeInUp, defaultViewport } from "@/lib/scroll-animations";
+import { HomeHero } from "@/components/ui/home-hero";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { FinalCTA } from "@/components/ui/final-cta";
@@ -25,54 +28,43 @@ const services = [
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with CTA */}
-      <section className="pt-32 pb-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-5xl">
-            <h1 className="text-6xl lg:text-8xl font-light tracking-tight text-black mb-12 leading-[0.85]">
-              Apps, AI & Websites
-              <br />
-              Built With You
-            </h1>
-            <div className="max-w-3xl space-y-6">
-              <p className="text-2xl text-gray-600 leading-relaxed">
-                We create digital products driven by analytics and built through close
-                collaboration.
-              </p>
-              <p className="text-2xl text-gray-600 leading-relaxed">
-                Your vision and our expertise are the ingredients for changing the
-                game.
-              </p>
-            </div>
-            <div className="mt-12">
-              <Button href="/contact" className="text-lg px-8 py-4">
-                Get in touch
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <MinimalCardGrid
-        title="What We Build"
-        description="From mobile apps to AI-powered platforms, we create digital solutions that drive real business value."
-        cards={services}
-        columns="3"
+      <HomeHero
+        title="Apps, AI & Websites Built With You"
+        subtitle={[
+          "We create digital products driven by analytics and built through close collaboration.",
+        ]}
+        ctaText="Get in touch"
+        ctaHref="/contact"
       />
 
-      <TwoColumnSection
-        title="Data-Driven Development"
-        content="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback."
-        primaryCTA={{ text: "Our Approach", href: "/approach" }}
-        secondaryCTA={{ text: "Case Studies", href: "/cases" }}
-      />
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={defaultViewport}
+        transition={{ delay: 1.5 }}
+      >
+        <MinimalCardGrid
+          title="What We Build"
+          description="From mobile apps to AI-powered platforms, we create digital solutions that drive real business value."
+          cards={services}
+          columns="3"
+        />
 
-      <FinalCTA
-        title="Ready to Build Something Amazing?"
-        subtitle="Let's collaborate to create a digital product that not only meets your needs but exceeds your expectations and drives measurable business growth."
-        primaryCTA={{ text: "Start Your Project", href: "/contact" }}
-        secondaryCTA={{ text: "View Our Services", href: "/services" }}
-      />
+        <TwoColumnSection
+          title="Data-Driven Development"
+          content="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback."
+          primaryCTA={{ text: "Our Approach", href: "/approach" }}
+          secondaryCTA={{ text: "Case Studies", href: "/cases" }}
+        />
+
+        <FinalCTA
+          title="Ready to Build Something Amazing?"
+          subtitle="Let's collaborate to create a digital product that not only meets your needs but exceeds your expectations and drives measurable business growth."
+          primaryCTA={{ text: "Start Your Project", href: "/contact" }}
+          secondaryCTA={{ text: "View Our Services", href: "/services" }}
+        />
+      </motion.div>
     </div>
   );
 }

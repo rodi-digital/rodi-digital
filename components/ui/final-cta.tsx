@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeInUp, scaleIn, defaultViewport } from "@/lib/scroll-animations";
 import { Button } from "@/components/ui/button";
 
 interface FinalCTAProps {
@@ -22,7 +26,13 @@ export function FinalCTA({ title, subtitle, primaryCTA, secondaryCTA }: FinalCTA
   
   return (
     <section className="py-32 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <motion.div 
+        className="max-w-7xl mx-auto px-6 text-center"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={defaultViewport}
+      >
         <h2 className="text-5xl font-light text-black mb-8 tracking-tight">
           {firstLine}
           <br />
@@ -43,7 +53,7 @@ export function FinalCTA({ title, subtitle, primaryCTA, secondaryCTA }: FinalCTA
             {secondaryCTA.text}
           </Button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

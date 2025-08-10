@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer, staggerItem, defaultViewport } from "@/lib/scroll-animations";
+
 interface ListItem {
   title: string;
   description: string;
@@ -17,18 +22,31 @@ export function MinimalListSection({
   return (
     <section className="py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
+        <motion.div 
+          className="mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+        >
           <h2 className="text-4xl font-light text-black mb-6">{title}</h2>
           <p className="text-lg text-gray-600 max-w-3xl">
             {description}
           </p>
-        </div>
+        </motion.div>
         
-        <div className="space-y-12">
+        <motion.div 
+          className="space-y-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+        >
           {items.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12 border-b border-gray-100 last:border-b-0"
+              variants={staggerItem}
             >
               <div>
                 <div className="flex items-center gap-4 mb-4">
@@ -45,9 +63,9 @@ export function MinimalListSection({
                   {item.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
