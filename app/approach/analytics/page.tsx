@@ -2,7 +2,6 @@ import { PageHeader } from "@/components/ui/page-header";
 import { ContentCard } from "@/components/ui/content-card";
 import { ProcessSteps } from "@/components/ui/process-steps";
 import { StickyCards } from "@/components/ui/sticky-cards";
-import { H2 } from "@/components/ui/heading";
 
 const approachFeatures = [
   {
@@ -29,24 +28,24 @@ const approachFeatures = [
 
 const implementationSteps = [
   {
-    title: "Project Setup",
+    title: "Start with Insights",
     description:
-      "Analytics tools are set up and initialized during the initial project phase, ensuring tracking is in place from day one.",
+      "From day one, tracking is in placee, ensuring no blind spots and enabling immediate visibility into user behavior. For every iteration, we decide what to measure and how to track.",
   },
   {
-    title: "During Development",
+    title: "Built-In Measurement",
     description:
-      "Every user interaction is tracked by default, with clear naming conventions to ensure easy discoverability and consistency.",
+      "Every feature we build includes an analytics strategy. Ensuring that key interactions are tracked with purpose, using consistent and meaningful naming for easy analysis and continuous learning.",
   },
   {
-    title: "Launch",
+    title: "Launch with confidence",
     description:
-      "Essential dashboards are created before launch, providing both internal learning and shareable insights for clients.",
+      "At launch, every key flow and feature is fully tracked providing real-time visibility into usage, friction points, and early growth signals via actionable dashboards.",
   },
   {
-    title: "Post-Launch Monitoring",
+    title: "Stay Data-Driven",
     description:
-      "We conduct periodical check-ups and provide structured reports to our partners, focusing on KPIs and actionable insights.",
+      "Post-launch, we monitor key trends and user behavior, providing structured reports and insights that help drive informed decisions, optimizations, and long-term growth.",
   },
 ];
 
@@ -70,7 +69,7 @@ export default function AnalyticsPage() {
           description="We believe in a 'better to get started than to be perfect' approach, allowing for continuous adjustments. Our process integrates analytics from the outset:"
           className="mb-12"
         >
-          <ProcessSteps steps={implementationSteps} color="blue" />
+          <ProcessSteps steps={implementationSteps} />
         </ContentCard>
       </div>
     </div>
