@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeInUp, scaleIn, defaultViewport } from "@/lib/scroll-animations";
+import { fadeInUp, defaultViewport } from "@/lib/scroll-animations";
 import { Button } from "@/components/ui/button";
 
 interface FinalCTAProps {
@@ -17,16 +17,21 @@ interface FinalCTAProps {
   };
 }
 
-export function FinalCTA({ title, subtitle, primaryCTA, secondaryCTA }: FinalCTAProps) {
+export function FinalCTA({
+  title,
+  subtitle,
+  primaryCTA,
+  secondaryCTA,
+}: FinalCTAProps) {
   // Split title for line break
   const words = title.split(" ");
   const midpoint = Math.ceil(words.length / 2);
   const firstLine = words.slice(0, midpoint).join(" ");
   const secondLine = words.slice(midpoint).join(" ");
-  
+
   return (
     <section className="py-32 border-t border-gray-100">
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto px-6 text-center"
         variants={fadeInUp}
         initial="hidden"

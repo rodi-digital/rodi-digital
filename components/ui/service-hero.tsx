@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeInUp, heroText, defaultViewport } from "@/lib/scroll-animations";
+import { fadeInUp } from "@/lib/scroll-animations";
 
 interface ServiceHeroProps {
   title: string;

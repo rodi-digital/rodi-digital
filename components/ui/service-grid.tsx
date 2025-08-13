@@ -33,7 +33,7 @@ export function ServiceGrid({ services }: ServiceGridProps) {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center group"
               variants={staggerItem}
             >
               <motion.div
@@ -43,7 +43,7 @@ export function ServiceGrid({ services }: ServiceGridProps) {
                 whileInView="visible"
                 viewport={defaultViewport}
               >
-                <div className="border-b border-gray-200 pb-6 mb-6">
+                <div className="relative border-b border-gray-200 pb-6 mb-6 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-px before:bg-gray-400 before:transition-all before:duration-300 group-hover:before:w-full">
                   <span className="text-sm text-gray-400 font-mono">
                     {String(index + 1).padStart(2, "0")}
                   </span>
