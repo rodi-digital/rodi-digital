@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { ServiceHero } from "@/components/ui/service-hero";
 import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
+import { ResultsImpactGrid } from "@/components/ui/results-impact-grid";
 import { FinalCTA } from "@/components/ui/final-cta";
 
 interface Card {
@@ -56,11 +57,10 @@ export function CaseStudyLayout({
         columns="3"
       />
       
-      <MinimalCardGrid
+      <ResultsImpactGrid
         title="Results & Impact"
         description="The measurable outcomes and positive impact achieved."
         cards={impact}
-        columns="3"
       />
       
       {technologySection && (
