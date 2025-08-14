@@ -1,7 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, staggerItem, defaultViewport } from "@/lib/scroll-animations";
+import * as motion from "motion/react-client";
+import {
+  fadeInUp,
+  staggerContainer,
+  staggerItem,
+  defaultViewport,
+} from "@/lib/scroll-animations";
 
 interface ListItem {
   title: string;
@@ -14,15 +19,15 @@ interface MinimalListSectionProps {
   items: ListItem[];
 }
 
-export function MinimalListSection({ 
-  title, 
-  description, 
-  items 
+export function MinimalListSection({
+  title,
+  description,
+  items,
 }: MinimalListSectionProps) {
   return (
     <section className="py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="mb-16"
           variants={fadeInUp}
           initial="hidden"
@@ -30,12 +35,10 @@ export function MinimalListSection({
           viewport={defaultViewport}
         >
           <h2 className="text-4xl font-light text-black mb-6">{title}</h2>
-          <p className="text-lg text-gray-600 max-w-3xl">
-            {description}
-          </p>
+          <p className="text-lg text-gray-600 max-w-3xl">{description}</p>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="space-y-12"
           variants={staggerContainer}
           initial="hidden"
@@ -51,7 +54,7 @@ export function MinimalListSection({
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-sm text-gray-400 font-mono">
-                    {String(index + 1).padStart(2, '0')}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-2xl font-medium text-black">
                     {item.title}

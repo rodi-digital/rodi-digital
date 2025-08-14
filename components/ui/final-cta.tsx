@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 import { fadeInUp, defaultViewport } from "@/lib/scroll-animations";
 import { Button } from "@/components/ui/button";
 

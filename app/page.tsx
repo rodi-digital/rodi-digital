@@ -1,27 +1,43 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { fadeInUp, defaultViewport } from "@/lib/scroll-animations";
 import { HomeHero } from "@/components/ui/home-hero";
-import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { FinalCTA } from "@/components/ui/final-cta";
+import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
 
 const services = [
   {
-    title: "Mobile Apps",
-    description:
-      "Validate your app idea quickly and cost-effectively by building and launching a mobile app with speed. We specialize in building intuitive and high-performing mobile applications for rapid idea validation and full-scale deployment.",
-  },
-  {
     title: "Web Development",
     description:
-      "We build fast, responsive websites that look great and perform even better. Whether you need a custom web application, a CMS-powered platform, or a pixel-perfect Webflow site, we've got you covered.",
+      "Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs.",
+    items: [
+      "SaaS Platform Development - Scalable and secure Software-as-a-Service platforms",
+      "Webflow Site Development - Beautiful, responsive sites with easy management",
+      "Large-Scale CMS-Powered Websites - Enterprise solutions with content management",
+      "Custom Web Applications - Bespoke solutions for unique business challenges",
+    ],
   },
   {
-    title: "AI-Powered Applications",
+    title: "Mobile Development",
     description:
-      "Unlock the power of future-forward technology: improve search functionality, personalize customer interactions, and gain valuable insights for strategic decision-making.",
+      "Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development.",
+    items: [
+      "Cross-Platform Apps - iOS and Android development with React Native & Expo",
+      "Data-Driven Integration - Built-in analytics and tracking from day one",
+      "Rapid Prototyping - Fast time to market for app idea validation",
+      "Performance Optimization - Native performance with JavaScript flexibility",
+    ],
+  },
+  {
+    title: "AI-Enabled Applications",
+    description:
+      "Harness the transformative power of Large Language Models to unlock new possibilities, intelligent automation, and advanced insights for your business.",
+    items: [
+      "Custom LLM Integration - Seamlessly integrate state-of-the-art language models",
+      "Natural Language Processing - Text analysis, chatbots, and language understanding",
+      "Intelligent Automation - Complex task automation with reasoning capabilities",
+      "Dynamic Content Generation - Contextually relevant content creation",
+      "Personalization at Scale - Highly personalized user experiences",
+      "Advanced Data Insights - Pattern recognition and decision support systems",
+    ],
   },
 ];
 
@@ -37,34 +53,25 @@ export default function HomePage() {
         ctaHref="/contact"
       />
 
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={defaultViewport}
-        transition={{ delay: 1.5 }}
-      >
-        <MinimalCardGrid
-          title="What We Build"
-          description="From mobile apps to AI-powered platforms, we create digital solutions that drive real business value."
-          cards={services}
-          columns="3"
-        />
+      <DetailedServicesGrid
+        title="Our Services"
+        subtitle="Building Digital Solutions"
+        services={services}
+      />
 
-        <TwoColumnSection
-          title="Data-Driven Development"
-          content="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback."
-          primaryCTA={{ text: "Our Approach", href: "/approach" }}
-          secondaryCTA={{ text: "Case Studies", href: "/cases" }}
-        />
+      <TwoColumnSection
+        title="Data-Driven Development"
+        content="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback."
+        primaryCTA={{ text: "Our Approach", href: "/approach" }}
+        secondaryCTA={{ text: "Case Studies", href: "/cases" }}
+      />
 
-        <FinalCTA
-          title="Ready to Build Something Amazing?"
-          subtitle="Let's collaborate to create a digital product that not only meets your needs but exceeds your expectations and drives measurable business growth."
-          primaryCTA={{ text: "Start Your Project", href: "/contact" }}
-          secondaryCTA={{ text: "View Our Services", href: "/services" }}
-        />
-      </motion.div>
+      <FinalCTA
+        title="Ready to Build Something Amazing?"
+        subtitle="Let's collaborate to create a digital product that not only meets your needs but exceeds your expectations and drives measurable business growth."
+        primaryCTA={{ text: "Start Your Project", href: "/contact" }}
+        secondaryCTA={{ text: "View Our Services", href: "/services" }}
+      />
     </div>
   );
 }
