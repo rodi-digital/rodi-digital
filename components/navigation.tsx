@@ -1,16 +1,49 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as motion from "motion/react-client";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { glassBackground } from "./ui/glass-background";
 import { fadeIn } from "@/lib/scroll-animations";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleMouseEnter = (itemName: string) => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    setActiveDropdown(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150); // Small delay to allow moving to dropdown
+    setHoverTimeout(timeout);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+  };
 
   const navigation = [
     {
@@ -45,103 +78,209 @@ export function Navigation() {
   ];
 
   return (
-    <div className="w-full flex justify-center pt-4">
-      <motion.nav
-        className={cn(
-          "fixed z-50 rounded-full border border-white/50 shadow-lg ",
-          "max-w-7xl w-full mx-auto p-2",
-          glassBackground
-        )}
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        custom={1}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+    <motion.nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-white/40 backdrop-blur-md border-b border-white/20 shadow-lg py-2"
+          : "bg-transparent backdrop-blur-sm py-12"
+      )}
+      variants={fadeIn}
+      initial="hidden"
+      animate="visible"
+      custom={0.2}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            custom={1}
+          >
+            <Link href="/" className="flex items-center">
               <Image
                 src="/rodi-digital-logo.svg"
-                width={100}
-                height={50}
+                width={scrolled ? 80 : 100}
+                height={scrolled ? 40 : 50}
                 alt="Logo of Rodi Digital"
+                className="transition-all duration-300"
               />
             </Link>
+          </motion.div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    href={item.href}
-                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navigation.map((item, index) => (
+              <motion.div
+                key={item.name}
+                className="relative"
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+                custom={0.4 + index * 0.1}
+                onMouseEnter={() => handleMouseEnter(item.name)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "flex items-center space-x-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
+                    "hover:bg-gray-100/50 hover:text-gray-900",
+                    scrolled ? "text-gray-700" : "text-gray-600"
+                  )}
+                >
+                  <span>{item.name}</span>
                   {item.children && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <div className="py-1">
-                        {item.children.map((child) => (
+                    <motion.div
+                      animate={{
+                        rotate: activeDropdown === item.name ? 180 : 0,
+                      }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ChevronDown size={14} />
+                    </motion.div>
+                  )}
+                </Link>
+
+                {/* Animated Dropdown */}
+                {item.children && (
+                  <motion.div
+                    className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-gray-100/50 overflow-hidden"
+                    onMouseEnter={handleDropdownMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{
+                      opacity: activeDropdown === item.name ? 1 : 0,
+                      y: activeDropdown === item.name ? 0 : -10,
+                      scale: activeDropdown === item.name ? 1 : 0.95,
+                    }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    style={{
+                      pointerEvents:
+                        activeDropdown === item.name ? "auto" : "none",
+                    }}
+                  >
+                    <div className="p-2">
+                      {item.children.map((child, childIndex) => (
+                        <motion.div
+                          key={child.name}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{
+                            opacity: activeDropdown === item.name ? 1 : 0,
+                            x: activeDropdown === item.name ? 0 : -10,
+                          }}
+                          transition={{
+                            duration: 0.2,
+                            delay:
+                              activeDropdown === item.name
+                                ? childIndex * 0.05
+                                : 0,
+                          }}
+                        >
                           <Link
-                            key={child.name}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-xl transition-colors duration-150"
                           >
                             {child.name}
                           </Link>
-                        ))}
-                      </div>
+                        </motion.div>
+                      ))}
                     </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-gray-900"
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
           </div>
 
-          {/* Mobile Navigation */}
-          {isOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.children && (
-                      <div className="pl-4">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Mobile menu button */}
+          <motion.div
+            className="md:hidden"
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            custom={0.5}
+          >
+            <motion.button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-full hover:bg-gray-100/50 transition-colors"
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.div
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.div>
+            </motion.button>
+          </motion.div>
         </div>
-      </motion.nav>
-    </div>
+
+        {/* Mobile Navigation */}
+        <motion.div
+          className="md:hidden overflow-hidden"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{
+            height: isOpen ? "auto" : 0,
+            opacity: isOpen ? 1 : 0,
+          }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          <div className="px-2 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md border-t border-gray-100/50 mt-4 rounded-b-2xl">
+            {navigation.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{
+                  opacity: isOpen ? 1 : 0,
+                  x: isOpen ? 0 : -20,
+                }}
+                transition={{
+                  duration: 0.3,
+                  delay: isOpen ? index * 0.1 : 0,
+                }}
+              >
+                <Link
+                  href={item.href}
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+                {item.children && (
+                  <div className="mt-2 ml-4 space-y-1">
+                    {item.children.map((child, childIndex) => (
+                      <motion.div
+                        key={child.name}
+                        initial={{ opacity: 0, x: -15 }}
+                        animate={{
+                          opacity: isOpen ? 1 : 0,
+                          x: isOpen ? 0 : -15,
+                        }}
+                        transition={{
+                          duration: 0.2,
+                          delay: isOpen
+                            ? index * 0.1 + childIndex * 0.05 + 0.1
+                            : 0,
+                        }}
+                      >
+                        <Link
+                          href={child.href}
+                          className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {child.name}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </motion.nav>
   );
 }
