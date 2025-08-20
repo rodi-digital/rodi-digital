@@ -8,11 +8,13 @@ import {
   fadeInUp,
 } from "@/lib/scroll-animations";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface Service {
   title: string;
   description: string;
   href: string;
+  image?: string;
 }
 
 interface ServiceGridProps {
@@ -24,7 +26,7 @@ export function ServiceGrid({ services }: ServiceGridProps) {
     <section className="py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          className="space-y-24"
+          className="space-y-12"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -66,7 +68,20 @@ export function ServiceGrid({ services }: ServiceGridProps) {
                 viewport={defaultViewport}
                 transition={{ delay: 0.2 }}
               >
-                <div className="aspect-square bg-gray-50 rounded-2xl border border-gray-100"></div>
+                <div className="aspect-square rounded-2xl overflow-hidden hover:bg-gradient-to-br items-center justify-center flex transition-all duration-300">
+                  {service.image && (
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={300}
+                        height={300}
+                      />
+                    </motion.div>
+                  )}
+                </div>
               </motion.div>
             </motion.div>
           ))}
