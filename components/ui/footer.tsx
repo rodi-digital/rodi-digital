@@ -13,20 +13,16 @@ export function Footer() {
             height={50}
             alt="Logo of Rodi Digital"
           />
-          <div className="text-gray-700 text-sm mb-4">
-            Stationsweg 19
+          <div className="text-gray-700 text-sm">
+            Stationsweg 19, 5211 TV 's-Hertogenbosch, The Netherlands
             <br />
-            5211 TV 's-Hertogenbosch
-            <br />
-            The Netherlands
-          </div>
-          <div className="text-gray-700 text-sm mb-4">
             hello@rodi-digital.com
+            <br />
+            VAT: NL867887370B01
           </div>
-          <div className="text-gray-700 text-sm">NL8678 8737 0B01</div>
         </div>
         <Button href="#contact" className="my-12  md:mt-0">
-          Get in touch
+          Let's Talk
         </Button>
       </div>
     </footer>

@@ -5,23 +5,23 @@ import { image } from "framer-motion/client";
 
 const services = [
   {
-    title: "AI-Enabled Applications",
+    title: "AI-Powered Applications",
     description:
-      "Harness the transformative power of Large Language Models (LLMs) to unlock new possibilities, intelligent automation, and advanced insights for your business.",
+      "Unlock the potential of AI to improve search functionality, personalize customer interactions, and gain valuable insights for strategic decisions.",
     href: "/services/ai-enabled-applications",
     image: "/images/ai.png",
   },
   {
     title: "Mobile Development",
     description:
-      "Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development.",
+      "We specialize in intuitive, high-performance mobile apps – whether you need a simple proof-of-concept or a polished product ready for full-scale launch.",
     href: "/services/mobile",
     image: "/images/stores.png",
   },
   {
     title: "Web Development",
     description:
-      "Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs.",
+      "We build fast, responsive websites that not only look great but also run flawlessly.",
     href: "/services/web",
     image: "/images/web.png",
   },
@@ -32,7 +32,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Our Services"
-        subtitle="We specialize in cutting-edge digital solutions designed to drive innovation, enhance user experiences, and deliver measurable business value."
+        subtitle="We specialize in creating digital solutions that drive innovation, enhance user experiences, and deliver measurable business value."
       />
 
       <ServiceGrid services={services} />

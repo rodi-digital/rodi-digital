@@ -16,9 +16,9 @@ const expertiseCards = [
       "For businesses seeking beautiful, responsive, and easily manageable websites with basic functionality, we excel in building custom Webflow sites. We leverage Webflow's powerful design capabilities to create visually appealing and user-friendly online presences.",
   },
   {
-    title: "Large-Scale CMS-Powered Websites",
+    title: "Large-Scale Content Management Platforms",
     description:
-      "We have extensive experience in developing large company websites powered by Content Management Systems (CMS). This ensures that your team can easily manage and update content, providing flexibility and control over your digital assets while maintaining a consistent brand experience.",
+      "We have extensive experience in developing large company websites powered by Content Management Systems like WordPress. This ensures that your team can easily manage and update content, providing flexibility and control over your digital assets while maintaining a consistent brand experience.",
   },
   {
     title: "Custom Web Applications",
@@ -65,13 +65,13 @@ export default function WebPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Web Development"
-        subtitle="Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs."
+        subtitle="We build fast, responsive websites that not only look great but also run flawlessly."
       />
       
       <TwoColumnSection
         title="Digital Experiences That Drive Growth"
         content="At Rodi Digital, we craft dynamic and high-performing web solutions tailored to your specific business needs. From sophisticated SaaS platforms to visually stunning marketing sites, we deliver web experiences that drive engagement and growth."
-        primaryCTA={{ text: "Start Your Web Project", href: "/contact" }}
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
       />
       
@@ -89,9 +89,9 @@ export default function WebPage() {
       />
       
       <FinalCTA
-        title="Ready to Build Your Web Presence?"
-        subtitle="Partner with Rodi Digital to create a powerful online presence that aligns with your strategic goals and delivers measurable results."
-        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        title="Ready to turn your idea into reality?"
+        subtitle="We'd love to help you create a powerful online presence that aligns with your strategic goals and delivers measurable results."
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>

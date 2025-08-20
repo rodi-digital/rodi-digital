@@ -59,7 +59,7 @@ export function Navigation() {
       href: "/services",
       children: [
         {
-          name: "AI-Enabled Applications",
+          name: "AI-Powered Applications",
           href: "/services/ai-enabled-applications",
         },
         { name: "Mobile", href: "/services/mobile" },
@@ -83,7 +83,7 @@ export function Navigation() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-white/40 backdrop-blur-md border-b border-white/20 shadow-lg py-2"
-          : "bg-transparent backdrop-blur-sm py-12"
+          : "backdrop-blur-sm py-24"
       )}
       variants={fadeIn}
       initial="hidden"
@@ -102,8 +102,8 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/rodi-digital-logo.svg"
-                width={scrolled ? 80 : 100}
-                height={scrolled ? 40 : 50}
+                width={scrolled ? 80 : 130}
+                height={scrolled ? 40 : 80}
                 alt="Logo of Rodi Digital"
                 className="transition-all duration-300"
               />

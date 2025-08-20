@@ -4,9 +4,9 @@ import { FinalCTA } from "@/components/ui/final-cta";
 
 const approaches = [
   {
-    title: "Analytics at the core",
+    title: "Analytics at the Core",
     description:
-      "We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making.",
+      "We believe analytics should go beyond dashboards – it should spark conversations. We embed analytics at every step of product development, turning assumptions into data-backed insights and features into tangible outcomes.",
     href: "/approach/analytics",
     image: "/images/analytics.png",
   },
@@ -24,7 +24,7 @@ export default function ApproachPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="How we work"
-        subtitle="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights."
+        subtitle="We create digital products that stand the test of time, using data and analytics to drive your growth through close collaboration."
       />
 
       <ServiceGrid services={approaches} />

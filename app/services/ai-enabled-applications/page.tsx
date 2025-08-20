@@ -55,18 +55,18 @@ const llmBackedApplicationsCards = [
   },
 ];
 
-export default function AIEnabledApplicationsPage() {
+export default function AIPoweredApplicationsPage() {
   return (
     <div className="min-h-screen">
       <ServiceHero
-        title="AI-Enabled Applications"
-        subtitle="Harness the transformative power of Large Language Models to unlock new possibilities, intelligent automation, and advanced insights for your business."
+        title="AI-Powered Applications"
+        subtitle="Unlock the potential of AI to improve search functionality, personalize customer interactions, and gain valuable insights for strategic decisions."
       />
       
       <TwoColumnSection
         title="Redefining What's Possible"
-        content="At Rodi Digital, we harness the transformative power of Artificial Intelligence to build applications that redefine what's possible. Our expertise lies in developing AI-enabled applications, particularly those leveraging Large Language Models (LLMs) on the backend, to unlock functionalities and insights far beyond traditional systems."
-        primaryCTA={{ text: "Start Your AI Project", href: "/contact" }}
+        content="We harness the power of Artificial Intelligence to build applications that unlock new possibilities. Our expertise lies in developing AI-powered applications, particularly those leveraging Large Language Models (LLMs), to improve functionality and provide valuable insights for your business."
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
       />
       
@@ -84,9 +84,9 @@ export default function AIEnabledApplicationsPage() {
       />
       
       <FinalCTA
-        title="Ready to Transform Your Business?"
-        subtitle="Partner with Rodi Digital to build intelligent, high-performing AI-enabled applications that drive innovation and deliver significant business value."
-        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        title="Ready to turn your idea into reality?"
+        subtitle="We'd love to help you build intelligent, high-performing AI-powered applications that drive innovation and deliver significant business value."
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>

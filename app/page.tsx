@@ -5,38 +5,37 @@ import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
 
 const services = [
   {
-    title: "Web Development",
+    title: "AI-Powered Applications",
     description:
-      "Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs.",
+      "Stop spending hours on repetitive tasks and struggling with poor search results. Let AI handle the heavy lifting while delivering personalized experiences your customers actually want.",
     items: [
-      "SaaS Platform Development - Scalable and secure Software-as-a-Service platforms",
-      "Webflow Site Development - Beautiful, responsive sites with easy management",
-      "Large-Scale CMS-Powered Websites - Enterprise solutions with content management",
-      "Custom Web Applications - Bespoke solutions for unique business challenges",
+      "Smart Document Processing - Stop manually extracting data from invoices, contracts, and forms",
+      "Intelligent Customer Support - End the cycle of repetitive support tickets draining your team",
+      "Content Generation at Scale - Eliminate the bottleneck of creating personalized marketing content",
+      "Advanced Search & Discovery - No more users leaving because they can't find what they need",
     ],
   },
   {
     title: "Mobile Development",
     description:
-      "Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development.",
+      "Turn your app idea into reality without breaking the bank or waiting months. Get to market fast and learn what your users actually want.",
     items: [
-      "Cross-Platform Apps - iOS and Android development with React Native & Expo",
-      "Data-Driven Integration - Built-in analytics and tracking from day one",
-      "Rapid Prototyping - Fast time to market for app idea validation",
-      "Performance Optimization - Native performance with JavaScript flexibility",
+      "Cross-Platform Apps - Stop choosing between iOS and Android, reach everyone with one codebase",
+      "MVP Development - Avoid spending months building features nobody actually wants",
+      "Real-Time Analytics - End the guesswork about what users do in your app",
+      "Push Notifications Done Right - Stop losing users who forget about your app",
     ],
   },
   {
-    title: "AI-Enabled Applications",
+    title: "Web Development",
     description:
-      "Harness the transformative power of Large Language Models to unlock new possibilities, intelligent automation, and advanced insights for your business.",
+      "Stop losing customers to slow, confusing websites. Get a web presence that actually converts visitors into paying customers.",
     items: [
-      "Custom LLM Integration - Seamlessly integrate state-of-the-art language models",
-      "Natural Language Processing - Text analysis, chatbots, and language understanding",
-      "Intelligent Automation - Complex task automation with reasoning capabilities",
-      "Dynamic Content Generation - Contextually relevant content creation",
-      "Personalization at Scale - Highly personalized user experiences",
-      "Advanced Data Insights - Pattern recognition and decision support systems",
+      "SaaS Development - Eliminate the headache of building scalable subscription businesses",
+      "Landing Pages - Stop watching potential customers bounce without converting",
+      "E-commerce Solutions - End lost sales from complicated checkout processes",
+      "Custom Business Tools - Replace inefficient spreadsheets and manual processes",
+      "Content Management Systems - Stop paying developers for simple website updates",
     ],
   },
 ];
@@ -45,11 +44,11 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <HomeHero
-        title="Apps, AI & Websites Built With You"
+        title="Apps, AI, and Websites Built with You"
         subtitle={[
-          "We create digital products driven by analytics and built through close collaboration.",
+          "We create digital products that stand the test of time, using data and analytics to drive your growth.",
         ]}
-        ctaText="Get in touch"
+        ctaText="Let's Talk"
         ctaHref="/contact"
       />
 

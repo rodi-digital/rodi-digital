@@ -45,13 +45,13 @@ export default function MobilePage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Mobile Development"
-        subtitle="Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development."
+        subtitle="We specialize in intuitive, high-performance mobile apps – whether you need a simple proof-of-concept or a polished product ready for full-scale launch."
       />
       
       <TwoColumnSection
         title="Built for Growth & Speed"
         content="At Rodi Digital, we specialize in building high-performing mobile applications that are not only fast to market but also designed for continuous iteration and growth. We leverage cutting-edge cross-platform technologies to deliver robust and engaging mobile experiences."
-        primaryCTA={{ text: "Start Your Mobile Project", href: "/contact" }}
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
       />
       
@@ -69,9 +69,9 @@ export default function MobilePage() {
       />
       
       <FinalCTA
-        title="Ready to Build Your Mobile App?"
-        subtitle="Whether you're looking to validate a new concept or build a full-scale mobile application, Rodi Digital provides the expertise and efficiency to bring your vision to life."
-        primaryCTA={{ text: "Get Started Today", href: "/contact" }}
+        title="Ready to turn your idea into reality?"
+        subtitle="Whether you're looking to validate a new concept or build a full-scale mobile application, we'd love to help bring your vision to life."
+        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>
