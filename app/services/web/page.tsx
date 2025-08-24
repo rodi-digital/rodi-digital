@@ -1,5 +1,4 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
@@ -66,11 +65,6 @@ export default function WebPage() {
       <ServiceHero
         title="Web Development"
         subtitle="A website that only looks good is not enough. If it loads slowly, feels clunky, or makes it hard to update content, you lose customers and waste opportunities. We design and build web experiences that are fast, flexible, and focused on growth."
-      />
-
-      <CenteredContentSection
-        content="Your site should do more than look nice — it should move the needle for your business. Fast, responsive, and built with your goals in mind."
-        cta={{ text: "Let's Build Something Together", href: "/contact" }}
       />
 
       <MinimalCardGrid

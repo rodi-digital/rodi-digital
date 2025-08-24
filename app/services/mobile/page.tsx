@@ -1,5 +1,4 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
@@ -57,29 +56,27 @@ export default function MobilePage() {
         title="Mobile Development"
         subtitle="Building an app should not take forever or blow your budget. You want something people can actually use, on iOS and Android, without guessing which features matter. We help you launch fast, learn from real users, and improve with confidence."
       />
-      
-      <CenteredContentSection
-        content="Great apps are simple to ship and easy to improve. Cross-platform from day one, with built-in analytics that guide every decision."
-        cta={{ text: "Let's Build Something Together", href: "/contact" }}
-      />
-      
+
       <MinimalCardGrid
         title="Our Mobile Development Strengths"
         description="You need momentum, not meetings. Here is how we keep your app moving forward."
         cards={strengthsCards}
         columns="2"
       />
-      
+
       <MinimalListSection
         title="Technologies We Use"
         description="Proven tools that help you move fast and stay flexible."
         items={technologiesCards}
       />
-      
+
       <FinalCTA
         title="Ready to turn your idea into reality?"
         subtitle="Whether you want to validate a new concept or scale a mature product, we will help you launch fast and improve with data."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
+        primaryCTA={{
+          text: "Let's Build Something Together",
+          href: "/contact",
+        }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>

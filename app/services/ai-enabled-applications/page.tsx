@@ -1,5 +1,4 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
@@ -71,14 +70,6 @@ export default function AIPoweredApplicationsPage() {
       <ServiceHero
         title="AI-Powered Applications"
         subtitle="Your team is buried in repetitive tasks, customers get stuck with unhelpful chatbots, and finding answers in endless documents takes forever. We build AI-powered applications that actually solve these problems, freeing your people to focus on what matters most."
-      />
-
-      <CenteredContentSection
-        content="AI should not feel like a gimmick. We build practical applications that make work smoother, decisions clearer, and experiences more human."
-        cta={{
-          text: "Let's Build Something Together",
-          href: "/contact",
-        }}
       />
 
       <MinimalCardGrid
