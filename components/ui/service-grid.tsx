@@ -68,14 +68,17 @@ export function ServiceGrid({ services }: ServiceGridProps) {
                 viewport={defaultViewport}
                 transition={{ delay: 0.2 }}
               >
-                <div className="rounded-2xl overflow-hidden hover:bg-gradient-to-br items-center justify-center flex transition-all duration-300">
+                <div className="overflow-hidden items-center justify-center flex transition-all duration-300 relative px-12">
                   {service.image && (
-                    <motion.div whileHover={{ scale: 1.05 }}>
+                    <motion.div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 pointer-events-none z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-white/10 pointer-events-none z-10"></div>
                       <Image
+                        className=" object-cover w-full rounded-2xl "
                         src={service.image}
                         alt={service.title}
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={200}
                       />
                     </motion.div>
                   )}

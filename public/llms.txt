@@ -2,7 +2,17 @@
 
 > Digital agency specializing in AI-enabled applications, mobile development, and web solutions. We create digital products driven by analytics and built through close collaboration with our clients.
 
+## About Us
+
 Rodi Digital is a modern digital agency that combines cutting-edge technology with data-driven development practices. We specialize in building mobile apps, web applications, and AI-powered solutions that deliver measurable business value through collaborative partnerships.
+
+## Technologies & Expertise
+
+- **AI & Machine Learning**: Large Language Models (LLMs), intelligent automation, and advanced AI insights
+- **Mobile Development**: React Native and Expo for cross-platform mobile solutions
+- **Web Development**: Modern web technologies for fast, responsive applications
+- **Analytics**: Data-driven insights embedded throughout the development process
+- **Collaboration**: Close partnership approach with clients throughout development
 
 ## Services
 
