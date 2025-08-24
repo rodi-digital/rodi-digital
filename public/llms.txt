@@ -1,15 +1,15 @@
 # Rodi Digital
 
-> Digital agency specializing in AI-enabled applications, mobile development, and web solutions. We create digital products driven by analytics and built through close collaboration with our clients.
+> Digital agency specializing in AI-enabled applications, mobile development, and web platforms. We create digital products driven by analytics and built through close collaboration with our clients.
 
 ## About Us
 
-Rodi Digital is a modern digital agency that combines cutting-edge technology with data-driven development practices. We specialize in building mobile apps, web applications, and AI-powered solutions that deliver measurable business value through collaborative partnerships.
+Rodi Digital is a modern digital agency that combines cutting-edge technology with data-driven development practices. We specialize in building mobile apps, web applications, and AI-powered platforms that deliver measurable business value through collaborative partnerships.
 
 ## Technologies & Expertise
 
 - **AI & Machine Learning**: Large Language Models (LLMs), intelligent automation, and advanced AI insights
-- **Mobile Development**: React Native and Expo for cross-platform mobile solutions
+- **Mobile Development**: React Native and Expo for cross-platform mobile applications
 - **Web Development**: Modern web technologies for fast, responsive applications
 - **Analytics**: Data-driven insights embedded throughout the development process
 - **Collaboration**: Close partnership approach with clients throughout development
@@ -17,8 +17,8 @@ Rodi Digital is a modern digital agency that combines cutting-edge technology wi
 ## Services
 
 - [AI-Enabled Applications](https://rodi-digital.vercel.app/services/ai-enabled-applications): Harness the transformative power of Large Language Models (LLMs) to unlock new possibilities, intelligent automation, and advanced insights for your business.
-- [Mobile Development](https://rodi-digital.vercel.app/services/mobile): Deliver fast, data-driven, and cost-effective mobile solutions with our expertise in React Native and Expo for seamless cross-platform development.
-- [Web Development](https://rodi-digital.vercel.app/services/web): Crafting fast, responsive, and visually stunning web solutions precisely tailored to your unique business needs.
+- [Mobile Development](https://rodi-digital.vercel.app/services/mobile): Deliver fast, data-driven, and cost-effective mobile applications with our expertise in React Native and Expo for seamless cross-platform development.
+- [Web Development](https://rodi-digital.vercel.app/services/web): Crafting fast, responsive, and visually stunning web platforms precisely tailored to your unique business needs.
 - [All Services](https://rodi-digital.vercel.app/services): Complete overview of our digital development services and capabilities.
 
 ## Approach

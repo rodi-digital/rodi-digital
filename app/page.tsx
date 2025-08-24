@@ -53,7 +53,7 @@ export default function HomePage() {
 
       <DetailedServicesGrid
         title="Our Services"
-        subtitle="Building Digital Solutions"
+        subtitle="What We Build"
         services={services}
       />
 

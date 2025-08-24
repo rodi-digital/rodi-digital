@@ -34,7 +34,7 @@ export function Navigation() {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setActiveDropdown(null);
-    }, 150); // Small delay to allow moving to dropdown
+    }, 150);
     setHoverTimeout(timeout);
   };
 
@@ -82,8 +82,8 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/40 backdrop-blur-md border-b border-white/20 shadow-lg py-2"
-          : "backdrop-blur-sm py-24"
+          ? "bg-white/40 backdrop-blur-md border-white/20 py-2"
+          : "backdrop-blur-sm py-12"
       )}
       variants={fadeIn}
       initial="hidden"
@@ -102,7 +102,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/rodi-digital-logo.svg"
-                width={scrolled ? 80 : 130}
+                width={scrolled ? 80 : 150}
                 height={scrolled ? 40 : 80}
                 alt="Logo of Rodi Digital"
                 className="transition-all duration-300"
@@ -200,7 +200,7 @@ export function Navigation() {
             variants={fadeIn}
             initial="hidden"
             animate="visible"
-            custom={0.5}
+            custom={1}
           >
             <motion.button
               onClick={() => setIsOpen(!isOpen)}

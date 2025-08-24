@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Rodi Digital - Apps, AI & Websites built with you",
   description:
-    "Digital partner specializing in AI-enabled applications, mobile development, and web solutions. Building the future together.",
+    "Digital partner specializing in AI-enabled applications, mobile development, and web platforms. Building the future together.",
   generator: "v0.dev",
   icons: {
     icon: "/favicon.svg",

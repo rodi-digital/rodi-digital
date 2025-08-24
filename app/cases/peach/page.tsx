@@ -60,7 +60,7 @@ export default function PeachCasePage() {
         content:
           "Built with modern mobile development frameworks (e.g., React Native, Expo) and robust backend systems for seamless content delivery, personalization, and subscription management.",
       }}
-      ctaTitle="Ready to Build Your Health Solution?"
+      ctaTitle="Ready to Build Your Health Platform?"
       ctaSubtitle="Let's create a digital health platform that empowers users with personalized, expert-backed information."
       projectLinks={[
         {

@@ -45,7 +45,7 @@ export default function TraiCasePage() {
       solution="Trai leverages AI to generate personalized, adaptive training plans for triathletes, taking into account their unique requirements and performance data."
       keyFeatures={keyFeatures}
       impact={impactFeatures}
-      ctaTitle="Ready to Build Your AI Solution?"
+      ctaTitle="Ready to Build Your AI Platform?"
       ctaSubtitle="Let's create an intelligent, AI-powered platform that adapts and evolves with your users' needs."
     />
   );

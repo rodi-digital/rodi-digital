@@ -19,14 +19,14 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
   const secondLine = words.slice(midpoint).join(" ");
 
   return (
-    <section className="pt-32 pb-24 min-h-[100vh] flex items-center">
-      <div className="max-w-7xl mx-auto px-6 flex-grow">
+    <section className="pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-24 min-h-[100vh] flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex-grow">
         <div className="max-w-5xl">
           <motion.h1
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-6xl lg:text-8xl font-light tracking-tight text-black mb-12 leading-[0.85]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light tracking-tight text-black mb-8 sm:mb-12 leading-[0.9] sm:leading-[0.85]"
           >
             {firstLine}
             <br />
@@ -38,10 +38,10 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
             animate="visible"
             variants={fadeIn}
             custom={1}
-            className="max-w-3xl space-y-6"
+            className="max-w-3xl space-y-4 sm:space-y-6"
           >
             {subtitle.map((paragraph, index) => (
-              <p key={index} className="text-3xl text-gray-600">
+              <p key={index} className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 leading-relaxed">
                 {paragraph}
               </p>
             ))}
@@ -52,7 +52,7 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
             animate="visible"
             variants={fadeIn}
             custom={1}
-            className="mt-12"
+            className="mt-8 sm:mt-12"
           >
             <Button href={ctaHref} className="text-lg px-8 py-4">
               {ctaText}

@@ -81,7 +81,7 @@ export default function AIPoweredApplicationsPage() {
 
       <MinimalListSection
         title="Our Expertise"
-        description="Most teams know AI could help but don't know where to start. We build custom solutions around your business, not the other way around. Every tool is designed to fit naturally into your workflows and deliver measurable results."
+        description="Most teams know AI could help but don't know where to start. We build custom applications around your business, not the other way around. Every tool is designed to fit naturally into your workflows and deliver measurable results."
         items={expertiseCards}
       />
 

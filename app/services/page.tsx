@@ -32,7 +32,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Our Services"
-        subtitle="We specialize in creating digital solutions that drive innovation, enhance user experiences, and deliver measurable business value."
+        subtitle="We specialize in building AI applications, mobile apps, and websites that drive innovation, enhance user experiences, and deliver measurable business value."
       />
 
       <ServiceGrid services={services} />
