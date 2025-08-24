@@ -1,57 +1,67 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { TwoColumnSection } from "@/components/ui/two-column-section";
+import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 
 const expertiseCards = [
   {
-    title: "Custom LLM Integration",
+    title: "Custom LLM integration",
     description:
-      "Seamlessly integrating state-of-the-art LLMs into your existing or new applications.",
+      "We embed the latest language models directly into your systems so they feel seamless. This removes clunky workarounds and gives your team and customers a smoother experience.",
   },
   {
-    title: "Natural Language Processing (NLP)",
+    title: "Natural language processing",
     description:
-      "Building applications that understand, interpret, and generate human language for tasks like sentiment analysis, text summarization, and chatbots.",
+      "We help your applications understand text, summarize information, and detect sentiment. That means quicker decisions and less manual effort spent sifting through content.",
   },
   {
-    title: "AI-Powered Automation Workflows",
+    title: "AI-powered automation workflows",
     description:
-      "Designing and implementing intelligent workflows that streamline operations and improve efficiency.",
+      "From handling tickets to analyzing documents, we automate repetitive tasks with intelligence built in. Your team saves time and can focus on high-value work.",
+  },
+  {
+    title: "AI-powered search",
+    description:
+      "No more endless digging through documents. Our AI search understands context and delivers the right answers instantly.",
+  },
+  {
+    title: "Customer support intelligence",
+    description:
+      "We streamline support by handling simple cases automatically and giving agents better context for complex ones. This speeds up resolutions and keeps customers happy.",
   },
 ];
 
 const llmBackedApplicationsCards = [
   {
-    title: "Intelligent Automation",
+    title: "Conversational agents",
     description:
-      "Automate complex tasks that require understanding, reasoning, and natural language processing, such as customer support, content generation, data analysis, and personalized recommendations.",
+      "Finally, chatbots that actually understand and help your customers.",
   },
   {
-    title: "Enhanced User Interaction",
+    title: "Smart automations",
     description:
-      "Create highly intuitive and responsive interfaces that understand and respond to natural language queries, offering a more human-like interaction experience.",
+      "Free your team from repetitive manual processes so they can focus on higher-value work.",
   },
   {
-    title: "Dynamic Content Generation",
+    title: "AI-powered search",
     description:
-      "Generate diverse and contextually relevant content on the fly, from marketing copy and reports to personalized user experiences.",
+      "No more endless document digging. Find the right answers instantly.",
   },
   {
-    title: "Advanced Data Insights",
+    title: "Customer support intelligence",
     description:
-      "Process and derive insights from unstructured data, identifying patterns, trends, and anomalies that would be impossible with conventional methods.",
+      "Resolve issues faster and give your support team time back for what really matters.",
   },
   {
-    title: "Personalization at Scale",
+    title: "Personalization at scale",
     description:
-      "Deliver highly personalized experiences to individual users, adapting content, recommendations, and interactions based on their unique preferences and behaviors.",
+      "Adapt content and recommendations to each individual user automatically.",
   },
   {
-    title: "Problem Solving & Decision Support",
+    title: "Actionable insights",
     description:
-      "Develop applications that can analyze complex scenarios, provide informed recommendations, and assist in critical decision-making processes.",
+      "Spot patterns, trends, and growth opportunities hidden in your data.",
   },
 ];
 
@@ -60,33 +70,37 @@ export default function AIPoweredApplicationsPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="AI-Powered Applications"
-        subtitle="Unlock the potential of AI to improve search functionality, personalize customer interactions, and gain valuable insights for strategic decisions."
+        subtitle="Your team is buried in repetitive tasks, customers get stuck with unhelpful chatbots, and finding answers in endless documents takes forever. We build AI-powered applications that actually solve these problems, freeing your people to focus on what matters most."
       />
-      
-      <TwoColumnSection
-        title="Redefining What's Possible"
-        content="We harness the power of Artificial Intelligence to build applications that unlock new possibilities. Our expertise lies in developing AI-powered applications, particularly those leveraging Large Language Models (LLMs), to improve functionality and provide valuable insights for your business."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
-        secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
+
+      <CenteredContentSection
+        content="AI should not feel like a gimmick. We build practical applications that make work smoother, decisions clearer, and experiences more human."
+        cta={{
+          text: "Let's Build Something Together",
+          href: "/contact",
+        }}
       />
-      
+
       <MinimalCardGrid
-        title="The Power of LLM-Backed Applications"
-        description="Integrating LLMs into your applications provides a paradigm shift in functionality and user experience. This approach enables:"
+        title="The Power of AI in Action"
+        description="Here's how AI transforms everyday work into something smarter and easier:"
         cards={llmBackedApplicationsCards}
         columns="3"
       />
-      
+
       <MinimalListSection
         title="Our Expertise"
-        description="We specialize in developing custom AI solutions tailored to your specific business needs, including:"
+        description="Most teams know AI could help but don't know where to start. We build custom solutions around your business, not the other way around. Every tool is designed to fit naturally into your workflows and deliver measurable results."
         items={expertiseCards}
       />
-      
+
       <FinalCTA
         title="Ready to turn your idea into reality?"
-        subtitle="We'd love to help you build intelligent, high-performing AI-powered applications that drive innovation and deliver significant business value."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
+        subtitle="Let's build AI-powered applications that make life easier for your team and your customers, while driving real business growth."
+        primaryCTA={{
+          text: "Let's Build Something Together",
+          href: "/contact",
+        }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>

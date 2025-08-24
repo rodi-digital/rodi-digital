@@ -2,37 +2,47 @@ import { CaseStudyLayout } from "@/components/ui/case-study-layout";
 
 const keyFeatures = [
   {
-    title: "Plan and Discover Routes",
+    title: "Turn-by-turn guidance",
     description:
-      "Find routes online or create your own with platforms like Komoot or Strava and upload them to Rodi for turn-by-turn guidance.",
+      "Clear cues on the route so riders stop second-guessing and never miss their next turn.",
   },
   {
-    title: "Navigate and Track",
+    title: "Route uploads from the web",
     description:
-      "Utilize the phone's GPS sensor to display valuable insights during rides, including distance, average speed, elevation, duration, and max speed.",
+      "Simple GPX upload at rodi.app/upload to get any planned route into the app in seconds.",
   },
   {
-    title: "Enjoy a Free Experience",
+    title: "Ride stats that matter",
     description:
-      "Rodi stands out by offering a completely free service with no ads, no subscriptions, and no data sharing, prioritizing user privacy and experience.",
+      "Track distance, time, pace, and more so cyclists can review progress and plan the next ride with confidence.",
+  },
+  {
+    title: "Lightweight, rider-first UI",
+    description:
+      "A focused interface that keeps the map and cues center stage, reducing on-bike friction.",
+  },
+  {
+    title: "Content system for growth",
+    description:
+      "A Notion-powered blog workflow that lets you publish tips and updates without developer bottlenecks.",
   },
 ];
 
 const impactFeatures = [
   {
-    title: "Unwavering Privacy Commitment",
+    title: "Fewer wrong turns",
     description:
-      "By offering a completely free service with no ads, subscriptions, or data sharing, Rodi prioritizes user privacy and fosters trust within the cycling community.",
+      "Reliable guidance reduces route anxiety and keeps riders on course for the entire trip.",
   },
   {
-    title: "Empowering the Cycling Community",
+    title: "Faster route prep",
     description:
-      "Rodi has become an invaluable, accessible tool for cyclists, removing financial barriers and enabling broader participation in route exploration and performance tracking.",
+      "Uploading a planned route is quick and predictable, which shortens pre-ride setup and gets people rolling sooner.",
   },
   {
-    title: "Streamlined Cycling Experience",
+    title: "Higher engagement",
     description:
-      "Rodi simplifies route navigation and provides intuitive performance tracking, significantly enhancing the overall cycling experience for users.",
+      "Clear stats and helpful content give riders a reason to return for the next ride and share routes with friends.",
   },
 ];
 
@@ -40,13 +50,24 @@ export default function RodiCasePage() {
   return (
     <CaseStudyLayout
       title="Rodi"
-      subtitle="A privacy-focused bike computer app offering seamless route guidance and performance tracking."
-      challenge="Cyclists often seek a reliable and free bike computer app that offers comprehensive route guidance, accurate performance tracking, and seamless integration with popular cycling platforms, all while ensuring privacy and avoiding intrusive ads or subscriptions."
-      solution="As the founder, Rodi Digital (Tijs Martens) designed, implemented, and strategized the development of Rodi, a free bike computer application that prioritizes user privacy and experience above all else."
+      subtitle="A rider-first cycling app that guides your route and captures the ride."
+      challenge="Cyclists want a simple way to follow a planned route and see the key stats that matter. Many tools feel heavy or distracting on the bike, and getting a GPX from web to phone can be clumsy. The challenge was to build a lightweight, reliable experience that makes navigation and ride tracking effortless."
+      solution="We designed and built Rodi as a free, rider-first bike computer. The app shows your route and ride statistics in a clear layout and provides turn guidance to keep you on track. A web uploader makes it easy to add routes from your favorite planning tools straight into the app. A Notion-powered blog workflow supports ongoing tips and updates, so content stays fresh without slowing development."
       keyFeatures={keyFeatures}
       impact={impactFeatures}
-      ctaTitle="Ready to Build Your Mobile App?"
-      ctaSubtitle="Let's create a privacy-focused mobile application that puts user experience first, without ads or subscriptions."
+      technologySection={{
+        title: "Technology Stack",
+        content:
+          "Built with React Native and Expo for iOS and Android, using native location and mapping capabilities for reliable on-bike guidance. The content pipeline integrates with Notion for fast publishing. Analytics and in-app instrumentation support continuous improvement across navigation and ride flows.",
+      }}
+      ctaTitle="Want an app riders love to use?"
+      ctaSubtitle="Let’s design and build a focused, reliable experience that ships fast and gets better with every release."
+      projectLinks={[
+        {
+          text: "View app website",
+          href: "https://rodi.app/",
+        },
+      ]}
     />
   );
 }

@@ -7,35 +7,34 @@ const services = [
   {
     title: "AI-Powered Applications",
     description:
-      "Stop spending hours on repetitive tasks and struggling with poor search results. Let AI handle the heavy lifting while delivering personalized experiences your customers actually want.",
+      "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
     items: [
-      "Smart Document Processing - Stop manually extracting data from invoices, contracts, and forms",
-      "Intelligent Customer Support - End the cycle of repetitive support tickets draining your team",
-      "Content Generation at Scale - Eliminate the bottleneck of creating personalized marketing content",
-      "Advanced Search & Discovery - No more users leaving because they can't find what they need",
+      "Conversational Agents – Finally, chatbots that understand and actually help.",
+      "Smart Automations – Free your team from repetitive manual processes.",
+      "AI-Powered Search – Find the right answers instantly, no endless document digging.",
+      "Customer Support Intelligence – Resolve issues faster and keep your team focused on higher-value work.",
     ],
   },
   {
     title: "Mobile Development",
     description:
-      "Turn your app idea into reality without breaking the bank or waiting months. Get to market fast and learn what your users actually want.",
+      "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
     items: [
-      "Cross-Platform Apps - Stop choosing between iOS and Android, reach everyone with one codebase",
-      "MVP Development - Avoid spending months building features nobody actually wants",
-      "Real-Time Analytics - End the guesswork about what users do in your app",
-      "Push Notifications Done Right - Stop losing users who forget about your app",
+      "Rapid Prototyping & Launch – Validate your app idea without wasting months or budget.",
+      "Cross-Platform Reach – One codebase, iOS + Android, without trade-offs.",
+      "Built-In Analytics – Know what your users actually want from day one.",
+      "Engaging User Experience – Keep users active with smooth flows, smart notifications, and intuitive design.",
     ],
   },
   {
     title: "Web Development",
     description:
-      "Stop losing customers to slow, confusing websites. Get a web presence that actually converts visitors into paying customers.",
+      "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
     items: [
-      "SaaS Development - Eliminate the headache of building scalable subscription businesses",
-      "Landing Pages - Stop watching potential customers bounce without converting",
-      "E-commerce Solutions - End lost sales from complicated checkout processes",
-      "Custom Business Tools - Replace inefficient spreadsheets and manual processes",
-      "Content Management Systems - Stop paying developers for simple website updates",
+      "SaaS Platforms – Scalable foundations for subscription businesses.",
+      "High-Impact Landing Pages – Convert visitors instead of losing them.",
+      "E-commerce Optimized – Smooth checkouts that reduce cart abandonment.",
+      "Easy Content Management – Stay in control without developer bottlenecks.",
     ],
   },
 ];

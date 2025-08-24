@@ -5,24 +5,24 @@ import { FinalCTA } from "@/components/ui/final-cta";
 
 const collaborativePrinciples = [
   {
-    title: "Close Partnership",
+    title: "Close partnership",
     description:
-      "We integrate seamlessly with your team, acting as an extension of your organization. Your success is our success, and we are committed to a shared journey.",
+      "We embed ourselves into your team so progress feels seamless. Your success is our success.",
   },
   {
-    title: "Frequent Updates & Live Demos",
+    title: "Frequent updates and live demos",
     description:
-      "Transparency is key. We provide regular, frequent updates and conduct live demonstrations of our progress. This allows you to see your product evolve in real-time and provides opportunities for immediate feedback.",
+      "No more waiting months to see results. You get regular updates and live demos that show how your product is evolving, with room for feedback at every step.",
   },
   {
-    title: "Continuous Synchronization",
+    title: "Continuous synchronization",
     description:
-      "We prioritize frequent synchronization meetings to discuss and shape features collaboratively. This proactive approach ensures that what we build precisely matches your needs, preventing misalignments and rework.",
+      "We hold short sync sessions to keep ideas moving in the right direction. This prevents misalignment and wasted effort.",
   },
   {
-    title: "Open Feedback Loop",
+    title: "Open feedback loop",
     description:
-      "Your feedback is invaluable. We foster an environment where open discussion and constructive criticism are encouraged, allowing us to adapt and refine our approach to best serve your evolving needs.",
+      "Honest feedback is how good products become great. We encourage open conversations so we can adapt and refine quickly.",
   },
 ];
 
@@ -31,24 +31,24 @@ export default function CollaborationPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Collaboration"
-        subtitle="We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey."
+        subtitle="Working with an agency can feel like handing over control and just hoping for the best. Deadlines slip, feedback gets lost, and you end up with something that is not quite what you imagined. We believe the only way to build the right product is to build it together with you."
       />
       
       <TwoColumnSection
         title="Building Together"
-        content="At Rodi Digital, we believe that successful digital product development hinges on close, transparent, and continuous collaboration with our clients. We don't just build for you; we build with you, ensuring that every step of the journey is aligned with your vision and business objectives."
+        content="Successful digital products are never built in isolation. They grow out of close teamwork, clear communication, and shared goals. We work side by side with your team so that every decision reflects your vision and supports your business objectives."
       />
 
       <MinimalCardGrid
         title="Our Collaborative Principles"
-        description="We foster an environment of transparency, continuous communication, and shared success."
+        description="Partnership means more than meetings and status updates. It means creating a rhythm of communication and feedback that keeps everyone aligned and confident."
         cards={collaborativePrinciples}
         columns="2"
       />
 
       <FinalCTA
-        title="Ready to Collaborate?"
-        subtitle="Experience the power of true partnership in digital product development. Let's build something amazing together."
+        title="Ready to collaborate?"
+        subtitle="Let's work as one team to create a product that truly fits your vision. With the right partnership, building becomes easier, faster, and more rewarding."
         primaryCTA={{ text: "Start Your Project", href: "/contact" }}
         secondaryCTA={{ text: "View Our Approach", href: "/approach" }}
       />

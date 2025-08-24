@@ -1,62 +1,62 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { TwoColumnSection } from "@/components/ui/two-column-section";
+import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 
 const expertiseCards = [
   {
-    title: "SaaS Platform Development",
+    title: "SaaS platforms",
     description:
-      "We specialize in building scalable and secure Software-as-a-Service (SaaS) platforms. Whether you need a complex multi-tenant application or a specialized business tool, we design and develop robust solutions that meet the demands of modern cloud-based services.",
+      "Scalable foundations that grow with your subscription business and keep performance steady as you add users.",
   },
   {
-    title: "Webflow Site Development",
+    title: "High-impact landing pages",
     description:
-      "For businesses seeking beautiful, responsive, and easily manageable websites with basic functionality, we excel in building custom Webflow sites. We leverage Webflow's powerful design capabilities to create visually appealing and user-friendly online presences.",
+      "Pages designed to grab attention and convert visitors instead of letting them bounce away.",
   },
   {
-    title: "Large-Scale Content Management Platforms",
+    title: "E-commerce optimized",
     description:
-      "We have extensive experience in developing large company websites powered by Content Management Systems like WordPress. This ensures that your team can easily manage and update content, providing flexibility and control over your digital assets while maintaining a consistent brand experience.",
+      "Smooth shopping experiences with checkout flows that reduce cart abandonment and boost sales.",
   },
   {
-    title: "Custom Web Applications",
+    title: "Easy content management",
     description:
-      "Beyond standard websites, we develop bespoke web applications designed to solve unique business challenges and streamline operations. Our custom solutions are built with performance, security, and scalability in mind.",
+      "Websites your team can update without waiting on a developer. Stay agile and keep your content fresh.",
   },
   {
-    title: "Performance Optimization & Security",
+    title: "Custom web applications",
     description:
-      "We prioritize building web solutions that are not only functional and aesthetically pleasing but also optimized for speed, search engine visibility, and robust security, ensuring a reliable and high-quality user experience.",
+      "When you need more than a standard site, we build tools that solve unique business problems and streamline operations.",
+  },
+  {
+    title: "Performance and security",
+    description:
+      "Fast load times, SEO-friendly structure, and strong protection so your site is both visible and reliable.",
   },
 ];
 
 const processCards = [
   {
-    title: "Discovery & Planning",
+    title: "Discovery and planning",
     description:
-      "We start by understanding your business goals, target audience, and technical requirements to create a comprehensive project roadmap.",
+      "We start by learning about your goals, audience, and requirements to map out the right approach.",
   },
   {
-    title: "Design & Architecture",
+    title: "Design and architecture",
     description:
-      "We create user-centered designs and establish a scalable technical architecture that supports your current needs and future growth.",
+      "User-focused design paired with a technical foundation that supports today's needs and tomorrow's growth.",
   },
   {
-    title: "Development & Integration",
+    title: "Development and integration",
     description:
-      "Our development process includes regular check-ins, live demos, and continuous integration of feedback to ensure alignment with your vision.",
+      "Iterative builds with check-ins and demos so you can see progress and give feedback along the way.",
   },
   {
-    title: "Testing & Optimization",
+    title: "Launch and support",
     description:
-      "Comprehensive testing across devices and browsers, performance optimization, and security audits before launch.",
-  },
-  {
-    title: "Launch & Support",
-    description:
-      "Smooth deployment with ongoing support, monitoring, and maintenance to ensure optimal performance.",
+      "Smooth deployment followed by ongoing support and maintenance so your site keeps performing.",
   },
 ];
 
@@ -65,33 +65,34 @@ export default function WebPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Web Development"
-        subtitle="We build fast, responsive websites that not only look great but also run flawlessly."
+        subtitle="A website that only looks good is not enough. If it loads slowly, feels clunky, or makes it hard to update content, you lose customers and waste opportunities. We design and build web experiences that are fast, flexible, and focused on growth."
       />
-      
-      <TwoColumnSection
-        title="Digital Experiences That Drive Growth"
-        content="At Rodi Digital, we craft dynamic and high-performing web solutions tailored to your specific business needs. From sophisticated SaaS platforms to visually stunning marketing sites, we deliver web experiences that drive engagement and growth."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
-        secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
+
+      <CenteredContentSection
+        content="Your site should do more than look nice — it should move the needle for your business. Fast, responsive, and built with your goals in mind."
+        cta={{ text: "Let's Build Something Together", href: "/contact" }}
       />
-      
+
       <MinimalCardGrid
         title="Our Web Development Expertise"
-        description="We combine technical excellence with strategic thinking to deliver web solutions that meet your business objectives."
+        description="Here's how we make sure your website doesn't just work, but works for you:"
         cards={expertiseCards}
         columns="2"
       />
-      
+
       <MinimalListSection
         title="Our Web Development Process"
-        description="A structured approach that ensures quality, transparency, and successful delivery."
+        description="A clear process keeps your project on track and makes sure you know what's happening at every step."
         items={processCards}
       />
-      
+
       <FinalCTA
         title="Ready to turn your idea into reality?"
-        subtitle="We'd love to help you create a powerful online presence that aligns with your strategic goals and delivers measurable results."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
+        subtitle="We'd love to help you create a site that does more than look good — one that drives measurable growth and keeps you in control."
+        primaryCTA={{
+          text: "Let's Build Something Together",
+          href: "/contact",
+        }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />
     </div>

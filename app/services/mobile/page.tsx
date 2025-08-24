@@ -1,42 +1,52 @@
 import { ServiceHero } from "@/components/ui/service-hero";
-import { TwoColumnSection } from "@/components/ui/two-column-section";
+import { CenteredContentSection } from "@/components/ui/centered-content-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 
 const strengthsCards = [
   {
-    title: "Cross-Platform Expertise",
+    title: "Cross-platform coverage",
     description:
-      "We build versatile mobile applications using Expo and React Native, allowing us to develop for both iOS and Android simultaneously. This approach significantly reduces development time and costs, ensuring a faster time to market for your app idea.",
+      "One codebase for iOS and Android. Reach your full audience faster and keep maintenance simple.",
   },
   {
-    title: "Data-Driven Iteration",
+    title: "MVP that learns",
     description:
-      "Our apps are built with analytics and tracking deeply integrated from the outset. This ensures that every user interaction and performance metric is captured, providing valuable data for informed decision-making and continuous improvement. We believe in iterating based on real user behavior to optimize your app for success.",
+      "Ship a focused first version, measure what users do, and invest only in features that prove their value.",
   },
   {
-    title: "Agile and Efficient Development",
+    title: "Push notifications done right",
     description:
-      "As a lean, one-person operation, Rodi Digital offers unparalleled agility and cost-effectiveness compared to larger agencies. This means direct communication, faster turnaround times, and a more personalized approach to your project, all while maintaining high standards of quality and performance.",
+      "Send timely, relevant messages that bring users back without annoying them. Drive retention with intent, not volume.",
   },
   {
-    title: "Focus on Fast Time to Market",
+    title: "Data-driven iteration",
     description:
-      "We understand the importance of validating your app idea quickly. Our streamlined development process and cross-platform capabilities enable us to launch your mobile app efficiently, allowing you to gather user feedback and iterate rapidly.",
+      "Tracking is built in from the start. Every update is guided by real behavior, not guesswork.",
+  },
+  {
+    title: "Agile solo delivery",
+    description:
+      "Work directly with the builder. Clear communication, fast turnarounds, and a product that fits your needs.",
+  },
+  {
+    title: "Fast time to market",
+    description:
+      "Short cycles, clean scope, and a clear plan. Launch sooner, learn sooner, grow sooner.",
   },
 ];
 
 const technologiesCards = [
   {
-    title: "React Native & Expo",
+    title: "React Native and Expo",
     description:
-      "Our primary stack for cross-platform mobile development, offering native performance with JavaScript flexibility and rapid development capabilities.",
+      "Native performance with a single codebase, quick builds, and smooth updates over the air.",
   },
   {
-    title: "Analytics Integration",
+    title: "Analytics integration",
     description:
-      "Built-in analytics tracking from day one, using tools like Firebase Analytics, Mixpanel, or custom solutions to capture user behavior and app performance.",
+      "Instrumentation from day one with Firebase, Mixpanel, or a custom setup. Track key flows, retention, and engagement so you know what to improve next.",
   },
 ];
 
@@ -45,32 +55,30 @@ export default function MobilePage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Mobile Development"
-        subtitle="We specialize in intuitive, high-performance mobile apps – whether you need a simple proof-of-concept or a polished product ready for full-scale launch."
+        subtitle="Building an app should not take forever or blow your budget. You want something people can actually use, on iOS and Android, without guessing which features matter. We help you launch fast, learn from real users, and improve with confidence."
       />
       
-      <TwoColumnSection
-        title="Built for Growth & Speed"
-        content="At Rodi Digital, we specialize in building high-performing mobile applications that are not only fast to market but also designed for continuous iteration and growth. We leverage cutting-edge cross-platform technologies to deliver robust and engaging mobile experiences."
-        primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
-        secondaryCTA={{ text: "View Case Studies", href: "/cases" }}
+      <CenteredContentSection
+        content="Great apps are simple to ship and easy to improve. Cross-platform from day one, with built-in analytics that guide every decision."
+        cta={{ text: "Let's Build Something Together", href: "/contact" }}
       />
       
       <MinimalCardGrid
         title="Our Mobile Development Strengths"
-        description="We combine technical expertise with strategic thinking to deliver mobile solutions that drive business value."
+        description="You need momentum, not meetings. Here is how we keep your app moving forward."
         cards={strengthsCards}
         columns="2"
       />
       
       <MinimalListSection
         title="Technologies We Use"
-        description="We leverage proven technologies to build scalable and performant mobile applications."
+        description="Proven tools that help you move fast and stay flexible."
         items={technologiesCards}
       />
       
       <FinalCTA
         title="Ready to turn your idea into reality?"
-        subtitle="Whether you're looking to validate a new concept or build a full-scale mobile application, we'd love to help bring your vision to life."
+        subtitle="Whether you want to validate a new concept or scale a mature product, we will help you launch fast and improve with data."
         primaryCTA={{ text: "Let's Build Something Together", href: "/contact" }}
         secondaryCTA={{ text: "View All Services", href: "/services" }}
       />

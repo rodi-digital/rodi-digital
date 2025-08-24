@@ -7,45 +7,45 @@ const approachFeatures = [
   {
     title: "Continuous value creation",
     description:
-      "We strive to be more than just a service provider; we aim to be a true digital partner. By continuously gathering data and sharing insights, we ensure ongoing value even beyond the initial build phase of a product.",
+      "Building the product is just the start. We keep tracking and sharing insights so you see value long after launch.",
   },
   {
     title: "Data-backed recommendations",
     description:
-      "Upselling valuable new features and improvements is crucial, but it must be done credibly. We provide better recommendations, backed by robust data, ensuring our suggestions carry weight and drive tangible improvements.",
+      "Tired of being told to just add more features? We only suggest improvements when the numbers prove they will make a difference.",
   },
   {
     title: "Enhanced credibility and ROI",
     description:
-      "Our high-quality, visually appealing products are designed to enhance your business. By demonstrating clear, positive ROI in our case studies, we strengthen our brand's credibility and appeal.",
+      "Your product should look great and pay for itself. We focus on results that clearly show a return on investment, not just pretty screens.",
   },
   {
     title: "Empowering every stakeholder",
     description:
-      "Analytics is not just for decision-makers; it's for everyone involved in building a digital product. We provide insights tailored to different needs across business, product, technical, and design teams.",
+      "Analytics is not just for managers. Designers, developers, and product teams all get insights that help them do better work.",
   },
 ];
 
 const implementationSteps = [
   {
-    title: "Start with Insights",
+    title: "Start with insights",
     description:
-      "From day one, tracking is in place, ensuring no blind spots and enabling immediate visibility into user behavior. For every iteration, we decide what to measure and how to track.",
+      "From day one we track what matters, so you are never left guessing about user behavior.",
   },
   {
-    title: "Built-In Measurement",
+    title: "Built-in measurement",
     description:
-      "Every feature we build includes an analytics strategy. Ensuring that key interactions are tracked with purpose, using consistent and meaningful naming for easy analysis and continuous learning.",
+      "Every feature includes meaningful tracking with clear names and purpose. No more messy data that is hard to use.",
   },
   {
     title: "Launch with confidence",
     description:
-      "At launch, every key flow and feature is fully tracked providing real-time visibility into usage, friction points, and early growth signals via actionable dashboards.",
+      "By the time you go live, every key flow is monitored. You see instantly how people are using your product.",
   },
   {
-    title: "Stay Data-Driven",
+    title: "Stay data-driven",
     description:
-      "Post-launch, we monitor key trends and user behavior, providing structured reports and insights that help drive informed decisions, optimizations, and long-term growth.",
+      "After launch we keep an eye on trends and share simple reports that guide smarter decisions and steady growth.",
   },
 ];
 
@@ -54,25 +54,25 @@ export default function AnalyticsPage() {
     <div className="min-h-screen">
       <ServiceHero
         title="Analytics"
-        subtitle="We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making."
+        subtitle="Ever launched a product and had no idea what people were actually doing inside it? You're not alone. Guessing what works and what doesn't wastes time and money. We make analytics part of the product itself, so you always know what's really happening."
       />
       
       <MinimalCardGrid
         title="Our Analytics Approach"
-        description="We believe in data-driven product development that creates lasting value for all stakeholders."
+        description="Data should not hide in reports that nobody reads. It should guide every decision, help your product grow, and make life easier for the whole team."
         cards={approachFeatures}
         columns="2"
       />
 
       <MinimalListSection
         title="Our Implementation Plan"
-        description="We believe in a 'better to get started than to be perfect' approach, allowing for continuous adjustments. Our process integrates analytics from the outset:"
+        description="Getting analytics right should not slow you down. We believe it is better to get started quickly and improve as we go."
         items={implementationSteps}
       />
 
       <FinalCTA
-        title="Ready to Build Data-Driven Products?"
-        subtitle="Let's integrate analytics into every layer of your product development to drive continuous growth and informed decision-making."
+        title="Ready to build data-driven products?"
+        subtitle="No more guessing. No more blind spots. Let's make analytics part of your product from the start, so every decision is made with clarity and confidence."
         primaryCTA={{ text: "Get Started Today", href: "/contact" }}
         secondaryCTA={{ text: "View Our Approach", href: "/approach" }}
       />
