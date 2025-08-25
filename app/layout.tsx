@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "@/components/ui/footer";
 import { Navigation } from "@/components/navigation";
 import { GradientBackground } from "@/components/ui/gradient-background";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GradientBackground>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-        </GradientBackground>
+        <PostHogProvider>
+          <GradientBackground>
+            <Navigation />
+            <main>{children}</main>
+            <Footer />
+          </GradientBackground>
+        </PostHogProvider>
       </body>
     </html>
   );
