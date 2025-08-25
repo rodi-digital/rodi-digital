@@ -2,8 +2,9 @@
 
 import * as motion from "motion/react-client";
 import { fadeInUp } from "@/lib/scroll-animations";
-import { Button } from "./button";
-import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function ContactContent() {
   const contactInfo = [
@@ -81,23 +82,27 @@ export function ContactContent() {
           className="flex items-center justify-center"
         >
           <div className="text-center space-y-8">
-            <div className="w-32 h-32 mx-auto bg-green-500 rounded-full flex items-center justify-center">
-              <MessageCircle className="w-16 h-16 text-white" />
+            <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center">
+              <Image
+                src="/images/WhatsappLogoGreen.svg"
+                alt="WhatsApp Logo"
+                width={128}
+                height={128}
+              />
             </div>
 
-            <div className="space-y-4">
-              <h2 className="text-3xl font-light text-gray-900">
-                Message us on WhatsApp
-              </h2>
-            </div>
-
-            <Button
+            <Link
               href="https://wa.me/+32499721771"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg inline-flex items-center space-x-2"
+              className="inline-block hover:scale-105 transition-transform duration-200"
             >
-              <MessageCircle className="w-5 h-5" />
-              <span>Start WhatsApp Chat</span>
-            </Button>
+              <Image
+                src="/images/WhatsAppButtonGreenMedium.png"
+                alt="Chat on WhatsApp"
+                width={300}
+                height={60}
+                className="rounded-full"
+              />
+            </Link>
           </div>
         </motion.div>
       </div>
