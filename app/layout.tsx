@@ -6,6 +6,7 @@ import { Footer } from "@/components/ui/footer";
 import { Navigation } from "@/components/navigation";
 import { GradientBackground } from "@/components/ui/gradient-background";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           </GradientBackground>
         </PostHogProvider>
       </body>
+      <GoogleAnalytics gaId="G-DC8JK0RYR4" />
     </html>
   );
 }
