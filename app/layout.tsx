@@ -38,7 +38,7 @@ export default function RootLayout({
           </GradientBackground>
         </PostHogProvider>
       </body>
-      <GoogleAnalytics gaId="G-DC8JK0RYR4" />
+      <GoogleAnalytics gaId="G-TJNMYDCFDT" />
     </html>
   );
 }
