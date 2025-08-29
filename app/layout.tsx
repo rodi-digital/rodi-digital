@@ -11,15 +11,76 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rodi Digital - Apps, AI & Websites built with you",
+  title: "Rodi Digital | AI, Mobile & Web Development Agency",
   description:
-    "Digital partner specializing in AI-enabled applications, mobile development, and web platforms. Building the future together.",
-  generator: "v0.dev",
+    "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+  keywords: [
+    "AI development Netherlands",
+    "mobile app development",
+    "web development agency",
+    "cross-platform apps",
+    "AI chatbots",
+    "Netherlands digital agency",
+    "custom software development",
+  ],
+  openGraph: {
+    title:
+      "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
+    description:
+      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+    url: "https://rodi-digital.com",
+    siteName: "Rodi Digital",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
   },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Rodi Digital",
+  url: "https://rodi-digital.com",
+  logo: "https://rodi-digital.com/rodi-digital-logo.svg",
+  description:
+    "AI, Mobile & Web Development Agency in the Netherlands specializing in AI chatbots, cross-platform mobile apps, and high-conversion websites",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Stationsweg 19",
+    addressLocality: "'s-Hertogenbosch",
+    postalCode: "5211 TV",
+    addressCountry: "NL",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+32499721771",
+    contactType: "customer service",
+    email: "hello@rodi-digital.com",
+  },
+  sameAs: ["https://www.linkedin.com/company/rodi-digital"],
+  areaServed: ["NL", "EU", "US"],
+  serviceType: [
+    "AI Development",
+    "Mobile App Development",
+    "Web Development",
+    "Cross-platform Development",
+    "AI Chatbot Development",
+  ],
 };
 
 export default function RootLayout({
@@ -29,6 +90,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <PostHogProvider>
           <GradientBackground>

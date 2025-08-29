@@ -76,7 +76,7 @@ export function ServiceGrid({ services }: ServiceGridProps) {
                       <Image
                         className=" object-cover w-full rounded-2xl "
                         src={service.image}
-                        alt={service.title}
+                        alt={`${service.title} - Rodi Digital Development Services Netherlands`}
                         width={200}
                         height={200}
                       />

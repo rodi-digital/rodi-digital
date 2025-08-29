@@ -4,40 +4,39 @@ import { Button } from "./button";
 
 const footerLinks = [
   {
-    title: "Services",
+    title: "Development Services",
     links: [
-      { label: "All Services", href: "/services" },
+      { label: "All Development Services", href: "/services" },
       {
-        label: "AI-Powered Applications",
+        label: "AI Chatbot Development",
         href: "/services/ai-enabled-applications",
       },
-      { label: "Mobile Development", href: "/services/mobile" },
-      { label: "Web Development", href: "/services/web" },
+      { label: "Mobile App Development", href: "/services/mobile" },
+      { label: "Web Development Netherlands", href: "/services/web" },
+    ],
+  },
+  {
+    title: "Our Approach",
+    links: [
+      { label: "Development Process", href: "/approach" },
+      { label: "Data Analytics", href: "/approach/analytics" },
+      { label: "Client Collaboration", href: "/approach/collaboration" },
+    ],
+  },
+  {
+    title: "Portfolio",
+    links: [
+      { label: "All Case Studies", href: "/cases" },
+      { label: "Healthcare Mobile App", href: "/cases/peach" },
+      { label: "Sports App Development", href: "/cases/rodi" },
+      { label: "AI Fitness Platform", href: "/cases/trai" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Our Approach", href: "/approach" },
-      { label: "Analytics", href: "/approach/analytics" },
-      { label: "Collaboration", href: "/approach/collaboration" },
-      { label: "Case Studies", href: "/cases" },
-    ],
-  },
-  {
-    title: "Cases",
-    links: [
-      { label: "All Cases", href: "/cases" },
-      { label: "PEACHealth", href: "/cases/peach" },
-      { label: "Rodi", href: "/cases/rodi" },
-      { label: "Trai", href: "/cases/trai" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "Contact", href: "/contact" },
-      { label: "llms.txt", href: "/llms.txt" },
+      { label: "Contact Agency", href: "/contact" },
+      { label: "AI Resources", href: "/llms.txt" },
     ],
   },
 ];
@@ -56,11 +55,12 @@ export function Footer() {
                 src="/rodi-digital-logo.svg"
                 width={120}
                 height={60}
-                alt="Logo of Rodi Digital"
+                alt="Rodi Digital - Netherlands AI and Mobile App Development Agency"
               />
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                We create digital products that stand the test of time, using
-                data and analytics to drive your growth.
+                Leading AI, mobile & web development agency in the Netherlands. 
+                We build cross-platform mobile apps, AI chatbots, and high-conversion 
+                websites for startups and enterprises across Europe and worldwide.
               </p>
               <div className="text-gray-500 text-sm space-y-1">
                 <p>Stationsweg 19, 5211 TV 's-Hertogenbosch</p>

@@ -104,7 +104,7 @@ export function Navigation() {
                 src="/rodi-digital-logo.svg"
                 width={scrolled ? 80 : 150}
                 height={scrolled ? 40 : 80}
-                alt="Logo of Rodi Digital"
+                alt="Rodi Digital - AI, Mobile & Web Development Agency Netherlands"
                 className="transition-all duration-300"
               />
             </Link>

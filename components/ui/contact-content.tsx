@@ -85,7 +85,7 @@ export function ContactContent() {
             <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center">
               <Image
                 src="/images/WhatsappLogoGreen.svg"
-                alt="WhatsApp Logo"
+                alt="Contact Rodi Digital via WhatsApp - AI and Mobile App Development"
                 width={128}
                 height={128}
               />
@@ -97,7 +97,7 @@ export function ContactContent() {
             >
               <Image
                 src="/images/WhatsAppButtonGreenMedium.png"
-                alt="Chat on WhatsApp"
+                alt="WhatsApp Contact Button - Rodi Digital Development Agency Netherlands"
                 width={300}
                 height={60}
                 className="rounded-full"
