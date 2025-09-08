@@ -192,7 +192,7 @@ export function Navigation() {
                 )}
               </motion.div>
             ))}
-            
+
             {/* Let's Chat CTA */}
             <motion.div
               variants={fadeIn}
@@ -204,7 +204,7 @@ export function Navigation() {
               <Link
                 href="/contact"
                 className={cn(
-                  "px-6 py-2 rounded-full font-medium transition-all duration-200",
+                  "px-6 py-2 rounded-md font-medium transition-all duration-200",
                   "bg-primary text-white hover:bg-primary/90",
                   "text-sm"
                 )}
