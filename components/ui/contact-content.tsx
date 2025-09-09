@@ -5,45 +5,41 @@ import { fadeInUp } from "@/lib/scroll-animations";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { copy } from "@/lib/copy";
 
 export function ContactContent() {
   const contactInfo = [
     {
-      title: "ADDRESS",
+      title: copy.contactPage.contactInfo[0].title,
       icon: MapPin,
       content: (
         <div>
-          <p>Stationsweg 19,</p>
-          <p>5211 TV 's-Hertogenbosch, The Netherlands</p>
+          <p>{copy.contact.address.street},</p>
+          <p>{copy.contact.address.postalCode} {copy.contact.address.city}, {copy.contact.address.country}</p>
         </div>
       ),
     },
     {
-      title: "EMAIL",
+      title: copy.contactPage.contactInfo[1].title,
       icon: Mail,
       content: (
         <a
-          href="mailto:hello@rodi-digital.com"
+          href={`mailto:${copy.contact.email}`}
           className="text-primary hover:underline"
         >
-          hello@rodi-digital.com
+          {copy.contact.email}
         </a>
       ),
     },
     {
-      title: "PHONENUMBER",
+      title: copy.contactPage.contactInfo[2].title,
       icon: Phone,
       content: (
-        <a href="tel:+32499721771" className="text-primary hover:underline">
-          +32 499 72 17 71
+        <a href={`tel:${copy.contact.whatsapp}`} className="text-primary hover:underline">
+          {copy.contact.phone}
         </a>
       ),
     },
-    // {
-    //   title: "OFFICE HOURS",
-    //   icon: null,
-    //   content: <p>Monday – Friday</p>,
-    // },
   ];
 
   return (
@@ -85,19 +81,19 @@ export function ContactContent() {
             <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center">
               <Image
                 src="/images/WhatsappLogoGreen.svg"
-                alt="Contact Rodi Digital via WhatsApp - AI and Mobile App Development"
+                alt={copy.contactPage.whatsappAlt}
                 width={128}
                 height={128}
               />
             </div>
 
             <Link
-              href="https://wa.me/+32499721771"
+              href={`https://wa.me/${copy.contact.whatsapp}`}
               className="inline-block hover:scale-105 transition-transform duration-200"
             >
               <Image
                 src="/images/WhatsAppButtonGreenMedium.png"
-                alt="WhatsApp Contact Button - Rodi Digital Development Agency Netherlands"
+                alt={copy.contactPage.whatsappButtonAlt}
                 width={300}
                 height={60}
                 className="rounded-full"
@@ -128,7 +124,7 @@ export function ContactContent() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Rodi Digital Office Location"
+            title={copy.contactPage.mapTitle}
           />
         </div>
       </motion.div>

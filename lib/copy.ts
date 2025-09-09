@@ -1,0 +1,800 @@
+export const copy = {
+  site: {
+    name: "Rodi Digital",
+    tagline: "AI, Mobile & Web Development Agency",
+    description:
+      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+    copyright: "© 2025 Rodi Digital. Built with you.",
+  },
+
+  contact: {
+    email: "hello@rodi-digital.com",
+    phone: "+32 499 72 17 71",
+    whatsapp: "+32499721771",
+    address: {
+      street: "Stationsweg 19",
+      postalCode: "5211 TV",
+      city: "'s-Hertogenbosch",
+      country: "The Netherlands",
+    },
+    vat: "NL867887370B01",
+  },
+
+  navigation: {
+    logoAlt: "Rodi Digital - AI, Mobile & Web Development Agency Netherlands",
+    ctaButton: "Let's Chat",
+  },
+
+  home: {
+    hero: {
+      title: "Apps, AI, and Websites Built with You",
+      subtitle:
+        "We create digital products that stand the test of time, using data and analytics to drive your growth.",
+      ctaText: "Let's Talk",
+    },
+    services: {
+      title: "Our Services",
+      subtitle: "What We Build",
+      aiPowered: {
+        title: "AI-Powered Applications",
+        description:
+          "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
+        items: [
+          "Conversational Agents – Finally, chatbots that understand and actually help.",
+          "Smart Automations – Free your team from repetitive manual processes.",
+          "AI-Powered Search – Find the right answers instantly, no endless document digging.",
+          "Customer Support Intelligence – Resolve issues faster and keep your team focused on higher-value work.",
+        ],
+      },
+      mobile: {
+        title: "Mobile Development",
+        description:
+          "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
+        items: [
+          "Rapid Prototyping & Launch – Validate your app idea without wasting months or budget.",
+          "Cross-Platform Reach – One codebase, iOS + Android, without trade-offs.",
+          "Built-In Analytics – Know what your users actually want from day one.",
+          "Engaging User Experience – Keep users active with smooth flows, smart notifications, and intuitive design.",
+        ],
+      },
+      web: {
+        title: "Web Development",
+        description:
+          "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
+        items: [
+          "SaaS Platforms – Scalable foundations for subscription businesses.",
+          "High-Impact Landing Pages – Convert visitors instead of losing them.",
+          "E-commerce Optimized – Smooth checkouts that reduce cart abandonment.",
+          "Easy Content Management – Stay in control without developer bottlenecks.",
+        ],
+      },
+    },
+    dataDrivern: {
+      title: "Data-Driven Development",
+      content:
+        "At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback.",
+      primaryCta: { text: "Our Approach", href: "/approach" },
+      secondaryCta: { text: "Case Studies", href: "/cases" },
+    },
+    finalCta: {
+      title: "Ready to Build Something Amazing?",
+      subtitle:
+        "Let's collaborate to create a digital product that not only meets your needs but exceeds your expectations and drives measurable business growth.",
+      primaryCta: { text: "Start Your Project", href: "/contact" },
+      secondaryCta: { text: "View Our Services", href: "/services" },
+    },
+  },
+
+  approach: {
+    hero: {
+      title: "How we work",
+      subtitle:
+        "We create digital products that stand the test of time, using data and analytics to drive your growth through close collaboration.",
+    },
+    analytics: {
+      title: "Analytics at the Core",
+      description:
+        "We believe analytics should go beyond dashboards – it should spark conversations. We embed analytics at every step of product development, turning assumptions into data-backed insights and features into tangible outcomes.",
+      href: "/approach/analytics",
+      image: "/images/analytics.png",
+    },
+    collaboration: {
+      title: "Collaboration",
+      description:
+        "We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey.",
+      href: "/approach/collaboration",
+      image: "/images/collaboration.png",
+    },
+    finalCta: {
+      title: "Ready to Work Together?",
+      subtitle:
+        "Discover how our collaborative, data-driven approach can transform your digital product development journey.",
+      primaryCta: { text: "Get Started Today", href: "/contact" },
+      secondaryCta: { text: "View Our Services", href: "/services" },
+    },
+  },
+
+  services: {
+    hero: {
+      title: "Our Services",
+      subtitle:
+        "We specialize in building AI applications, mobile apps, and websites that drive innovation, enhance user experiences, and deliver measurable business value.",
+    },
+    aiPowered: {
+      title: "AI-Powered Applications",
+      description:
+        "Unlock the potential of AI to improve search functionality, personalize customer interactions, and gain valuable insights for strategic decisions.",
+      href: "/services/ai-enabled-applications",
+      image: "/images/ai.png",
+    },
+    mobile: {
+      title: "Mobile Development",
+      description:
+        "We specialize in intuitive, high-performance mobile apps – whether you need a simple proof-of-concept or a polished product ready for full-scale launch.",
+      href: "/services/mobile",
+      image: "/images/stores.png",
+    },
+    web: {
+      title: "Web Development",
+      description:
+        "We build fast, responsive websites that not only look great but also run flawlessly.",
+      href: "/services/web",
+      image: "/images/web.png",
+    },
+    finalCta: {
+      title: "Ready to Start Your Project?",
+      subtitle:
+        "Let's discuss how we can help bring your digital vision to life with our expertise in modern development technologies and methodologies.",
+      primaryCta: { text: "Get Started Today", href: "/contact" },
+      secondaryCta: { text: "View Case Studies", href: "/cases" },
+    },
+  },
+
+  cases: {
+    hero: {
+      title: "Case Studies",
+      subtitle:
+        "Explore how Rodi Digital has partnered with clients to transform their visions into successful, impactful digital products.",
+    },
+    peach: {
+      title: "PEACHealth",
+      description:
+        "Empowering individuals with personalized, expert-backed health information through a free mobile application, fostering informed decision-making and improved patient engagement.",
+      href: "/cases/peach",
+      image: "/images/cases/peach.png",
+    },
+    rodi: {
+      title: "Rodi",
+      description:
+        "A free, privacy-focused bike computer app offering seamless route guidance, comprehensive performance tracking, and Strava integration, all without ads or subscriptions.",
+      href: "/cases/rodi",
+      image: "/images/cases/rodi.png",
+    },
+    trai: {
+      title: "Trai",
+      description:
+        "An AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas, optimizing performance and simplifying planning for athletes.",
+      href: "/cases/trai",
+      image: "/images/cases/trai.png",
+    },
+    finalCta: {
+      title: "Ready to Create Your Success Story?",
+      subtitle:
+        "Let's partner together to transform your vision into a successful, impactful digital product that drives real business value.",
+      primaryCta: { text: "Get Started Today", href: "/contact" },
+      secondaryCta: { text: "View Our Services", href: "/services" },
+    },
+  },
+
+  approachAnalytics: {
+    hero: {
+      title: "Analytics",
+      subtitle:
+        "Ever launched a product and had no idea what people were actually doing inside it? You're not alone. Guessing what works and what doesn't wastes time and money. We make analytics part of the product itself, so you always know what's really happening.",
+    },
+    approachSection: {
+      title: "Our Analytics Approach",
+      description:
+        "Data should not hide in reports that nobody reads. It should guide every decision, help your product grow, and make life easier for the whole team.",
+      features: [
+        {
+          title: "Continuous value creation",
+          description:
+            "Building the product is just the start. We keep tracking and sharing insights so you see value long after launch.",
+        },
+        {
+          title: "Data-backed recommendations",
+          description:
+            "Tired of being told to just add more features? We only suggest improvements when the numbers prove they will make a difference.",
+        },
+        {
+          title: "Enhanced credibility and ROI",
+          description:
+            "Your product should look great and pay for itself. We focus on results that clearly show a return on investment, not just pretty screens.",
+        },
+        {
+          title: "Empowering every stakeholder",
+          description:
+            "Analytics is not just for managers. Designers, developers, and product teams all get insights that help them do better work.",
+        },
+      ],
+    },
+    implementationSection: {
+      title: "Our Implementation Plan",
+      description:
+        "Getting analytics right should not slow you down. We believe it is better to get started quickly and improve as we go.",
+      steps: [
+        {
+          title: "Start with insights",
+          description:
+            "From day one we track what matters, so you are never left guessing about user behavior.",
+        },
+        {
+          title: "Built-in measurement",
+          description:
+            "Every feature includes meaningful tracking with clear names and purpose. No more messy data that is hard to use.",
+        },
+        {
+          title: "Launch with confidence",
+          description:
+            "By the time you go live, every key flow is monitored. You see instantly how people are using your product.",
+        },
+        {
+          title: "Stay data-driven",
+          description:
+            "After launch we keep an eye on trends and share simple reports that guide smarter decisions and steady growth.",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to build data-driven products?",
+      subtitle:
+        "No more guessing. No more blind spots. Let's make analytics part of your product from the start, so every decision is made with clarity and confidence.",
+      primaryCta: { text: "Get Started Today", href: "/contact" },
+      secondaryCta: { text: "View Our Approach", href: "/approach" },
+    },
+  },
+
+  approachCollaboration: {
+    hero: {
+      title: "Collaboration",
+      subtitle:
+        "Working with an agency can feel like handing over control and just hoping for the best. Deadlines slip, feedback gets lost, and you end up with something that is not quite what you imagined. We believe the only way to build the right product is to build it together with you.",
+    },
+    buildingTogether: {
+      title: "Building Together",
+      content:
+        "Successful digital products are never built in isolation. They grow out of close teamwork, clear communication, and shared goals. We work side by side with your team so that every decision reflects your vision and supports your business objectives.",
+    },
+    principlesSection: {
+      title: "Our Collaborative Principles",
+      description:
+        "Partnership means more than meetings and status updates. It means creating a rhythm of communication and feedback that keeps everyone aligned and confident.",
+      principles: [
+        {
+          title: "Close partnership",
+          description:
+            "We embed ourselves into your team so progress feels seamless. Your success is our success.",
+        },
+        {
+          title: "Frequent updates and live demos",
+          description:
+            "No more waiting months to see results. You get regular updates and live demos that show how your product is evolving, with room for feedback at every step.",
+        },
+        {
+          title: "Continuous synchronization",
+          description:
+            "We hold short sync sessions to keep ideas moving in the right direction. This prevents misalignment and wasted effort.",
+        },
+        {
+          title: "Open feedback loop",
+          description:
+            "Honest feedback is how good products become great. We encourage open conversations so we can adapt and refine quickly.",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to collaborate?",
+      subtitle:
+        "Let's work as one team to create a product that truly fits your vision. With the right partnership, building becomes easier, faster, and more rewarding.",
+      primaryCta: { text: "Start Your Project", href: "/contact" },
+      secondaryCta: { text: "View Our Approach", href: "/approach" },
+    },
+  },
+
+  servicesAiEnabledApplications: {
+    hero: {
+      title: "AI-Powered Applications",
+      subtitle:
+        "Your team is buried in repetitive tasks, customers get stuck with unhelpful chatbots, and finding answers in endless documents takes forever. We build AI-powered applications that actually solve these problems, freeing your people to focus on what matters most.",
+    },
+    powerOfAiSection: {
+      title: "The Power of AI in Action",
+      description:
+        "Here's how AI transforms everyday work into something smarter and easier:",
+      features: [
+        {
+          title: "Conversational agents",
+          description:
+            "Finally, chatbots that actually understand and help your customers.",
+        },
+        {
+          title: "Smart automations",
+          description:
+            "Free your team from repetitive manual processes so they can focus on higher-value work.",
+        },
+        {
+          title: "AI-powered search",
+          description:
+            "No more endless document digging. Find the right answers instantly.",
+        },
+        {
+          title: "Customer support intelligence",
+          description:
+            "Resolve issues faster and give your support team time back for what really matters.",
+        },
+        {
+          title: "Personalization at scale",
+          description:
+            "Adapt content and recommendations to each individual user automatically.",
+        },
+        {
+          title: "Actionable insights",
+          description:
+            "Spot patterns, trends, and growth opportunities hidden in your data.",
+        },
+      ],
+    },
+    expertiseSection: {
+      title: "Our Expertise",
+      description:
+        "Most teams know AI could help but don't know where to start. We build custom applications around your business, not the other way around. Every tool is designed to fit naturally into your workflows and deliver measurable results.",
+      expertiseAreas: [
+        {
+          title: "Custom LLM integration",
+          description:
+            "We embed the latest language models directly into your systems so they feel seamless. This removes clunky workarounds and gives your team and customers a smoother experience.",
+        },
+        {
+          title: "Natural language processing",
+          description:
+            "We help your applications understand text, summarize information, and detect sentiment. That means quicker decisions and less manual effort spent sifting through content.",
+        },
+        {
+          title: "AI-powered automation workflows",
+          description:
+            "From handling tickets to analyzing documents, we automate repetitive tasks with intelligence built in. Your team saves time and can focus on high-value work.",
+        },
+        {
+          title: "AI-powered search",
+          description:
+            "No more endless digging through documents. Our AI search understands context and delivers the right answers instantly.",
+        },
+        {
+          title: "Customer support intelligence",
+          description:
+            "We streamline support by handling simple cases automatically and giving agents better context for complex ones. This speeds up resolutions and keeps customers happy.",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to turn your idea into reality?",
+      subtitle:
+        "Let's build AI-powered applications that make life easier for your team and your customers, while driving real business growth.",
+      primaryCta: { text: "Let's Build Something Together", href: "/contact" },
+      secondaryCta: { text: "View All Services", href: "/services" },
+    },
+  },
+
+  servicesMobile: {
+    hero: {
+      title: "Mobile Development",
+      subtitle:
+        "Building an app should not take forever or blow your budget. You want something people can actually use, on iOS and Android, without guessing which features matter. We help you launch fast, learn from real users, and improve with confidence.",
+    },
+    strengthsSection: {
+      title: "Our Mobile Development Strengths",
+      description:
+        "You need momentum, not meetings. Here is how we keep your app moving forward.",
+      strengths: [
+        {
+          title: "Cross-platform coverage",
+          description:
+            "One codebase for iOS and Android. Reach your full audience faster and keep maintenance simple.",
+        },
+        {
+          title: "MVP that learns",
+          description:
+            "Ship a focused first version, measure what users do, and invest only in features that prove their value.",
+        },
+        {
+          title: "Push notifications done right",
+          description:
+            "Send timely, relevant messages that bring users back without annoying them. Drive retention with intent, not volume.",
+        },
+        {
+          title: "Data-driven iteration",
+          description:
+            "Tracking is built in from the start. Every update is guided by real behavior, not guesswork.",
+        },
+        {
+          title: "Agile solo delivery",
+          description:
+            "Work directly with the builder. Clear communication, fast turnarounds, and a product that fits your needs.",
+        },
+        {
+          title: "Fast time to market",
+          description:
+            "Short cycles, clean scope, and a clear plan. Launch sooner, learn sooner, grow sooner.",
+        },
+      ],
+    },
+    technologiesSection: {
+      title: "Technologies We Use",
+      description: "Proven tools that help you move fast and stay flexible.",
+      technologies: [
+        {
+          title: "React Native and Expo",
+          description:
+            "Native performance with a single codebase, quick builds, and smooth updates over the air.",
+        },
+        {
+          title: "Analytics integration",
+          description:
+            "Instrumentation from day one with Firebase, Mixpanel, or a custom setup. Track key flows, retention, and engagement so you know what to improve next.",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to turn your idea into reality?",
+      subtitle:
+        "Whether you want to validate a new concept or scale a mature product, we will help you launch fast and improve with data.",
+      primaryCta: { text: "Let's Build Something Together", href: "/contact" },
+      secondaryCta: { text: "View All Services", href: "/services" },
+    },
+  },
+
+  servicesWeb: {
+    hero: {
+      title: "Web Development",
+      subtitle:
+        "A website that only looks good is not enough. If it loads slowly, feels clunky, or makes it hard to update content, you lose customers and waste opportunities. We design and build web experiences that are fast, flexible, and focused on growth.",
+    },
+    expertiseSection: {
+      title: "Our Web Development Expertise",
+      description:
+        "Here's how we make sure your website doesn't just work, but works for you:",
+      expertiseAreas: [
+        {
+          title: "SaaS platforms",
+          description:
+            "Scalable foundations that grow with your subscription business and keep performance steady as you add users.",
+        },
+        {
+          title: "High-impact landing pages",
+          description:
+            "Pages designed to grab attention and convert visitors instead of letting them bounce away.",
+        },
+        {
+          title: "E-commerce optimized",
+          description:
+            "Smooth shopping experiences with checkout flows that reduce cart abandonment and boost sales.",
+        },
+        {
+          title: "Easy content management",
+          description:
+            "Websites your team can update without waiting on a developer. Stay agile and keep your content fresh.",
+        },
+        {
+          title: "Custom web applications",
+          description:
+            "When you need more than a standard site, we build tools that solve unique business problems and streamline operations.",
+        },
+        {
+          title: "Performance and security",
+          description:
+            "Fast load times, SEO-friendly structure, and strong protection so your site is both visible and reliable.",
+        },
+      ],
+    },
+    processSection: {
+      title: "Our Web Development Process",
+      description:
+        "A clear process keeps your project on track and makes sure you know what's happening at every step.",
+      steps: [
+        {
+          title: "Discovery and planning",
+          description:
+            "We start by learning about your goals, audience, and requirements to map out the right approach.",
+        },
+        {
+          title: "Design and architecture",
+          description:
+            "User-focused design paired with a technical foundation that supports today's needs and tomorrow's growth.",
+        },
+        {
+          title: "Development and integration",
+          description:
+            "Iterative builds with check-ins and demos so you can see progress and give feedback along the way.",
+        },
+        {
+          title: "Launch and support",
+          description:
+            "Smooth deployment followed by ongoing support and maintenance so your site keeps performing.",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to turn your idea into reality?",
+      subtitle:
+        "We'd love to help you create a site that does more than look good — one that drives measurable growth and keeps you in control.",
+      primaryCta: { text: "Let's Build Something Together", href: "/contact" },
+      secondaryCta: { text: "View All Services", href: "/services" },
+    },
+  },
+
+  casesPeach: {
+    hero: {
+      title: "PEACHealth",
+      subtitle:
+        "Living longer and better through personalized, expert-backed health information.",
+    },
+    challenge:
+      "In an overwhelming landscape of health information, individuals concerned about or living with illness often face significant challenges in finding trustworthy, up-to-date, and personalized guidance. This lack of reliable resources can lead to anxiety, confusion, and hinder their ability to actively participate in crucial health decisions. The challenge was to develop a platform that cuts through this noise, empowering users with credible information and fostering proactive engagement in their care.",
+    solution:
+      "PEACHealth is a free mobile application that delivers personalized, expert-backed, and authoritative information for people concerned about or living with illness. By consolidating guidance from world-renowned medical experts and trusted sources, the platform makes reliable health information accessible and relevant to individual needs. Recent work focused on extending the platform with a subscription model, creating a sustainable foundation for growth while offering users access to premium content and features.",
+    keyFeatures: [
+      {
+        title: "Personalized Education",
+        description:
+          "Educational articles personalized to the user's specific condition and needs. The platform has a system that specialists can use to create a personalize plan of information for each patient",
+      },
+      {
+        title: "Symptom Tracking",
+        description:
+          "Track and share symptoms with friends, family, and healthcare professionals. The algorithm learns from the user's input to provide more relevant information over time",
+      },
+      {
+        title: "Appointment Logging",
+        description:
+          "Log appointments for a clear overview of care plans and medical history",
+      },
+      {
+        title: "Subscription Model",
+        description:
+          "Introduced a subscription system to unlock premium content and features, supporting long-term growth and sustainability",
+      },
+      {
+        title: "Community features",
+        description:
+          "Access to a supportive community of individuals facing similar health challenges, fostering connection and shared experiences",
+      },
+    ],
+    impact: [
+      {
+        title: "Empowered Decision Making",
+        description:
+          "Empowers users to understand their options and actively participate in their care journey",
+      },
+      {
+        title: "Improved Patient Engagement",
+        description:
+          "Fosters enhanced communication between patients and healthcare providers through shared insights and progress tracking.",
+      },
+      {
+        title: "Clinical Trials",
+        description:
+          "Facilitates participation in clinical trials and measures their real-world impact, helping patients access innovative treatments while generating valuable insights for healthcare providers and researchers.",
+      },
+    ],
+    technologySection: {
+      title: "Technology Stack",
+      content:
+        "Built with modern mobile development frameworks (e.g., React Native, Expo) and robust backend systems for seamless content delivery, personalization, and subscription management.",
+    },
+    ctaTitle: "Ready to Build Your Health Platform?",
+    ctaSubtitle:
+      "Let's create a digital health platform that empowers users with personalized, expert-backed information.",
+    projectLinks: [
+      {
+        text: "View on Apple App Store",
+        href: "https://apps.apple.com/pl/app/peachealth/id1640682684",
+      },
+      {
+        text: "View on Google Play Store",
+        href: "https://play.google.com/store/apps/details?gl=US&hl=en_GB&id=com.mycancercompanion.app",
+      },
+    ],
+  },
+
+  casesTrai: {
+    hero: {
+      title: "Trai",
+      subtitle:
+        "AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas.",
+    },
+    challenge:
+      "Triathletes often struggle to create personalized and effective training plans that truly adapt to their individual needs, availability, preferences, and evolving goals. The challenge was to develop an intelligent system capable of automating the generation of highly customized and dynamic training schemas.",
+    solution:
+      "Trai leverages AI to generate personalized, adaptive training plans for triathletes, taking into account their unique requirements and performance data.",
+    keyFeatures: [
+      {
+        title: "Personalized Training Plans",
+        description:
+          "AI-generated, highly customized training plans based on individual needs, availability, and goals.",
+      },
+      {
+        title: "Strava Integration",
+        description:
+          "Connects with Strava to analyze fitness data and tailor training recommendations.",
+      },
+      {
+        title: "Adaptive Scheduling",
+        description:
+          "Plans adapt dynamically as the athlete's data and preferences change.",
+      },
+    ],
+    impact: [
+      {
+        title: "Enhanced Time Efficiency",
+        description:
+          "Trai eliminates countless hours of manual planning and research, allowing athletes to focus entirely on their training.",
+      },
+      {
+        title: "Optimized Performance",
+        description:
+          "Our AI-driven approach leads to more effective, enjoyable, and ultimately, higher-performing training experiences.",
+      },
+      {
+        title: "Actionable Data-Driven Insights",
+        description:
+          "Trai leverages real training data for precise fitness assessment and continuous progress tracking, ensuring plans are always optimized.",
+      },
+    ],
+    ctaTitle: "Ready to Build Your AI Platform?",
+    ctaSubtitle:
+      "Let's create an intelligent, AI-powered platform that adapts and evolves with your users' needs.",
+  },
+
+  casesRodi: {
+    hero: {
+      title: "Rodi",
+      subtitle:
+        "A rider-first cycling app that guides your route and captures the ride.",
+    },
+    challenge:
+      "Cyclists want a simple way to follow a planned route and see the key stats that matter. Many tools feel heavy or distracting on the bike, and getting a GPX from web to phone can be clumsy. The challenge was to build a lightweight, reliable experience that makes navigation and ride tracking effortless.",
+    solution:
+      "We designed and built Rodi as a free, rider-first bike computer. The app shows your route and ride statistics in a clear layout and provides turn guidance to keep you on track. A web uploader makes it easy to add routes from your favorite planning tools straight into the app. A Notion-powered blog workflow supports ongoing tips and updates, so content stays fresh without slowing development.",
+    keyFeatures: [
+      {
+        title: "Turn-by-turn guidance",
+        description:
+          "Clear cues on the route so riders stop second-guessing and never miss their next turn.",
+      },
+      {
+        title: "Route uploads from the web",
+        description:
+          "Simple GPX upload at rodi.app/upload to get any planned route into the app in seconds.",
+      },
+      {
+        title: "Ride stats that matter",
+        description:
+          "Track distance, time, pace, and more so cyclists can review progress and plan the next ride with confidence.",
+      },
+      {
+        title: "Lightweight, rider-first UI",
+        description:
+          "A focused interface that keeps the map and cues center stage, reducing on-bike friction.",
+      },
+      {
+        title: "Content system for growth",
+        description:
+          "A Notion-powered blog workflow that lets you publish tips and updates without developer bottlenecks.",
+      },
+    ],
+    impact: [
+      {
+        title: "Fewer wrong turns",
+        description:
+          "Reliable guidance reduces route anxiety and keeps riders on course for the entire trip.",
+      },
+      {
+        title: "Faster route prep",
+        description:
+          "Uploading a planned route is quick and predictable, which shortens pre-ride setup and gets people rolling sooner.",
+      },
+      {
+        title: "Higher engagement",
+        description:
+          "Clear stats and helpful content give riders a reason to return for the next ride and share routes with friends.",
+      },
+    ],
+    technologySection: {
+      title: "Technology Stack",
+      content:
+        "Built with React Native and Expo for iOS and Android, using native location and mapping capabilities for reliable on-bike guidance. The content pipeline integrates with Notion for fast publishing. Analytics and in-app instrumentation support continuous improvement across navigation and ride flows.",
+    },
+    ctaTitle: "Want an app riders love to use?",
+    ctaSubtitle:
+      "Let's design and build a focused, reliable experience that ships fast and gets better with every release.",
+    projectLinks: [
+      {
+        text: "View app website",
+        href: "https://rodi.app/",
+      },
+    ],
+  },
+
+  contactPage: {
+    hero: {
+      title: "Let's Connect",
+      subtitle:
+        "Have a digital project in mind? Want to explore how AI, mobile, or web can transform your business? We're here to help bring your vision to life.",
+    },
+    contactInfo: [
+      {
+        title: "ADDRESS",
+        content: "Stationsweg 19, 5211 TV 's-Hertogenbosch, The Netherlands",
+      },
+      {
+        title: "EMAIL",
+        content: "hello@rodi-digital.com",
+      },
+      {
+        title: "PHONENUMBER",
+        content: "+32 499 72 17 71",
+      },
+    ],
+    whatsappAlt:
+      "Contact Rodi Digital via WhatsApp - AI and Mobile App Development",
+    whatsappButtonAlt:
+      "WhatsApp Contact Button - Rodi Digital Development Agency Netherlands",
+    mapTitle: "Rodi Digital Office Location",
+  },
+
+  footer: {
+    logoAlt: "Rodi Digital - Netherlands AI and Mobile App Development Agency",
+    description:
+      "Leading AI, mobile & web development agency in the Netherlands. We build cross-platform mobile apps, AI chatbots, and high-conversion websites for startups and enterprises across Europe and worldwide.",
+    sections: [
+      {
+        title: "Development Services",
+        links: [
+          { label: "All Development Services", href: "/services" },
+          {
+            label: "AI Chatbot Development",
+            href: "/services/ai-enabled-applications",
+          },
+          { label: "Mobile App Development", href: "/services/mobile" },
+          { label: "Web Development Netherlands", href: "/services/web" },
+        ],
+      },
+      {
+        title: "Our Approach",
+        links: [
+          { label: "Development Process", href: "/approach" },
+          { label: "Data Analytics", href: "/approach/analytics" },
+          { label: "Client Collaboration", href: "/approach/collaboration" },
+        ],
+      },
+      {
+        title: "Portfolio",
+        links: [
+          { label: "All Case Studies", href: "/cases" },
+          { label: "Healthcare Mobile App", href: "/cases/peach" },
+          { label: "Sports App Development", href: "/cases/rodi" },
+          { label: "AI Fitness Platform", href: "/cases/trai" },
+        ],
+      },
+      {
+        title: "Company",
+        links: [
+          { label: "Contact Agency", href: "/contact" },
+          { label: "AI Resources", href: "/llms.txt" },
+        ],
+      },
+    ],
+    ctaButton: "Let's Talk",
+  },
+};

@@ -1,45 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./button";
+import { copy } from "@/lib/copy";
 
-const footerLinks = [
-  {
-    title: "Development Services",
-    links: [
-      { label: "All Development Services", href: "/services" },
-      {
-        label: "AI Chatbot Development",
-        href: "/services/ai-enabled-applications",
-      },
-      { label: "Mobile App Development", href: "/services/mobile" },
-      { label: "Web Development Netherlands", href: "/services/web" },
-    ],
-  },
-  {
-    title: "Our Approach",
-    links: [
-      { label: "Development Process", href: "/approach" },
-      { label: "Data Analytics", href: "/approach/analytics" },
-      { label: "Client Collaboration", href: "/approach/collaboration" },
-    ],
-  },
-  {
-    title: "Portfolio",
-    links: [
-      { label: "All Case Studies", href: "/cases" },
-      { label: "Healthcare Mobile App", href: "/cases/peach" },
-      { label: "Sports App Development", href: "/cases/rodi" },
-      { label: "AI Fitness Platform", href: "/cases/trai" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "Contact Agency", href: "/contact" },
-      { label: "AI Resources", href: "/llms.txt" },
-    ],
-  },
-];
 
 export function Footer() {
   return (
@@ -55,25 +18,23 @@ export function Footer() {
                 src="/rodi-digital-logo.svg"
                 width={120}
                 height={60}
-                alt="Rodi Digital - Netherlands AI and Mobile App Development Agency"
+                alt={copy.footer.logoAlt}
               />
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Leading AI, mobile & web development agency in the Netherlands. 
-                We build cross-platform mobile apps, AI chatbots, and high-conversion 
-                websites for startups and enterprises across Europe and worldwide.
+                {copy.footer.description}
               </p>
               <div className="text-gray-500 text-sm space-y-1">
-                <p>Stationsweg 19, 5211 TV 's-Hertogenbosch</p>
-                <p>The Netherlands</p>
+                <p>{copy.contact.address.street}, {copy.contact.address.postalCode} {copy.contact.address.city}</p>
+                <p>{copy.contact.address.country}</p>
                 <p className="font-medium text-gray-600">
-                  hello@rodi-digital.com
+                  {copy.contact.email}
                 </p>
-                <p>VAT: NL867887370B01</p>
+                <p>VAT: {copy.contact.vat}</p>
               </div>
             </div>
 
             {/* Navigation Links - Each section takes 1 column */}
-            {footerLinks.map((section, index) => (
+            {copy.footer.sections.map((section, index) => (
               <div key={index} className="lg:col-span-1">
                 <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-4">
                   {section.title}
@@ -99,10 +60,10 @@ export function Footer() {
         <div className="py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2024 Rodi Digital. Built with you.
+              {copy.site.copyright}
             </p>
             <Button href="/contact" className="bg-primary hover:bg-primary/90">
-              Let's Talk
+              {copy.footer.ctaButton}
             </Button>
           </div>
         </div>

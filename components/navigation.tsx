@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { fadeIn } from "@/lib/scroll-animations";
+import { copy } from "@/lib/copy";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +105,7 @@ export function Navigation() {
                 src="/rodi-digital-logo.svg"
                 width={scrolled ? 80 : 150}
                 height={scrolled ? 40 : 80}
-                alt="Rodi Digital - AI, Mobile & Web Development Agency Netherlands"
+                alt={copy.navigation.logoAlt}
                 className="transition-all duration-300"
               />
             </Link>
@@ -209,7 +210,7 @@ export function Navigation() {
                   "text-sm"
                 )}
               >
-                Let's Chat
+                {copy.navigation.ctaButton}
               </Link>
             </motion.div>
           </div>

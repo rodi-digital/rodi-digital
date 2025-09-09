@@ -1,5 +1,6 @@
 import { ServiceHero } from "@/components/ui/service-hero";
 import { ContactContent } from "@/components/ui/contact-content";
+import { copy } from "@/lib/copy";
 
 export const metadata = {
   title: "Contact - Rodi Digital",
@@ -11,8 +12,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <ServiceHero
-        title="Let's Connect"
-        subtitle="Have a digital project in mind? Want to explore how AI, mobile, or web can transform your business? We're here to help bring your vision to life."
+        title={copy.contactPage.hero.title}
+        subtitle={copy.contactPage.hero.subtitle}
       />
 
       <ContactContent />

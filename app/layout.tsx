@@ -7,13 +7,13 @@ import { Navigation } from "@/components/navigation";
 import { GradientBackground } from "@/components/ui/gradient-background";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { copy } from "@/lib/copy";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rodi Digital | AI, Mobile & Web Development Agency",
-  description:
-    "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+  title: `${copy.site.name} | ${copy.site.tagline}`,
+  description: copy.site.description,
   keywords: [
     "AI development Netherlands",
     "mobile app development",
@@ -24,12 +24,10 @@ export const metadata: Metadata = {
     "custom software development",
   ],
   openGraph: {
-    title:
-      "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
-    description:
-      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+    title: `${copy.site.name} | ${copy.site.tagline} in the Netherlands`,
+    description: copy.site.description,
     url: "https://rodi-digital.com",
-    siteName: "Rodi Digital",
+    siteName: copy.site.name,
     locale: "en_US",
     type: "website",
   },
@@ -54,23 +52,22 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Rodi Digital",
+  name: copy.site.name,
   url: "https://rodi-digital.com",
   logo: "https://rodi-digital.com/rodi-digital-logo.svg",
-  description:
-    "AI, Mobile & Web Development Agency in the Netherlands specializing in AI chatbots, cross-platform mobile apps, and high-conversion websites",
+  description: `${copy.site.tagline} in the Netherlands specializing in AI chatbots, cross-platform mobile apps, and high-conversion websites`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Stationsweg 19",
-    addressLocality: "'s-Hertogenbosch",
-    postalCode: "5211 TV",
+    streetAddress: copy.contact.address.street,
+    addressLocality: copy.contact.address.city,
+    postalCode: copy.contact.address.postalCode,
     addressCountry: "NL",
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+32499721771",
+    telephone: copy.contact.whatsapp,
     contactType: "customer service",
-    email: "hello@rodi-digital.com",
+    email: copy.contact.email,
   },
   sameAs: ["https://www.linkedin.com/company/rodi-digital"],
   areaServed: ["NL", "EU", "US"],
