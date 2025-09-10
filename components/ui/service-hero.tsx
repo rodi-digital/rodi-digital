@@ -26,7 +26,7 @@ export function ServiceHero({
   const secondLine = words.slice(midpoint).join(" ");
 
   return (
-    <section className="pt-64 pb-64">
+    <section className="pt-64 pb-64 ">
       <motion.div
         className="max-w-7xl mx-auto px-6"
         variants={fadeInUp}

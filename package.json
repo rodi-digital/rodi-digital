@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@hookform/resolvers": "^3.9.1",
     "@next/third-parties": "^15.5.0",
     "@sglara/cn": "^1.0.0",
