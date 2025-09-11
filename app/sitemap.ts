@@ -34,7 +34,7 @@ function getAllPageRoutes(dir: string, baseDir: string = ""): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rodi.digital.com";
+  const baseUrl = "https://rodi-digital.com";
   const appDir = join(process.cwd(), "app");
 
   // Get all routes by scanning the app directory
