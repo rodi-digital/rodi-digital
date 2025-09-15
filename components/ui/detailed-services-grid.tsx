@@ -58,13 +58,9 @@ export function DetailedServicesGrid({
 
                     <ul className="space-y-4">
                       {service.items.map((item, itemIndex) => (
-                        <motion.li
+                        <li
                           key={itemIndex}
                           className="flex items-start gap-4"
-                          variants={fadeInUp}
-                          initial="hidden"
-                          whileInView="visible"
-                          viewport={defaultViewport}
                         >
                           <span className="text-sm text-gray-400 font-mono mt-1 flex-shrink-0">
                             •
@@ -82,7 +78,7 @@ export function DetailedServicesGrid({
                               </>
                             )}
                           </span>
-                        </motion.li>
+                        </li>
                       ))}
                     </ul>
                   </div>

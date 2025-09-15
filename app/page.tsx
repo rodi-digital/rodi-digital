@@ -9,10 +9,11 @@ const services = [
     description:
       "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
     items: [
-      "Conversational Agents – Finally, chatbots that understand and actually help.",
-      "Smart Automations – Free your team from repetitive manual processes.",
-      "AI-Powered Search – Find the right answers instantly, no endless document digging.",
-      "Customer Support Intelligence – Resolve issues faster and keep your team focused on higher-value work.",
+      "Content generation - Instant, brand-aligned copy, blogs, visuals, ads — polished at scale.",
+      "Conversational agents - Chatbots and voice assistants that feel more human than ever.",
+      "Process automation - Eliminate repetitive tasks and let your team do what matters.",
+      "Intelligent search & Insights - Search across documents, get answers instantly.",
+      "Personalization Eengine - Tailored content & experiences for each customer, powered by your data.",
     ],
   },
   {
@@ -20,10 +21,9 @@ const services = [
     description:
       "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
     items: [
-      "Rapid Prototyping & Launch – Validate your app idea without wasting months or budget.",
-      "Cross-Platform Reach – One codebase, iOS + Android, without trade-offs.",
-      "Built-In Analytics – Know what your users actually want from day one.",
-      "Engaging User Experience – Keep users active with smooth flows, smart notifications, and intuitive design.",
+      "iOS and Android - Build once, launch on iOS + Android, without trade-offs.",
+      "Rapid prototyping & launch - Validate your app idea without wasting months or budget.",
+      "Engaging user experience - Keep users active with smooth flows, smart notifications, and intuitive design.",
     ],
   },
   {
@@ -31,10 +31,10 @@ const services = [
     description:
       "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
     items: [
-      "SaaS Platforms – Scalable foundations for subscription businesses.",
-      "High-Impact Landing Pages – Convert visitors instead of losing them.",
-      "E-commerce Optimized – Smooth checkouts that reduce cart abandonment.",
-      "Easy Content Management – Stay in control without developer bottlenecks.",
+      "SaaS platforms - Scalable foundations for subscription businesses.",
+      "E-commerce - Smooth checkouts that reduce cart abandonment.",
+      "Easy content management - Stay in control without developer bottlenecks. Update content in seconds.",
+      "Company websites - Professional, fast, and built to grow with your business.",
     ],
   },
 ];
