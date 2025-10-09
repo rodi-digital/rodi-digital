@@ -2,6 +2,7 @@ import { HomeHero } from "@/components/ui/home-hero";
 import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
+import { FAQSection } from "@/components/ui/faq-section";
 
 const services = [
   {
@@ -39,6 +40,39 @@ const services = [
   },
 ];
 
+const homeFAQs = [
+  {
+    question: "What services does Rodi Digital offer?",
+    answer:
+      "Rodi Digital is an AI, mobile, and web development agency that builds cross-platform mobile apps, intelligent AI chatbots, and high-conversion websites for clients. In essence, they specialize in developing AI-powered applications, mobile apps, and modern websites that help businesses grow online. These services cover the full spectrum of digital product development – from smart conversational systems to user-friendly apps and conversion-focused web platforms.",
+  },
+  {
+    question: "What is unique about Rodi Digital's approach to development?",
+    answer:
+      "Rodi Digital's approach is data-driven and collaborative. They believe exceptional digital products are created through a synergy of close client collaboration and deep analytics insights. In practice, this means they don't just build a product for you – they build it with you, involving you in decisions and backing every choice with real data and user feedback. This approach ensures the final product truly aligns with your vision and delivers measurable results.",
+  },
+  {
+    question: "Who does Rodi Digital work with?",
+    answer:
+      "Rodi Digital works with organizations of all sizes, from nimble startups to large enterprises. They are based in the Netherlands but serve startups and established companies across Europe and worldwide. Their experience spans various industries and project scales, so they can adapt to the needs of both a new venture and a global business with equal ease.",
+  },
+  {
+    question: "How can Rodi Digital help my business grow?",
+    answer:
+      "Rodi Digital acts as a partner in your digital transformation by creating digital products that drive real business growth. They use data and analytics to make sure each app or website they build contributes to your bottom line. By focusing on user experience and evidence-based improvements, Rodi Digital delivers solutions that not only meet your needs but often exceed expectations and drive measurable business growth. In short, they build scalable digital tools that help increase customer engagement, improve efficiency, and unlock new opportunities for your business.",
+  },
+  {
+    question: "How do I start a project with Rodi Digital?",
+    answer:
+      'You can start by reaching out through their website\'s contact options. Simply click the "Let\'s Talk" or "Start Your Project" button on the site to get in touch. You can also contact Rodi Digital directly via email at hello@rodi-digital.com or by phone at +32 499 72 17 71 to discuss your ideas. The team welcomes inquiries – if you have a digital project in mind or want to explore how AI, mobile, or web solutions can transform your business, they\'re here to help bring your vision to life.',
+  },
+  {
+    question: "Where is Rodi Digital located?",
+    answer:
+      "Rodi Digital is headquartered in 's-Hertogenbosch, The Netherlands. Their office address is Stationsweg 19, 5211 TV 's-Hertogenbosch, and while they operate from the Netherlands, they collaborate with clients internationally. In fact, Rodi Digital proudly serves companies across Europe and worldwide, not just locally, so you can easily work with them even if you're not in the Netherlands.",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -62,6 +96,12 @@ export default function HomePage() {
         content="At Rodi Digital, we believe that exceptional digital products are born from a synergy of close collaboration and deep, data-driven insights. We don't just build for you; we build with you, ensuring every decision is backed by real data and user feedback."
         primaryCTA={{ text: "Our Approach", href: "/approach" }}
         secondaryCTA={{ text: "Case Studies", href: "/cases" }}
+      />
+
+      <FAQSection
+        title="Frequently Asked Questions"
+        subtitle="Get answers to common questions about our services and approach"
+        faqs={homeFAQs}
       />
 
       <FinalCTA
