@@ -6,7 +6,7 @@ export const fadeIn: Variants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.25, 0.25, 0.75],
+      ease: "easeIn",
       delay: i, // control delay with `custom`
     },
   }),
