@@ -12,7 +12,7 @@ const contactFAQs = [
   {
     question: "How can I contact Rodi Digital?",
     answer:
-      "You can easily get in touch with Rodi Digital through a few methods. The simplest way is to send them an email at hello@rodi-digital.com or call them by phone at +32 499 72 17 71. Additionally, on their website there's a \"Let's Talk\" or contact form button – clicking that will either open a contact form or your email client to start a conversation. Rodi Digital is very responsive to inquiries; they encourage prospective clients to reach out with any project ideas or questions. Whether you choose email, phone, or the website form, just provide a brief overview of what you're looking to achieve, and their team will be happy to discuss how they can help.",
+      "You can easily get in touch with Rodi Digital through a few methods. The simplest way is to send them an email at hello@rodi-digital.com. Additionally, on their website there's a \"Let's Talk\" or contact form button – clicking that will either open a contact form or your email client to start a conversation. Rodi Digital is very responsive to inquiries; they encourage prospective clients to reach out with any project ideas or questions. Whether you choose email, or the website form, just provide a brief overview of what you're looking to achieve, and their team will be happy to discuss how they can help.",
   },
   {
     question: "Where is Rodi Digital located?",

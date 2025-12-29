@@ -68,7 +68,6 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+32499721771",
     contactType: "customer service",
     email: "hello@rodi-digital.com",
   },

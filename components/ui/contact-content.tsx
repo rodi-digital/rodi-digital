@@ -30,15 +30,7 @@ export function ContactContent() {
         </a>
       ),
     },
-    {
-      title: "PHONENUMBER",
-      icon: Phone,
-      content: (
-        <a href="tel:+32499721771" className="text-primary hover:underline">
-          +32 499 72 17 71
-        </a>
-      ),
-    },
+
     // {
     //   title: "OFFICE HOURS",
     //   icon: null,
