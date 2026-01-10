@@ -3,77 +3,31 @@ import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
 import { FAQSection } from "@/components/ui/faq-section";
+import { reader } from "@/lib/keystatic-reader";
 
-const services = [
-  {
-    title: "AI-Powered Applications",
-    description:
-      "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
-    items: [
-      "Content generation - Instant, brand-aligned copy, blogs, visuals, ads — polished at scale.",
-      "Conversational agents - Chatbots and voice assistants that feel more human than ever.",
-      "Process automation - Eliminate repetitive tasks and let your team do what matters.",
-      "Intelligent search & Insights - Search across documents, get answers instantly.",
-      "Personalization Eengine - Tailored content & experiences for each customer, powered by your data.",
-    ],
-  },
-  {
-    title: "Mobile Development",
-    description:
-      "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
-    items: [
-      "iOS and Android - Build once, launch on iOS + Android, without trade-offs.",
-      "Rapid prototyping & launch - Validate your app idea without wasting months or budget.",
-      "Engaging user experience - Keep users active with smooth flows, smart notifications, and intuitive design.",
-    ],
-  },
-  {
-    title: "Web Development",
-    description:
-      "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
-    items: [
-      "SaaS platforms - Scalable foundations for subscription businesses.",
-      "E-commerce - Smooth checkouts that reduce cart abandonment.",
-      "Easy content management - Stay in control without developer bottlenecks. Update content in seconds.",
-      "Company websites - Professional, fast, and built to grow with your business.",
-    ],
-  },
-];
+export default async function HomePage() {
+  // Fetch service cards for home page
+  const serviceCards = (await reader.collections['service-cards'].all())
+    .filter(card => 
+      card.entry.published && 
+      (card.entry.context === 'home-services' || card.entry.context === 'both')
+    )
+    .sort((a, b) => a.entry.order - b.entry.order);
 
-const homeFAQs = [
-  {
-    question: "What services does Rodi Digital offer?",
-    answer:
-      "Rodi Digital is an AI, mobile, and web development agency that builds cross-platform mobile apps, intelligent AI chatbots, and high-conversion websites for clients. In essence, they specialize in developing AI-powered applications, mobile apps, and modern websites that help businesses grow online. These services cover the full spectrum of digital product development – from smart conversational systems to user-friendly apps and conversion-focused web platforms.",
-  },
-  {
-    question: "What is unique about Rodi Digital's approach to development?",
-    answer:
-      "Rodi Digital's approach is data-driven and collaborative. They believe exceptional digital products are created through a synergy of close client collaboration and deep analytics insights. In practice, this means they don't just build a product for you – they build it with you, involving you in decisions and backing every choice with real data and user feedback. This approach ensures the final product truly aligns with your vision and delivers measurable results.",
-  },
-  {
-    question: "Who does Rodi Digital work with?",
-    answer:
-      "Rodi Digital works with organizations of all sizes, from nimble startups to large enterprises. They are based in the Netherlands but serve startups and established companies across Europe and worldwide. Their experience spans various industries and project scales, so they can adapt to the needs of both a new venture and a global business with equal ease.",
-  },
-  {
-    question: "How can Rodi Digital help my business grow?",
-    answer:
-      "Rodi Digital acts as a partner in your digital transformation by creating digital products that drive real business growth. They use data and analytics to make sure each app or website they build contributes to your bottom line. By focusing on user experience and evidence-based improvements, Rodi Digital delivers solutions that not only meet your needs but often exceed expectations and drive measurable business growth. In short, they build scalable digital tools that help increase customer engagement, improve efficiency, and unlock new opportunities for your business.",
-  },
-  {
-    question: "How do I start a project with Rodi Digital?",
-    answer:
-      'You can start by reaching out through their website\'s contact options. Simply click the "Let\'s Talk" or "Start Your Project" button on the site to get in touch. You can also contact Rodi Digital directly via email at hello@rodi-digital.com to discuss your ideas. The team welcomes inquiries – if you have a digital project in mind or want to explore how AI, mobile, or web solutions can transform your business, they\'re here to help bring your vision to life.',
-  },
-  {
-    question: "Where is Rodi Digital located?",
-    answer:
-      "Rodi Digital is headquartered in 's-Hertogenbosch, The Netherlands. Their office address is Stationsweg 19, 5211 TV 's-Hertogenbosch, and while they operate from the Netherlands, they collaborate with clients internationally. In fact, Rodi Digital proudly serves companies across Europe and worldwide, not just locally, so you can easily work with them even if you're not in the Netherlands.",
-  },
-];
+  const services = serviceCards.map(card => ({
+    title: card.entry.title,
+    description: card.entry.description,
+    items: card.entry.items || [],
+  }));
 
-export default function HomePage() {
+  // Fetch FAQs for home section
+  const homeFAQs = (await reader.collections.faqs.all())
+    .filter(faq => faq.entry.published && faq.entry.section === 'home')
+    .sort((a, b) => a.entry.order - b.entry.order)
+    .map(faq => ({
+      question: faq.entry.question,
+      answer: faq.entry.answer,
+    }));
   return (
     <div className="min-h-screen">
       <HomeHero

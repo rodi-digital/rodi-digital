@@ -1,0 +1,43 @@
+---
+title: Wally
+subtitle: AI assistant for accounting firms that brings information and software together.
+description: AI assistant for accounting firms that integrates with Outlook, provides tax expertise, performs calculations, and analyzes documents to streamline accounting workflows.
+challenge: |
+  Accounting firms waste significant time searching for information and performing repetitive tasks. Employees juggle multiple disconnected systems and data sources, leading to inefficiency, errors, and frustration. The challenge was to create an AI assistant that understands accounting workflows and integrates seamlessly with existing tools like Outlook, making AI accessible to every team member without technical complexity.
+solution: |
+  Wally is an AI assistant specifically designed for accounting firms. It integrates with Microsoft Outlook to search emails and extract information instantly, provides specialized expertise in Belgian tax law (VAT, corporate tax, personal income tax), performs fiscal calculations and data analysis, analyzes documents to extract key information, and drafts emails. Wally is built to be accessible to every team member, from file managers to partners, bringing information and software together so accountants can focus on work that matters.
+keyFeatures:
+  - title: Outlook Integration
+    description: Searches Outlook inbox and extracts information and history in seconds, eliminating manual searching through emails.
+  - title: Tax Expertise
+    description: Specialized knowledge in Belgian VAT, corporate tax, and personal income tax, providing answers backed by official sources.
+  - title: Fiscal Calculations
+    description: Performs complex tax calculations and data analysis, from intricate computations to dataset processing and visualization.
+  - title: Document Analysis
+    description: Upload invoices, contracts, or tax documents and extract relevant information, interpreting and summarizing key details.
+  - title: Email Composition
+    description: Drafts emails on demand, helping accountants communicate more efficiently with clients and colleagues.
+  - title: Accessible AI
+    description: Designed for every team member, from file managers to partners, making AI accessible without technical barriers.
+impact:
+  - title: Time Savings
+    description: Reduces time lost on searching and repetitive work, allowing accountants to focus on high-value tasks that matter.
+  - title: Improved Efficiency
+    description: Streamlines workflows by consolidating information and software, enabling faster access to insights and data.
+  - title: Better Accuracy
+    description: Provides expert-backed answers with official sources, reducing errors and ensuring compliance with tax regulations.
+  - title: Reduced Complexity
+    description: Brings peace and overview to accounting offices without complex technology, making AI usable without hassle.
+technologySection:
+  enabled: true
+  title: Technology Stack
+  content: |
+    Built with AI/LLM technology integrated with Microsoft Outlook and Office 365, featuring secure document processing, tax calculation engines, and natural language interfaces designed for accounting professionals.
+ctaTitle: Ready to Transform Your Accounting Workflow?
+ctaSubtitle: Let''s build an AI assistant that integrates seamlessly with your existing tools and makes complex tasks simple.
+projectLinks:
+  - text: Visit Wally
+    href: https://wally.be/
+    variant: outline
+published: true
+order: 2
