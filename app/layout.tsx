@@ -2,9 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/components/ui/footer";
-import { Navigation } from "@/components/navigation";
-import { GradientBackground } from "@/components/ui/gradient-background";
+import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -99,11 +97,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <PostHogProvider>
-          <GradientBackground>
-            <Navigation />
-            <main>{children}</main>
-            <Footer />
-          </GradientBackground>
+          <LayoutWrapper>{children}</LayoutWrapper>
         </PostHogProvider>
       </body>
       <GoogleAnalytics gaId="G-TJNMYDCFDT" />
