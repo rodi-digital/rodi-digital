@@ -6,6 +6,27 @@ import { image } from "framer-motion/client";
 
 const cases = [
   {
+    title: "IPRHQ",
+    description:
+      "The first integrated platform unifying IP clearance, search, watch, enforcement, portfolio management, and monitoring into one unified system with AI-powered risk scoring.",
+    href: "/cases/iprhq",
+    image: "/images/cases/iprhq.png",
+  },
+  {
+    title: "DiffGraph",
+    description:
+      "Visualize architectural changes in every pull request with interactive dependency graphs, catching breaking changes before they ship and optimizing code review workflows.",
+    href: "/cases/diffgraph",
+    image: "/images/cases/diffgraph.png",
+  },
+  {
+    title: "Wally",
+    description:
+      "AI assistant for accounting firms that integrates with Outlook, provides tax expertise, performs calculations, and analyzes documents to streamline accounting workflows.",
+    href: "/cases/wally",
+    image: "/images/cases/wally.png",
+  },
+  {
     title: "PEACHealth",
     description:
       "Empowering individuals with personalized, expert-backed health information through a free mobile application, fostering informed decision-making and improved patient engagement.",

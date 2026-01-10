@@ -70,6 +70,9 @@ export function Navigation() {
       name: "Cases",
       href: "/cases",
       children: [
+        { name: "IPRHQ", href: "/cases/iprhq" },
+        { name: "DiffGraph", href: "/cases/diffgraph" },
+        { name: "Wally", href: "/cases/wally" },
         { name: "PEACHealth", href: "/cases/peach" },
         { name: "Rodi", href: "/cases/rodi" },
         { name: "Trai", href: "/cases/trai" },
