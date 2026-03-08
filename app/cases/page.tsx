@@ -47,6 +47,13 @@ const cases = [
     href: "/cases/trai",
     image: "/images/cases/trai.png",
   },
+  {
+    title: "Rodi Sites",
+    description:
+      "A subscription-based website platform delivering professional, SEO-optimized websites for Dutch small businesses from €75/month — no upfront costs, everything included.",
+    href: "/cases/rodi-sites",
+    image: "/images/cases/rodi-sites.png",
+  },
 ];
 
 const casesFAQs = [

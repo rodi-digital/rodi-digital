@@ -76,6 +76,7 @@ export function Navigation() {
         { name: "PEACHealth", href: "/cases/peach" },
         { name: "Rodi", href: "/cases/rodi" },
         { name: "Trai", href: "/cases/trai" },
+        { name: "Rodi Sites", href: "/cases/rodi-sites" },
       ],
     },
   ];
