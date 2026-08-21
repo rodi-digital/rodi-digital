@@ -1,11 +1,12 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://rodi-digital.vercel.app/sitemap.xml
+Sitemap: https://rodi-digital.com/sitemap.xml
 
 # LLMs.txt - Guide for AI crawlers
-# https://rodi-digital.vercel.app/llms.txt
+# https://rodi-digital.com/llms.txt
 
 # Allow major search engine crawlers
 User-agent: Googlebot
@@ -13,6 +14,15 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+# Allow SEO/backlink crawlers so our links are visible in link databases
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 1
 
 # Allow AI crawlers for training and inference
 User-agent: GPTBot
@@ -37,15 +47,5 @@ User-agent: anthropic-ai
 Allow: /
 
 # Block common bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
 User-agent: MJ12bot
 Disallow: /
-
-# Crawl delay for aggressive bots
-User-agent: *
-Crawl-delay: 1
