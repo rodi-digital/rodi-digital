@@ -1,17 +1,40 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Serif, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/ui/footer";
 import { Navigation } from "@/components/navigation";
 import { GradientBackground } from "@/components/ui/gradient-background";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { CustomCursor } from "@/components/ui/custom-cursor";
 
-const inter = Inter({ subsets: ["latin"] });
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Rodi Digital | AI, Mobile & Web Development Agency",
+  metadataBase: new URL("https://rodi-digital.com"),
+  title: {
+    default: "Rodi Digital | AI, Mobile & Web Development Agency",
+    template: "%s | Rodi Digital",
+  },
   description:
     "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
   keywords: [
@@ -32,6 +55,13 @@ export const metadata: Metadata = {
     siteName: "Rodi Digital",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
+    description:
+      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
   },
   robots: {
     index: true,
@@ -71,7 +101,10 @@ const organizationSchema = {
     contactType: "customer service",
     email: "hello@rodi-digital.com",
   },
-  sameAs: ["https://www.linkedin.com/company/rodi-digital"],
+  sameAs: [
+    "https://www.linkedin.com/company/rodi-digital",
+    "https://github.com/rodi-digital",
+  ],
   areaServed: ["NL", "EU", "US"],
   serviceType: [
     "AI Development",
@@ -88,7 +121,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${instrumentSerif.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -97,13 +130,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <PostHogProvider>
           <GradientBackground>
             <Navigation />
-            <main>{children}</main>
+            <main className="relative z-10">{children}</main>
             <Footer />
           </GradientBackground>
+          <CustomCursor />
         </PostHogProvider>
       </body>
       <GoogleAnalytics gaId="G-TJNMYDCFDT" />

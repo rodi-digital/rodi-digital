@@ -3,6 +3,21 @@ import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Collaboration — Building With You, Not For You",
+  description:
+    "Rodi Digital's collaborative development approach: frequent updates, live demos, short syncs, and an open feedback loop so you co-create your product with the team.",
+  path: "/approach/collaboration",
+  keywords: [
+    "collaborative software development",
+    "client partnership development",
+    "agile collaboration",
+    "transparent development process",
+  ],
+});
 
 const collaborativePrinciples = [
   {
@@ -59,6 +74,16 @@ const collaborationFAQs = [
 export default function CollaborationPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          faqPageSchema(collaborationFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Approach", path: "/approach" },
+            { name: "Collaboration", path: "/approach/collaboration" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Collaboration"
         subtitle="Working with an agency can feel like handing over control and just hoping for the best. Deadlines slip, feedback gets lost, and you end up with something that is not quite what you imagined. We believe the only way to build the right product is to build it together with you."

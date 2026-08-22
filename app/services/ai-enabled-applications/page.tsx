@@ -3,6 +3,28 @@ import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import {
+  pageMetadata,
+  faqPageSchema,
+  serviceSchema,
+  breadcrumbSchema,
+} from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "AI-Powered Applications & LLM Development",
+  description:
+    "Custom AI-powered applications, LLM integrations, conversational agents, and intelligent search built by Rodi Digital to automate work and improve customer experience.",
+  path: "/services/ai-enabled-applications",
+  keywords: [
+    "AI application development",
+    "LLM integration",
+    "AI chatbots",
+    "conversational AI",
+    "AI automation",
+    "AI-powered search",
+  ],
+});
 
 const expertiseCards = [
   {
@@ -96,6 +118,23 @@ const aiFAQs = [
 export default function AIPoweredApplicationsPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "AI-Powered Applications",
+            description:
+              "Custom AI-powered applications, LLM integrations, conversational agents, intelligent search, and process automation.",
+            path: "/services/ai-enabled-applications",
+            category: "AI Development",
+          }),
+          faqPageSchema(aiFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "AI-Powered Applications", path: "/services/ai-enabled-applications" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="AI-Powered Applications"
         subtitle="Your team is buried in repetitive tasks, customers get stuck with unhelpful chatbots, and finding answers in endless documents takes forever. We build AI-powered applications that actually solve these problems, freeing your people to focus on what matters most."

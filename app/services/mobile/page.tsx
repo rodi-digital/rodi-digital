@@ -3,6 +3,28 @@ import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import {
+  pageMetadata,
+  faqPageSchema,
+  serviceSchema,
+  breadcrumbSchema,
+} from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Mobile App Development — iOS & Android (React Native)",
+  description:
+    "Cross-platform mobile app development with React Native and Expo. Launch on iOS and Android from one codebase, fast, with analytics built in from day one.",
+  path: "/services/mobile",
+  keywords: [
+    "mobile app development",
+    "cross-platform apps",
+    "React Native development",
+    "iOS and Android apps",
+    "Expo development",
+    "MVP app development",
+  ],
+});
 
 const strengthsCards = [
   {
@@ -81,6 +103,23 @@ const mobileFAQs = [
 export default function MobilePage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Mobile Development",
+            description:
+              "Cross-platform mobile app development for iOS and Android using React Native and Expo, with analytics built in from day one.",
+            path: "/services/mobile",
+            category: "Mobile App Development",
+          }),
+          faqPageSchema(mobileFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Mobile Development", path: "/services/mobile" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Mobile Development"
         subtitle="Building an app should not take forever or blow your budget. You want something people can actually use, on iOS and Android, without guessing which features matter. We help you launch fast, learn from real users, and improve with confidence."

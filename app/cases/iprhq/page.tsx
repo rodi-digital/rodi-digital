@@ -1,4 +1,20 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "IPRHQ — Unified IP Management Platform with AI Risk Scoring",
+  description:
+    "IPRHQ is the first integrated platform unifying IP clearance, search, watch, enforcement, portfolio management, and monitoring with AI-powered risk scoring.",
+  path: "/cases/iprhq",
+  keywords: [
+    "IP management platform",
+    "intellectual property software",
+    "AI risk scoring",
+    "IP portfolio management",
+    "patent and trademark software",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -58,7 +74,15 @@ const impactFeatures = [
 
 export default function IPRHQCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "IPRHQ", path: "/cases/iprhq" },
+        ])}
+      />
+      <CaseStudyLayout
       title="IPRHQ"
       subtitle="Master your IP rights in one unified platform."
       challenge="IP teams juggle 5-7 disconnected tools and data sources for clearance, search, watch, enforcement, portfolio management, domains, and online monitoring. This fragmentation slows decisions, increases costs, creates blind spots, and risks. Manual data transfers between systems and multiple searches needed to obtain holistic results make IP management inefficient and error-prone."
@@ -79,6 +103,7 @@ export default function IPRHQCasePage() {
         },
       ]}
     />
+    </>
   );
 }
 

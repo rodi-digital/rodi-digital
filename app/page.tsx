@@ -3,12 +3,38 @@ import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
 import { FAQSection } from "@/components/ui/faq-section";
+import { CasesPreview } from "@/components/ui/cases-preview";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, SITE_URL } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Rodi Digital | AI, Mobile & Web Development Agency",
+  description:
+    "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+  path: "/",
+  keywords: [
+    "AI development Netherlands",
+    "mobile app development",
+    "web development agency",
+    "cross-platform apps",
+    "AI chatbots",
+    "Netherlands digital agency",
+  ],
+});
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Rodi Digital",
+  url: SITE_URL,
+};
 
 const services = [
   {
     title: "AI-Powered Applications",
     description:
       "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
+    image: "/images/ai.png",
     items: [
       "Content generation - Instant, brand-aligned copy, blogs, visuals, ads — polished at scale.",
       "Conversational agents - Chatbots and voice assistants that feel more human than ever.",
@@ -21,6 +47,7 @@ const services = [
     title: "Mobile Development",
     description:
       "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
+    image: "/images/stores.png",
     items: [
       "iOS and Android - Build once, launch on iOS + Android, without trade-offs.",
       "Rapid prototyping & launch - Validate your app idea without wasting months or budget.",
@@ -31,6 +58,7 @@ const services = [
     title: "Web Development",
     description:
       "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
+    image: "/images/web.png",
     items: [
       "SaaS platforms - Scalable foundations for subscription businesses.",
       "E-commerce - Smooth checkouts that reduce cart abandonment.",
@@ -73,9 +101,48 @@ const homeFAQs = [
   },
 ];
 
+const featuredCases = [
+  {
+    title: "Wally",
+    description:
+      "AI assistant for accounting firms that integrates with Outlook, provides tax expertise, and analyzes documents.",
+    href: "/cases/wally",
+    image: "/images/cases/wally.png",
+  },
+  {
+    title: "IPRHQ",
+    description:
+      "The first integrated platform unifying IP clearance, search, watch, enforcement, portfolio management, and monitoring with AI-powered risk scoring.",
+    href: "/cases/iprhq",
+    image: "/images/cases/iprhq.png",
+  },
+  {
+    title: "PEACHealth",
+    description:
+      "Empowering individuals with personalized, expert-backed health information through a free mobile application.",
+    href: "/cases/peach",
+    image: "/images/cases/peach.png",
+  },
+  {
+    title: "DiffGraph",
+    description:
+      "Visualize architectural changes in every pull request with interactive dependency graphs, catching breaking changes before they ship.",
+    href: "/cases/diffgraph",
+    image: "/images/cases/diffgraph.png",
+  },
+  {
+    title: "Loop Sleep",
+    description:
+      "An intelligent sleep companion for Loop Earplugs — conversational onboarding and AI-generated sleep rituals. Built while part of the team at Nimble.",
+    href: "/cases/loop",
+    image: "/images/cases/loop.png",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={[websiteSchema, faqPageSchema(homeFAQs)]} />
       <HomeHero
         title="Apps, AI, and Websites Built with You"
         subtitle={[
@@ -85,11 +152,39 @@ export default function HomePage() {
         ctaHref="/contact"
       />
 
+      {/* Marquee strip */}
+      <div className="border-y border-border overflow-hidden py-5 bg-background-elevated/40">
+        <div className="marquee">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-10 px-5 font-display italic text-2xl md:text-4xl text-foreground/70 whitespace-nowrap"
+            >
+              {[
+                "AI Engineering",
+                "Mobile · iOS · Android",
+                "Web Platforms",
+                "Data-Driven",
+                "Conversational Agents",
+                "Built With You",
+              ].map((t) => (
+                <span key={t} className="flex items-center gap-10">
+                  <span className="text-primary not-italic font-mono text-base">✦</span>
+                  {t}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <DetailedServicesGrid
         title="Our Services"
         subtitle="What We Build"
         services={services}
       />
+
+      <CasesPreview cases={featuredCases} />
 
       <TwoColumnSection
         title="Data-Driven Development"

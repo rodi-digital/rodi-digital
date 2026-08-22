@@ -2,7 +2,7 @@
 
 import * as motion from "motion/react-client";
 import { fadeInUp } from "@/lib/scroll-animations";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,62 +24,53 @@ export function ContactContent() {
       content: (
         <a
           href="mailto:hello@rodi-digital.com"
-          className="text-primary hover:underline"
+          className="link-draw inline-block text-primary"
         >
           hello@rodi-digital.com
         </a>
       ),
     },
-
-    // {
-    //   title: "OFFICE HOURS",
-    //   icon: null,
-    //   content: <p>Monday – Friday</p>,
-    // },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        {/* Left Side - Contact Information */}
+    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-24 md:py-32 border-t border-border">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="space-y-12"
+          className="lg:col-span-5 space-y-12"
         >
           {contactInfo.map((info, index) => (
             <div key={index}>
-              <div className="flex items-center space-x-2 mb-3">
+              <div className="flex items-center gap-3 mb-4">
                 {info.icon && <info.icon className="w-4 h-4 text-primary" />}
-                <h3 className="text-sm font-medium text-primary uppercase tracking-wide">
-                  {info.title}
-                </h3>
+                <h3 className="eyebrow">{info.title}</h3>
               </div>
-              <div className="text-gray-700 text-lg leading-relaxed">
+              <div className="font-display text-2xl md:text-3xl text-foreground leading-relaxed">
                 {info.content}
               </div>
             </div>
           ))}
         </motion.div>
 
-        {/* Right Side - WhatsApp CTA */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
           custom={0.2}
-          className="flex items-center justify-center"
+          className="lg:col-span-7 flex items-center justify-center"
         >
-          <div className="text-center space-y-8">
-            <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center">
+          <div className="text-center space-y-8 w-full">
+            <div className="relative h-32 w-32 mx-auto rounded-full border border-border flex items-center justify-center glow">
               <Image
                 src="/images/WhatsappLogoGreen.svg"
                 alt="Contact Rodi Digital via WhatsApp - AI and Mobile App Development"
-                width={128}
-                height={128}
+                width={96}
+                height={96}
+                className="object-contain"
               />
             </div>
 
@@ -99,7 +90,6 @@ export function ContactContent() {
         </motion.div>
       </div>
 
-      {/* Map Section */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -108,15 +98,16 @@ export function ContactContent() {
         custom={0.4}
         className="mt-24"
       >
-        <div
-          className="bg-gray-100 rounded-2xl overflow-hidden"
-          style={{ height: "400px" }}
-        >
+        <div className="eyebrow mb-4 flex items-center gap-3">
+          <span className="h-px w-10 bg-primary" />
+          § Location — 51.6901° N · 5.3028° E
+        </div>
+        <div className="border border-border overflow-hidden" style={{ height: "420px" }}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.6834890734747!2d5.302844976892394!3d51.69016897186847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee6b5c36b5cd%3A0x3b5b8f4c8c1c4b4a!2sStationsweg%2019%2C%205211%20TV%20's-Hertogenbosch%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
             width="100%"
             height="100%"
-            style={{ border: 0 }}
+            style={{ border: 0, filter: "grayscale(1) invert(0.92) contrast(0.9)" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

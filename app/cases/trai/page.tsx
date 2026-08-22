@@ -1,4 +1,20 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Trai — AI-Powered Triathlon Training Plan Generator",
+  description:
+    "Trai is an AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas, optimizing performance and simplifying planning for athletes.",
+  path: "/cases/trai",
+  keywords: [
+    "AI training plan generator",
+    "triathlon training app",
+    "adaptive training plans",
+    "AI fitness coach",
+    "personalized training schemas",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -61,7 +77,15 @@ const traiFAQs = [
 
 export default function TraiCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "Trai", path: "/cases/trai" },
+        ])}
+      />
+      <CaseStudyLayout
       title="Trai"
       subtitle="AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas."
       challenge="Triathletes often struggle to create personalized and effective training plans that truly adapt to their individual needs, availability, preferences, and evolving goals. The challenge was to develop an intelligent system capable of automating the generation of highly customized and dynamic training schemas."
@@ -72,5 +96,6 @@ export default function TraiCasePage() {
       ctaSubtitle="Let's create an intelligent, AI-powered platform that adapts and evolves with your users' needs."
       faqs={traiFAQs}
     />
+    </>
   );
 }

@@ -1,4 +1,20 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "DiffGraph — Visualize Architectural Changes in Pull Requests",
+  description:
+    "DiffGraph visualizes architectural changes in every pull request with interactive dependency graphs, catching breaking changes before they ship and improving code review workflows.",
+  path: "/cases/diffgraph",
+  keywords: [
+    "dependency graph visualization",
+    "code review tool",
+    "architecture visualization",
+    "pull request analysis",
+    "breaking change detection",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -53,7 +69,15 @@ const impactFeatures = [
 
 export default function DiffGraphCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "DiffGraph", path: "/cases/diffgraph" },
+        ])}
+      />
+      <CaseStudyLayout
       title="DiffGraph"
       subtitle="Stop reviewing lines. Start reviewing architecture."
       challenge="In the age of AI-assisted development, line-by-line reviews are a diminishing return. The real risk is not a misplaced semicolon, but fundamental architectural flaws that compound with every commit. These flaws are exponentially harder and more expensive to fix after the fact. Teams review every line of code, but who reviews the architecture?"
@@ -74,6 +98,7 @@ export default function DiffGraphCasePage() {
         },
       ]}
     />
+    </>
   );
 }
 

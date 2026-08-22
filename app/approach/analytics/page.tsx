@@ -3,6 +3,22 @@ import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Analytics at the Core — Data-Driven Product Development",
+  description:
+    "How Rodi Digital embeds analytics into every step of product development — tracking from day one, built-in measurement, and data-backed recommendations for continuous growth.",
+  path: "/approach/analytics",
+  keywords: [
+    "product analytics",
+    "data-driven product development",
+    "analytics implementation",
+    "user behavior tracking",
+    "ROI measurement",
+  ],
+});
 
 const approachFeatures = [
   {
@@ -81,6 +97,16 @@ const analyticsFAQs = [
 export default function AnalyticsPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          faqPageSchema(analyticsFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Approach", path: "/approach" },
+            { name: "Analytics", path: "/approach/analytics" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Analytics"
         subtitle="Ever launched a product and had no idea what people were actually doing inside it? You're not alone. Guessing what works and what doesn't wastes time and money. We make analytics part of the product itself, so you always know what's really happening."

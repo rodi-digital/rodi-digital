@@ -1,4 +1,20 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "PEACHealth — Personalized Health Information Mobile App",
+  description:
+    "PEACHealth empowers individuals with personalized, expert-backed health information through a free mobile application, fostering informed decision-making and improved patient engagement.",
+  path: "/cases/peach",
+  keywords: [
+    "health information app",
+    "personalized health app",
+    "patient engagement app",
+    "mobile health app",
+    "expert-backed health information",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -71,7 +87,15 @@ const peachFAQs = [
 
 export default function PeachCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "PEACHealth", path: "/cases/peach" },
+        ])}
+      />
+      <CaseStudyLayout
       title="PEACHealth"
       subtitle="Living longer and better through personalized, expert-backed health information."
       challenge="In an overwhelming landscape of health information, individuals concerned about or living with illness often face significant challenges in finding trustworthy, up-to-date, and personalized guidance. This lack of reliable resources can lead to anxiety, confusion, and hinder their ability to actively participate in crucial health decisions. The challenge was to develop a platform that cuts through this noise, empowering users with credible information and fostering proactive engagement in their care."
@@ -97,5 +121,6 @@ export default function PeachCasePage() {
       ]}
       faqs={peachFAQs}
     />
+    </>
   );
 }

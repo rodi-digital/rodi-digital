@@ -15,36 +15,28 @@ export function ServiceHero({
   size = "default",
 }: ServiceHeroProps) {
   const titleSize =
-    size === "large" ? "text-6xl lg:text-8xl" : "text-6xl lg:text-7xl";
-  const leadingSize = size === "large" ? "leading-[0.85]" : "leading-[0.9]";
-  const marginBottom = size === "large" ? "mb-12" : "mb-8";
-
-  // Split title into words and insert line breaks
-  const words = title.split(" ");
-  const midpoint = Math.ceil(words.length / 2);
-  const firstLine = words.slice(0, midpoint).join(" ");
-  const secondLine = words.slice(midpoint).join(" ");
+    size === "large" ? "text-[14vw] md:text-[10vw]" : "text-[12vw] md:text-[8vw]";
 
   return (
-    <section className="pt-64 pb-64 ">
+    <section className="pt-48 md:pt-64 pb-24 md:pb-32 relative overflow-hidden">
       <motion.div
-        className="max-w-7xl mx-auto px-6"
+        className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10"
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
       >
-        <div className="max-w-5xl">
-          <h1
-            className={`${titleSize} font-light tracking-tight text-black ${marginBottom} ${leadingSize}`}
-          >
-            {firstLine}
-            <br />
-            {secondLine}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-            {subtitle}
-          </p>
+        <div className="eyebrow mb-8 flex items-center gap-3">
+          <span className="h-px w-10 bg-primary" />
+          § Index — {title}
         </div>
+        <h1
+          className={`${titleSize} font-display tracking-tight text-foreground mb-10 leading-[0.9]`}
+        >
+          {title}
+        </h1>
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-display">
+          {subtitle}
+        </p>
       </motion.div>
     </section>
   );

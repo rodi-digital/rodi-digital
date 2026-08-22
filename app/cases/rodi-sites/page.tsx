@@ -1,10 +1,12 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
-import { Metadata } from "next";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Rodi Sites Case Study | Affordable Website Subscriptions for SMBs",
   description:
     "How Rodi Digital built Rodi Sites — a subscription-based website platform delivering professional, SEO-optimized websites for Dutch small businesses from €75/month with no upfront costs.",
+  path: "/cases/rodi-sites",
   keywords: [
     "website subscription service",
     "affordable business websites",
@@ -18,14 +20,7 @@ export const metadata: Metadata = {
     "Keystatic CMS",
     "Next.js website platform",
   ],
-  openGraph: {
-    title: "Rodi Sites Case Study | Website Subscriptions for SMBs",
-    description:
-      "How Rodi Digital built a subscription-based website platform delivering professional, SEO-optimized websites for Dutch small businesses from €75/month.",
-    url: "https://rodi-digital.com/cases/rodi-sites",
-    type: "article",
-  },
-};
+});
 
 const keyFeatures = [
   {
@@ -80,7 +75,15 @@ const impactFeatures = [
 
 export default function RodiSitesCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "Rodi Sites", path: "/cases/rodi-sites" },
+        ])}
+      />
+      <CaseStudyLayout
       title="Rodi Sites"
       subtitle="Professional websites as a subscription for Dutch small businesses."
       challenge="Small business owners — painters, plumbers, dentists, and local service providers — struggle to get online. Traditional web agencies charge €2,000–€8,000 upfront, take months to deliver, and disappear after launch. DIY platforms like Wix produce generic-looking sites with limited SEO. Freelancers are unreliable. The result: thousands of businesses remain invisible to customers searching online for local services."
@@ -101,5 +104,6 @@ export default function RodiSitesCasePage() {
         },
       ]}
     />
+    </>
   );
 }

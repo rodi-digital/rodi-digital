@@ -30,37 +30,49 @@ export function MinimalCardGrid({
     columns === "2" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
 
   return (
-    <section className="py-24 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 md:py-32 border-t border-border">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <motion.div
-          className="mb-16"
+          className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
         >
-          <h2 className="text-4xl font-light text-black mb-6">{title}</h2>
-          <p className="text-lg text-gray-600 max-w-3xl">{description}</p>
+          <div>
+            <div className="eyebrow mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-primary" />
+              § Detail
+            </div>
+            <h2 className="font-display text-5xl md:text-6xl text-foreground tracking-tight">
+              {title}
+            </h2>
+          </div>
+          <p className="font-display italic text-xl text-muted-foreground max-w-md">
+            {description}
+          </p>
         </motion.div>
 
         <motion.div
-          className={`grid grid-cols-1 ${gridCols} gap-8`}
+          className={`grid grid-cols-1 ${gridCols} gap-px bg-border`}
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
         >
           {cards.map((card, index) => (
-            <motion.div key={index} className="group" variants={staggerItem}>
-              <div className="relative border-b border-gray-200 pb-6 mb-6 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-px before:bg-gray-400 before:transition-all before:duration-300 group-hover:before:w-full">
-                <span className="text-sm text-gray-400 font-mono">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+            <motion.div
+              key={index}
+              className="group relative bg-background p-8 md:p-10 transition-colors duration-500 hover:bg-secondary/40"
+              variants={staggerItem}
+            >
+              <div className="eyebrow mb-6 text-primary">
+                {String(index + 1).padStart(2, "0")}
               </div>
-              <h3 className="text-xl font-medium mb-4 text-black">
+              <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4 tracking-tight">
                 {card.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {card.description}
               </p>
             </motion.div>
