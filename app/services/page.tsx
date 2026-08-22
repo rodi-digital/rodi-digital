@@ -2,7 +2,22 @@ import { ServiceHero } from "@/components/ui/service-hero";
 import { ServiceGrid } from "@/components/ui/service-grid";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
-import { image } from "framer-motion/client";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Services — AI, Mobile & Web Development",
+  description:
+    "Rodi Digital builds AI-powered applications, cross-platform mobile apps, and high-conversion websites. Explore our full range of digital development services.",
+  path: "/services",
+  keywords: [
+    "AI development services",
+    "mobile app development",
+    "web development services",
+    "digital product development",
+    "Netherlands software agency",
+  ],
+});
 
 const services = [
   {
@@ -60,12 +75,21 @@ const servicesFAQs = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          faqPageSchema(servicesFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Our Services"
         subtitle="We specialize in building AI applications, mobile apps, and websites that drive innovation, enhance user experiences, and deliver measurable business value."
       />
 
-      <ServiceGrid services={services} />
+      <ServiceGrid services={services} imageVariant="transparent" />
 
       <FAQSection
         title="Frequently Asked Questions"

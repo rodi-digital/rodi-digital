@@ -2,7 +2,22 @@ import { ServiceHero } from "@/components/ui/service-hero";
 import { ServiceGrid } from "@/components/ui/service-grid";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
-import { image } from "framer-motion/client";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Case Studies — AI, Mobile & Web Projects",
+  description:
+    "Explore Rodi Digital's portfolio: AI assistants, cross-platform mobile apps, and high-conversion websites built for clients across health, sport, legal, and accounting.",
+  path: "/cases",
+  keywords: [
+    "software development case studies",
+    "AI app portfolio",
+    "mobile app case studies",
+    "web development portfolio",
+    "Netherlands agency projects",
+  ],
+});
 
 const cases = [
   {
@@ -54,6 +69,13 @@ const cases = [
     href: "/cases/rodi-sites",
     image: "/images/cases/rodi-sites.png",
   },
+  {
+    title: "Loop Sleep",
+    description:
+      "An intelligent sleep companion for Loop Earplugs — conversational onboarding, AI-generated sleep rituals, and persistent storytelling. Built while part of the team at Nimble.",
+    href: "/cases/loop",
+    image: "/images/cases/loop.png",
+  },
 ];
 
 const casesFAQs = [
@@ -88,6 +110,15 @@ const casesFAQs = [
 export default function CasesPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          faqPageSchema(casesFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/cases" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Case Studies"
         subtitle="Explore how Rodi Digital has partnered with clients to transform their visions into successful, impactful digital products."

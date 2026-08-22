@@ -1,12 +1,26 @@
 import { ServiceHero } from "@/components/ui/service-hero";
 import { ContactContent } from "@/components/ui/contact-content";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import {
+  pageMetadata,
+  faqPageSchema,
+  breadcrumbSchema,
+  localBusinessSchema,
+} from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact - Rodi Digital",
+export const metadata = pageMetadata({
+  title: "Contact Rodi Digital — Start Your Project",
   description:
-    "Get in touch with Rodi Digital to discuss your next digital project. We're here to help bring your ideas to life.",
-};
+    "Get in touch with Rodi Digital to discuss your next digital project. Based in 's-Hertogenbosch, Netherlands, serving clients worldwide. Email hello@rodi-digital.com.",
+  path: "/contact",
+  keywords: [
+    "contact Rodi Digital",
+    "hire a development agency",
+    "start a digital project",
+    "Netherlands software agency contact",
+  ],
+});
 
 const contactFAQs = [
   {
@@ -35,6 +49,16 @@ const contactFAQs = [
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          localBusinessSchema,
+          faqPageSchema(contactFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Let's Connect"
         subtitle="Have a digital project in mind? Want to explore how AI, mobile, or web can transform your business? We're here to help bring your vision to life."

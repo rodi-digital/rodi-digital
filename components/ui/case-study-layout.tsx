@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { ServiceHero } from "@/components/ui/service-hero";
 import { TwoColumnSection } from "@/components/ui/two-column-section";
 import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
@@ -74,8 +73,13 @@ export function CaseStudyLayout({
       )}
 
       {projectLinks && projectLinks.length > 0 && (
-        <section className="border-t border-gray-100 py-36">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+        <section className="border-t border-border py-32">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
+            <div className="eyebrow mb-8 flex items-center justify-center gap-3">
+              <span className="h-px w-10 bg-primary" />
+              § Live
+              <span className="h-px w-10 bg-primary" />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {projectLinks.map((link, index) => (
                 <Button

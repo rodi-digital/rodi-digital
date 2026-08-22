@@ -3,6 +3,28 @@ import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import {
+  pageMetadata,
+  faqPageSchema,
+  serviceSchema,
+  breadcrumbSchema,
+} from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Web Development — SaaS, E-commerce & Company Websites",
+  description:
+    "Fast, conversion-focused web development: SaaS platforms, e-commerce, custom web apps, and company websites with easy content management built by Rodi Digital.",
+  path: "/services/web",
+  keywords: [
+    "web development agency",
+    "SaaS development",
+    "e-commerce development",
+    "custom web applications",
+    "company websites",
+    "conversion-focused web design",
+  ],
+});
 
 const expertiseCards = [
   {
@@ -92,6 +114,23 @@ const webFAQs = [
 export default function WebPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: "Web Development",
+            description:
+              "Fast, conversion-focused web development: SaaS platforms, e-commerce, custom web apps, and company websites with easy content management.",
+            path: "/services/web",
+            category: "Web Development",
+          }),
+          faqPageSchema(webFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Web Development", path: "/services/web" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="Web Development"
         subtitle="A website that only looks good is not enough. If it loads slowly, feels clunky, or makes it hard to update content, you lose customers and waste opportunities. We design and build web experiences that are fast, flexible, and focused on growth."

@@ -1,4 +1,19 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Wally — AI Assistant for Accounting Firms",
+  description:
+    "Wally is an AI assistant for accounting firms that integrates with Outlook, provides Belgian tax expertise, performs fiscal calculations, and analyzes documents.",
+  path: "/cases/wally",
+  keywords: [
+    "AI assistant for accountants",
+    "accounting AI",
+    "Outlook AI integration",
+    "tax AI assistant",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -58,7 +73,15 @@ const impactFeatures = [
 
 export default function WallyCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "Wally", path: "/cases/wally" },
+        ])}
+      />
+      <CaseStudyLayout
       title="Wally"
       subtitle="AI assistant for accounting firms that brings information and software together."
       challenge="Accounting firms waste significant time searching for information and performing repetitive tasks. Employees juggle multiple disconnected systems and data sources, leading to inefficiency, errors, and frustration. The challenge was to create an AI assistant that understands accounting workflows and integrates seamlessly with existing tools like Outlook, making AI accessible to every team member without technical complexity."
@@ -79,6 +102,7 @@ export default function WallyCasePage() {
         },
       ]}
     />
+    </>
   );
 }
 

@@ -27,26 +27,35 @@ export function TwoColumnSection({
   children,
 }: TwoColumnSectionProps) {
   return (
-    <section className="py-24 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <section className="py-24 md:py-32 border-t border-border">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <motion.div
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={defaultViewport}
+            className="lg:col-span-5"
           >
-            <h2 className="text-4xl font-light text-black mb-8">{title}</h2>
+            <div className="eyebrow mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-primary" />
+              § Approach
+            </div>
+            <h2 className="font-display text-5xl md:text-6xl text-foreground tracking-tight leading-[0.95]">
+              {title}
+            </h2>
           </motion.div>
           <motion.div
-            className="space-y-6"
+            className="lg:col-span-7 space-y-8"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={defaultViewport}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-lg text-gray-700 leading-relaxed">{content}</p>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-display">
+              {content}
+            </p>
             {(primaryCTA || secondaryCTA) && (
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 {primaryCTA && (

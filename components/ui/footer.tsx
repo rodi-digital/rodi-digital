@@ -43,47 +43,76 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-12">
-            {/* Company Info - Takes 2 columns on large screens */}
-            <div className="lg:col-span-2">
-              <Image
-                className="mb-6"
-                src="/rodi-digital-logo.svg"
-                width={120}
-                height={60}
-                alt="Rodi Digital - Netherlands AI and Mobile App Development Agency"
-              />
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Leading AI, mobile & web development agency in the Netherlands. 
-                We build cross-platform mobile apps, AI chatbots, and high-conversion 
-                websites for startups and enterprises across Europe and worldwide.
-              </p>
-              <div className="text-gray-500 text-sm space-y-1">
-                <p>Stationsweg 19, 5211 TV 's-Hertogenbosch</p>
-                <p>The Netherlands</p>
-                <p className="font-medium text-gray-600">
-                  hello@rodi-digital.com
-                </p>
-                <p>VAT: NL867887370B01</p>
-              </div>
+    <footer className="relative z-10 border-t border-border">
+      {/* Marquee ticker */}
+      <div className="border-b border-border overflow-hidden py-3">
+        <div className="marquee">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-8 px-4 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap">
+              {[
+                "AI Engineering",
+                "Mobile · iOS · Android",
+                "Web Platforms",
+                "Built With You",
+                "s-Hertogenbosch · NL",
+                "Serving EU & US",
+                "Data-Driven",
+                "Conversational Agents",
+              ].map((t) => (
+                <span key={t} className="flex items-center gap-8">
+                  <span className="text-primary">✦</span>
+                  {t}
+                </span>
+              ))}
             </div>
+          ))}
+        </div>
+      </div>
 
-            {/* Navigation Links - Each section takes 1 column */}
-            {footerLinks.map((section, index) => (
-              <div key={index} className="lg:col-span-1">
-                <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-4">
-                  {section.title}
-                </h4>
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Main */}
+        <div className="py-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-4 mb-6">
+              <Image
+                src="/rodi-digital-logo.svg"
+                width={140}
+                height={61}
+                alt="Rodi Digital — AI, Mobile & Web Development Agency Netherlands"
+              />
+              <span className="hidden sm:flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-primary rounded-full" />
+                <span className="eyebrow">NL · Online</span>
+              </span>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6 max-w-md">
+              Leading AI, mobile &amp; web development agency in the Netherlands.
+              We build cross-platform mobile apps, AI chatbots, and high-conversion
+              websites for startups and enterprises across Europe and worldwide.
+            </p>
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground space-y-2">
+              <p className="text-foreground">Stationsweg 19, 5211 TV &apos;s-Hertogenbosch</p>
+              <p>The Netherlands</p>
+              <a
+                href="mailto:hello@rodi-digital.com"
+                className="link-draw inline-block text-primary mt-3"
+              >
+                hello@rodi-digital.com
+              </a>
+              <p className="pt-2">VAT: NL867887370B01</p>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {footerLinks.map((section) => (
+              <div key={section.title}>
+                <h4 className="eyebrow mb-5">{section.title}</h4>
                 <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
+                  {section.links.map((link) => (
+                    <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-gray-600 text-sm hover:text-primary transition-colors duration-200"
+                        className="link-draw text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                       >
                         {link.label}
                       </Link>
@@ -95,14 +124,25 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="py-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
-              © 2024 Rodi Digital. Built with you.
-            </p>
-            <Button href="/contact" className="bg-primary hover:bg-primary/90">
-              Let's Talk
+        {/* Big wordmark */}
+        <div className="border-t border-border py-10 overflow-hidden">
+          <h2 className="font-display text-[18vw] leading-[0.8] tracking-tighter text-foreground/[0.06] select-none">
+            RODI DIGITAL
+          </h2>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="py-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">
+            © 2024 Rodi Digital. Built with you.
+          </p>
+          <div className="flex items-center gap-6">
+            <span className="eyebrow flex items-center gap-2">
+              <span className="h-1.5 w-1.5 bg-primary rounded-full" />
+              All Systems Operational
+            </span>
+            <Button href="/contact" className="px-4 py-2">
+              Let&apos;s Talk
             </Button>
           </div>
         </div>

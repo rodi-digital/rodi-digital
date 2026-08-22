@@ -2,6 +2,21 @@ import { ServiceHero } from "@/components/ui/service-hero";
 import { ServiceGrid } from "@/components/ui/service-grid";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, faqPageSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Our Approach — Data-Driven, Collaborative Development",
+  description:
+    "How Rodi Digital builds digital products: analytics embedded at every step and close collaboration with clients, so every decision is backed by real data and user feedback.",
+  path: "/approach",
+  keywords: [
+    "data-driven development",
+    "collaborative software development",
+    "analytics-driven product development",
+    "agile development approach",
+  ],
+});
 
 const approaches = [
   {
@@ -53,12 +68,21 @@ const approachFAQs = [
 export default function ApproachPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={[
+          faqPageSchema(approachFAQs),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Approach", path: "/approach" },
+          ]),
+        ]}
+      />
       <ServiceHero
         title="How we work"
         subtitle="We create digital products that stand the test of time, using data and analytics to drive your growth through close collaboration."
       />
 
-      <ServiceGrid services={approaches} />
+      <ServiceGrid services={approaches} imageVariant="transparent" />
 
       <FAQSection
         title="Frequently Asked Questions"

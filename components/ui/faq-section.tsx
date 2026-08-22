@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import * as motion from "motion/react-client";
 import {
   fadeInUp,
@@ -28,81 +28,97 @@ export function FAQSection({
   faqs,
   className = "",
 }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className={`py-24 border-t border-gray-100 ${className}`}>
-      <div className="max-w-7xl mx-auto px-6">
-        {(title || subtitle) && (
+    <section className={`py-24 md:py-32 border-t border-border ${className}`}>
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <motion.div
-            className="mb-16"
+            className="lg:col-span-4 lg:sticky lg:top-32 self-start"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={defaultViewport}
           >
+            <div className="eyebrow mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-primary" />
+              § FAQ
+            </div>
             {title && (
-              <h2 className="text-4xl font-light text-black mb-6">{title}</h2>
+              <h2 className="font-display text-4xl md:text-5xl text-foreground tracking-tight mb-6">
+                {title}
+              </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-gray-600 max-w-3xl">{subtitle}</p>
+              <p className="text-muted-foreground leading-relaxed max-w-sm">
+                {subtitle}
+              </p>
             )}
           </motion.div>
-        )}
 
-        <motion.div
-          className="space-y-2"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-        >
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              className="group border-b border-gray-200 pb-4 mb-4"
-              variants={staggerItem}
-            >
-              <button
-                className="w-full text-left flex justify-between items-start py-4 focus:outline-none transition-colors duration-200"
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-                aria-controls={`faq-answer-${index}`}
-              >
-                <h3 className="text-xl font-medium text-black pr-6 leading-relaxed">
-                  {faq.question}
-                </h3>
-                <ChevronDown
-                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              <div
-                id={`faq-answer-${index}`}
-                className={`overflow-hidden transition-all duration-500 ease-out ${
-                  openIndex === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="pb-4">
-                  <div className="text-gray-700 leading-relaxed">
-                    {faq.answer.split("\n").map((paragraph, pIndex) => (
-                      <p key={pIndex} className={pIndex > 0 ? "mt-4" : ""}>
-                        {paragraph}
-                      </p>
-                    ))}
+          <motion.div
+            className="lg:col-span-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+          >
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <motion.div
+                  key={index}
+                  className="group border-t border-border first:border-t-0"
+                  variants={staggerItem}
+                >
+                  <button
+                    className="w-full text-left flex items-start justify-between gap-6 py-6 focus:outline-none"
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <span className="eyebrow text-primary mt-1.5">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="font-display text-2xl md:text-3xl text-foreground leading-tight tracking-tight">
+                        {faq.question}
+                      </h3>
+                    </div>
+                    <span
+                      className={`flex-shrink-0 mt-1.5 h-8 w-8 border border-border flex items-center justify-center text-primary transition-all duration-300 ${
+                        isOpen ? "rotate-45 bg-primary text-primary-foreground" : ""
+                      }`}
+                    >
+                      <Plus size={14} />
+                    </span>
+                  </button>
+                  <div
+                    id={`faq-answer-${index}`}
+                    className={`grid transition-all duration-500 ease-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="pl-12 pb-8 text-muted-foreground leading-relaxed text-lg max-w-3xl">
+                        {faq.answer.split("\n").map((paragraph, pIndex) => (
+                          <p key={pIndex} className={pIndex > 0 ? "mt-4" : ""}>
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

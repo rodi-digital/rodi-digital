@@ -1,4 +1,21 @@
 import { CaseStudyLayout } from "@/components/ui/case-study-layout";
+import { JsonLd } from "@/components/ui/json-ld";
+import { pageMetadata, breadcrumbSchema } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Rodi — Rider-First Cycling App with Route Guidance",
+  description:
+    "Rodi is a free, privacy-focused bike computer app offering seamless route guidance, comprehensive performance tracking, and Strava integration — no ads or subscriptions.",
+  path: "/cases/rodi",
+  keywords: [
+    "cycling app",
+    "bike computer app",
+    "route guidance cycling",
+    "performance tracking app",
+    "Strava integration",
+    "privacy-focused fitness app",
+  ],
+});
 
 const keyFeatures = [
   {
@@ -71,7 +88,15 @@ const rodiFAQs = [
 
 export default function RodiCasePage() {
   return (
-    <CaseStudyLayout
+    <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/cases" },
+          { name: "Rodi", path: "/cases/rodi" },
+        ])}
+      />
+      <CaseStudyLayout
       title="Rodi"
       subtitle="A rider-first cycling app that guides your route and captures the ride."
       challenge="Cyclists want a simple way to follow a planned route and see the key stats that matter. Many tools feel heavy or distracting on the bike, and getting a GPX from web to phone can be clumsy. The challenge was to build a lightweight, reliable experience that makes navigation and ride tracking effortless."
@@ -93,5 +118,6 @@ export default function RodiCasePage() {
       ]}
       faqs={rodiFAQs}
     />
+    </>
   );
 }

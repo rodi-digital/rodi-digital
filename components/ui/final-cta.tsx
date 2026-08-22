@@ -23,27 +23,28 @@ export function FinalCTA({
   primaryCTA,
   secondaryCTA,
 }: FinalCTAProps) {
-  // Split title for line break
-  const words = title.split(" ");
-  const midpoint = Math.ceil(words.length / 2);
-  const firstLine = words.slice(0, midpoint).join(" ");
-  const secondLine = words.slice(midpoint).join(" ");
-
   return (
-    <section className="py-32 border-t border-gray-100">
+    <section className="py-32 md:py-48 border-t border-border relative overflow-hidden">
+      <div className="aurora" aria-hidden />
       <motion.div
-        className="max-w-7xl mx-auto px-6 text-center"
+        className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 text-center relative z-10"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={defaultViewport}
       >
-        <h2 className="text-5xl font-light text-black mb-8 tracking-tight">
-          {firstLine}
-          <br />
-          {secondLine}
+        <div className="eyebrow mb-8 flex items-center justify-center gap-3">
+          <span className="h-px w-10 bg-primary" />
+          § Let&apos;s Build
+          <span className="h-px w-10 bg-primary" />
+        </div>
+        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground tracking-tight leading-[0.95] mb-10">
+          {title.split(" ").slice(0, -2).join(" ")}{" "}
+          <span className="italic text-primary">
+            {title.split(" ").slice(-2).join(" ")}
+          </span>
         </h2>
-        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-14 max-w-2xl mx-auto leading-relaxed font-display">
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
