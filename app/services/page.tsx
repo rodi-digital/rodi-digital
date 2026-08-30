@@ -25,21 +25,21 @@ const services = [
     description:
       "Unlock the potential of AI to improve search functionality, personalize customer interactions, and gain valuable insights for strategic decisions.",
     href: "/services/ai-enabled-applications",
-    image: "/images/ai.png",
+    illustration: "emergence",
   },
   {
     title: "Mobile Development",
     description:
       "We specialize in intuitive, high-performance mobile apps – whether you need a simple proof-of-concept or a polished product ready for full-scale launch.",
     href: "/services/mobile",
-    image: "/images/stores.png",
+    illustration: "frames",
   },
   {
     title: "Web Development",
     description:
       "We build fast, responsive websites that not only look great but also run flawlessly.",
     href: "/services/web",
-    image: "/images/web.png",
+    illustration: "grid",
   },
 ];
 

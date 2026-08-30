@@ -3,12 +3,7 @@
 import { Button } from "@/components/ui/button";
 import * as motion from "motion/react-client";
 import { fadeInUp, fadeIn } from "@/lib/scroll-animations";
-import dynamic from "next/dynamic";
-
-const HeroScene = dynamic(() => import("@/components/ui/hero-scene").then(m => m.HeroScene), {
-  ssr: false,
-  loading: () => null,
-});
+import { HeroBackground } from "@/components/ui/hero-background";
 
 interface HomeHeroProps {
   title: string;
@@ -25,6 +20,8 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
 
   return (
     <section className="relative pt-40 sm:pt-48 md:pt-56 pb-16 md:pb-24 min-h-[100svh] flex items-center overflow-hidden">
+      <HeroBackground />
+
       {/* Coordinate markers */}
       <div className="absolute top-28 left-4 sm:left-6 lg:left-10 eyebrow hidden md:flex items-center gap-2">
         <span className="text-primary">+</span> 51.6901° N · 5.3028° E
@@ -33,10 +30,10 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
         <span className="h-1.5 w-1.5 bg-primary rounded-full" /> EST. 2024
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Text */}
-          <div className="lg:col-span-7 max-w-2xl">
+          <div className="lg:col-span-8 max-w-3xl">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -91,15 +88,6 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
             </motion.div>
           </div>
 
-          {/* 3D scene */}
-          <div className="lg:col-span-5 relative h-[340px] sm:h-[440px] lg:h-[560px] hidden lg:block" aria-hidden="true">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="aurora w-[120%] h-[120%] opacity-50" />
-            </div>
-            <div className="hero-canvas absolute inset-0">
-              <HeroScene />
-            </div>
-          </div>
         </div>
       </div>
 

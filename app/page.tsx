@@ -34,7 +34,7 @@ const services = [
     title: "AI-Powered Applications",
     description:
       "Let AI handle the busywork while you focus on growth. We build intelligent systems that deliver real value to your team and customers.",
-    image: "/images/ai.png",
+    illustration: "emergence",
     items: [
       "Content generation - Instant, brand-aligned copy, blogs, visuals, ads — polished at scale.",
       "Conversational agents - Chatbots and voice assistants that feel more human than ever.",
@@ -47,7 +47,7 @@ const services = [
     title: "Mobile Development",
     description:
       "Turn your app idea into reality faster than you thought possible. Launch, learn, and grow without wasting budget.",
-    image: "/images/stores.png",
+    illustration: "frames",
     items: [
       "iOS and Android - Build once, launch on iOS + Android, without trade-offs.",
       "Rapid prototyping & launch - Validate your app idea without wasting months or budget.",
@@ -58,7 +58,7 @@ const services = [
     title: "Web Development",
     description:
       "Your website shouldn't just look good—it should drive growth. We design and build sites that convert clicks into customers.",
-    image: "/images/web.png",
+    illustration: "grid",
     items: [
       "SaaS platforms - Scalable foundations for subscription businesses.",
       "E-commerce - Smooth checkouts that reduce cart abandonment.",

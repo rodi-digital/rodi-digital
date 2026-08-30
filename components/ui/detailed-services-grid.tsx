@@ -3,12 +3,17 @@
 import { defaultViewport, fadeInUp } from "@/lib/scroll-animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {
+  EmergenceIllustration,
+  type IllustrationVariant,
+} from "@/components/ui/emergence-illustration";
 
 interface ServiceDetail {
   title: string;
   description: string;
   items: string[];
   image?: string;
+  illustration?: IllustrationVariant;
 }
 
 interface DetailedServicesGridProps {
@@ -89,16 +94,25 @@ export function DetailedServicesGrid({
                 </div>
 
                 <div className="lg:col-span-3">
-                  {service.image && (
+                  {service.illustration ? (
                     <div className="relative aspect-square w-full max-w-[280px] mx-auto">
-                      <Image
-                        src={service.image}
-                        alt={`${service.title} — Rodi Digital`}
-                        fill
-                        sizes="(max-width: 1024px) 40vw, 20vw"
-                        className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105"
+                      <EmergenceIllustration
+                        variant={service.illustration}
+                        className="w-full h-full transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
+                  ) : (
+                    service.image && (
+                      <div className="relative aspect-square w-full max-w-[280px] mx-auto">
+                        <Image
+                          src={service.image}
+                          alt={`${service.title} — Rodi Digital`}
+                          fill
+                          sizes="(max-width: 1024px) 40vw, 20vw"
+                          className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+                    )
                   )}
                 </div>
               </div>
