@@ -1,6 +1,5 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Instrument_Serif, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/ui/footer";
 import { Navigation } from "@/components/navigation";
@@ -8,26 +7,7 @@ import { GradientBackground } from "@/components/ui/gradient-background";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CustomCursor } from "@/components/ui/custom-cursor";
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
+import { fontVariables } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rodi-digital.com"),
@@ -121,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${instrumentSerif.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={fontVariables}>
       <head>
         <script
           type="application/ld+json"
@@ -139,8 +119,11 @@ export default function RootLayout({
           </GradientBackground>
           <CustomCursor />
         </PostHogProvider>
+        {/* Must live inside <body>. As a direct child of <html> after </body>
+            this is invalid HTML, and the browser relocates it while parsing —
+            which leaves the DOM not matching what React rendered. */}
+        <GoogleAnalytics gaId="G-TJNMYDCFDT" />
       </body>
-      <GoogleAnalytics gaId="G-TJNMYDCFDT" />
     </html>
   );
 }

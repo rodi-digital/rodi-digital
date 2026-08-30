@@ -9,12 +9,17 @@ import {
 } from "@/lib/scroll-animations";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import {
+  EmergenceIllustration,
+  type IllustrationVariant,
+} from "@/components/ui/emergence-illustration";
 
 interface Service {
   title: string;
   description: string;
   href: string;
   image?: string;
+  illustration?: IllustrationVariant;
 }
 
 interface ServiceGridProps {
@@ -68,7 +73,15 @@ export function ServiceGrid({ services, imageVariant = "photo" }: ServiceGridPro
                 viewport={defaultViewport}
                 transition={{ delay: 0.2 }}
               >
-                {service.image && (
+                {service.illustration ? (
+                  <div className="relative aspect-[4/3] flex items-center justify-center">
+                    <EmergenceIllustration
+                      variant={service.illustration}
+                      className="h-full w-auto transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  service.image && (
                   <div
                     className={`relative aspect-[4/3] overflow-hidden ${isTransparent ? "" : "border border-border bg-secondary"}`}
                   >
@@ -87,6 +100,7 @@ export function ServiceGrid({ services, imageVariant = "photo" }: ServiceGridPro
                       </div>
                     )}
                   </div>
+                  )
                 )}
               </motion.div>
             </motion.div>

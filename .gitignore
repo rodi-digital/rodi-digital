@@ -25,3 +25,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# hero image generation scratch (large PNGs, regenerable via scripts/gen-hero-image.mjs)
+/hero-candidates/
+
+# licensed typefaces (not redistributable)
+/fonts/*.woff2
+/fonts/*.woff
+/fonts/*.otf
+/fonts/*.ttf

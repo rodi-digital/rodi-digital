@@ -24,14 +24,14 @@ const approaches = [
     description:
       "We believe analytics should go beyond dashboards – it should spark conversations. We embed analytics at every step of product development, turning assumptions into data-backed insights and features into tangible outcomes.",
     href: "/approach/analytics",
-    image: "/images/analytics.png",
+    illustration: "signal",
   },
   {
     title: "Collaboration",
     description:
       "We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey.",
     href: "/approach/collaboration",
-    image: "/images/collaboration.png",
+    illustration: "converge",
   },
 ];
 
