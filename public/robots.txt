@@ -1,12 +1,11 @@
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://rodi-digital.com/sitemap.xml
+Sitemap: https://www.rodi-digital.com/sitemap.xml
 
 # LLMs.txt - Guide for AI crawlers
-# https://rodi-digital.com/llms.txt
+# https://www.rodi-digital.com/llms.txt
 
 # Allow major search engine crawlers
 User-agent: Googlebot
@@ -18,11 +17,9 @@ Allow: /
 # Allow SEO/backlink crawlers so our links are visible in link databases
 User-agent: AhrefsBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: SemrushBot
 Allow: /
-Crawl-delay: 1
 
 # Allow AI crawlers for training and inference
 User-agent: GPTBot

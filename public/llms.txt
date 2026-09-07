@@ -16,25 +16,25 @@ Rodi Digital is a modern digital agency that combines cutting-edge technology wi
 
 ## Services
 
-- [AI-Enabled Applications](https://rodi-digital.com/services/ai-enabled-applications): Harness the transformative power of Large Language Models (LLMs) to unlock new possibilities, intelligent automation, and advanced insights for your business.
-- [Mobile Development](https://rodi-digital.com/services/mobile): Deliver fast, data-driven, and cost-effective mobile applications with our expertise in React Native and Expo for seamless cross-platform development.
-- [Web Development](https://rodi-digital.com/services/web): Crafting fast, responsive, and visually stunning web platforms precisely tailored to your unique business needs.
-- [All Services](https://rodi-digital.com/services): Complete overview of our digital development services and capabilities.
+- [AI-Enabled Applications](https://www.rodi-digital.com/services/ai-enabled-applications): Harness the transformative power of Large Language Models (LLMs) to unlock new possibilities, intelligent automation, and advanced insights for your business.
+- [Mobile Development](https://www.rodi-digital.com/services/mobile): Deliver fast, data-driven, and cost-effective mobile applications with our expertise in React Native and Expo for seamless cross-platform development.
+- [Web Development](https://www.rodi-digital.com/services/web): Crafting fast, responsive, and visually stunning web platforms precisely tailored to your unique business needs.
+- [All Services](https://www.rodi-digital.com/services): Complete overview of our digital development services and capabilities.
 
 ## Approach
 
-- [How We Work](https://rodi-digital.com/approach): Our methodology combining close collaboration with deep, data-driven insights to create exceptional digital products.
-- [Analytics at the Core](https://rodi-digital.com/approach/analytics): We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making.
-- [Collaboration](https://rodi-digital.com/approach/collaboration): We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey.
+- [How We Work](https://www.rodi-digital.com/approach): Our methodology combining close collaboration with deep, data-driven insights to create exceptional digital products.
+- [Analytics at the Core](https://www.rodi-digital.com/approach/analytics): We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making.
+- [Collaboration](https://www.rodi-digital.com/approach/collaboration): We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey.
 
 ## Case Studies
 
-- [Portfolio Overview](https://rodi-digital.com/cases): Explore our portfolio of successful digital products and the measurable impact we've delivered for our clients.
-- [Peach Case Study](https://rodi-digital.com/cases/peach): Detailed case study showcasing our work and results.
-- [Rodi Case Study](https://rodi-digital.com/cases/rodi): In-depth look at our internal project development and outcomes.
-- [TRAI Case Study](https://rodi-digital.com/cases/trai): Comprehensive analysis of project development and business impact.
+- [Portfolio Overview](https://www.rodi-digital.com/cases): Explore our portfolio of successful digital products and the measurable impact we've delivered for our clients.
+- [Peach Case Study](https://www.rodi-digital.com/cases/peach): Detailed case study showcasing our work and results.
+- [Rodi Case Study](https://www.rodi-digital.com/cases/rodi): In-depth look at our internal project development and outcomes.
+- [TRAI Case Study](https://www.rodi-digital.com/cases/trai): Comprehensive analysis of project development and business impact.
 
 ## Optional
 
-- [Home](https://rodi-digital.com): Main landing page with overview of services and value proposition.
-- [Contact](https://rodi-digital.com/contact): Get in touch to start your digital product development journey.
+- [Home](https://www.rodi-digital.com): Main landing page with overview of services and value proposition.
+- [Contact](https://www.rodi-digital.com/contact): Get in touch to start your digital product development journey.

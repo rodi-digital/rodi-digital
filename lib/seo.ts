@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://rodi-digital.com";
+export const SITE_URL = "https://www.rodi-digital.com";
 const BRAND = "Rodi Digital";
 
 export function pageMetadata(opts: {
