@@ -1,6 +1,5 @@
 import { MetadataRoute } from "next";
-
-const BASE = "https://rodi-digital.com";
+import { SITE_URL } from "@/lib/seo";
 
 const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "", priority: 1, changeFrequency: "monthly" },
@@ -26,7 +25,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return routes.map((r) => ({
-    url: `${BASE}${r.path}`,
+    url: `${SITE_URL}${r.path}`,
     lastModified: now,
     changeFrequency: r.changeFrequency,
     priority: r.priority,

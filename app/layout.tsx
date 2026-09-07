@@ -8,9 +8,10 @@ import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { fontVariables } from "@/lib/fonts";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rodi-digital.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Rodi Digital | AI, Mobile & Web Development Agency",
     template: "%s | Rodi Digital",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
       "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
     description:
       "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
-    url: "https://rodi-digital.com",
+    url: SITE_URL,
     siteName: "Rodi Digital",
     locale: "en_US",
     type: "website",
@@ -65,8 +66,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Rodi Digital",
-  url: "https://rodi-digital.com",
-  logo: "https://rodi-digital.com/rodi-digital-logo.svg",
+  url: SITE_URL,
+  logo: `${SITE_URL}/rodi-digital-logo.svg`,
   description:
     "AI, Mobile & Web Development Agency in the Netherlands specializing in AI chatbots, cross-platform mobile apps, and high-conversion websites",
   address: {
