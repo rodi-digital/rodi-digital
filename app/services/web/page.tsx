@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
   title: "Web Development — SaaS, E-commerce & Company Websites",
   description:
     "Fast, conversion-focused web development: SaaS platforms, e-commerce, custom web apps, and company websites with easy content management built by Rodi Digital.",
-  path: "/services/web",
+  route: "servicesWeb",
   keywords: [
     "web development agency",
     "SaaS development",
@@ -120,14 +120,14 @@ export default function WebPage() {
             name: "Web Development",
             description:
               "Fast, conversion-focused web development: SaaS platforms, e-commerce, custom web apps, and company websites with easy content management.",
-            path: "/services/web",
-            category: "Web Development",
+            route: "servicesWeb",
+                      category: "Web Development",
           }),
           faqPageSchema(webFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "Web Development", path: "/services/web" },
+            { name: "Home", route: "home" },
+            { name: "Services", route: "services" },
+            { name: "Web Development", route: "servicesWeb" },
           ]),
         ]}
       />

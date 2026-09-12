@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "IPRHQ — Unified IP Management Platform with AI Risk Scoring",
   description:
     "IPRHQ is the first integrated platform unifying IP clearance, search, watch, enforcement, portfolio management, and monitoring with AI-powered risk scoring.",
-  path: "/cases/iprhq",
+  route: "caseIprhq",
   keywords: [
     "IP management platform",
     "intellectual property software",
@@ -77,9 +77,9 @@ export default function IPRHQCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "IPRHQ", path: "/cases/iprhq" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "IPRHQ", route: "caseIprhq" },
         ])}
       />
       <CaseStudyLayout
@@ -93,6 +93,12 @@ export default function IPRHQCasePage() {
         title: "Technology Stack",
         content:
           "Built as a comprehensive web platform with AI-powered analytics engine, Microsoft Word Add-In integration, Chrome extension capabilities, and secure data infrastructure supporting real-time IP clearance, monitoring, and enforcement workflows.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds AI-powered applications for businesses — AI risk scoring and intelligent automation inside a platform teams use every day.",
+        linkLabel: "AI-Powered Applications",
+        href: "/services/ai-enabled-applications",
       }}
       ctaTitle="Ready to Transform Your IP Management?"
       ctaSubtitle="Let's build an integrated IP platform that unifies your workflows and accelerates decision-making."

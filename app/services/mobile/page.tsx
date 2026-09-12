@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
   title: "Mobile App Development — iOS & Android (React Native)",
   description:
     "Cross-platform mobile app development with React Native and Expo. Launch on iOS and Android from one codebase, fast, with analytics built in from day one.",
-  path: "/services/mobile",
+  route: "servicesMobile",
   keywords: [
     "mobile app development",
     "cross-platform apps",
@@ -109,14 +109,14 @@ export default function MobilePage() {
             name: "Mobile Development",
             description:
               "Cross-platform mobile app development for iOS and Android using React Native and Expo, with analytics built in from day one.",
-            path: "/services/mobile",
-            category: "Mobile App Development",
+            route: "servicesMobile",
+                      category: "Mobile App Development",
           }),
           faqPageSchema(mobileFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "Mobile Development", path: "/services/mobile" },
+            { name: "Home", route: "home" },
+            { name: "Services", route: "services" },
+            { name: "Mobile Development", route: "servicesMobile" },
           ]),
         ]}
       />

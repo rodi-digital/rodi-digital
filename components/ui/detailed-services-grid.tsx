@@ -20,12 +20,14 @@ interface DetailedServicesGridProps {
   title: string;
   subtitle: string;
   services: ServiceDetail[];
+  eyebrow?: string;
 }
 
 export function DetailedServicesGrid({
   title,
   subtitle,
   services,
+  eyebrow = "§02 / Capabilities",
 }: DetailedServicesGridProps) {
   return (
     <motion.section
@@ -40,7 +42,7 @@ export function DetailedServicesGrid({
           <div>
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              §02 / Capabilities
+              {eyebrow}
             </div>
             <h2 className="font-display text-5xl md:text-7xl text-foreground tracking-tight">
               {title}

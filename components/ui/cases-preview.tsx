@@ -14,9 +14,25 @@ interface CaseItem {
 
 interface CasesPreviewProps {
   cases: CaseItem[];
+  eyebrow?: string;
+  title?: string;
+  viewAllLabel?: string;
+  viewAllHref?: string;
+  featuredLabel?: string;
+  readLabel?: string;
+  caseAltSuffix?: string;
 }
 
-export function CasesPreview({ cases }: CasesPreviewProps) {
+export function CasesPreview({
+  cases,
+  eyebrow = "§03 / Selected Work",
+  title = "Case Studies",
+  viewAllLabel = "View all cases →",
+  viewAllHref = "/cases",
+  featuredLabel = "✦ Featured",
+  readLabel = "Read the case →",
+  caseAltSuffix = "Rodi Digital case study",
+}: CasesPreviewProps) {
   const [featured, ...rest] = cases;
 
   return (
@@ -32,17 +48,17 @@ export function CasesPreview({ cases }: CasesPreviewProps) {
           <div>
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              §03 / Selected Work
+              {eyebrow}
             </div>
             <h2 className="font-display text-5xl md:text-7xl text-foreground tracking-tight">
-              Case Studies
+              {title}
             </h2>
           </div>
           <Link
-            href="/cases"
+            href={viewAllHref}
             className="link-draw font-mono text-xs uppercase tracking-[0.18em] text-primary"
           >
-            View all cases →
+            {viewAllLabel}
           </Link>
         </motion.div>
 
@@ -62,13 +78,13 @@ export function CasesPreview({ cases }: CasesPreviewProps) {
               <div className="relative aspect-[16/11] lg:aspect-[2/1] overflow-hidden mb-7 border border-border">
                 <Image
                   src={featured.image}
-                  alt={`${featured.title} — Rodi Digital case study`}
+                  alt={`${featured.title} — ${caseAltSuffix}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="absolute top-4 left-4 eyebrow text-primary bg-background/80 backdrop-blur px-2.5 py-1">
-                  ✦ Featured
+                  {featuredLabel}
                 </div>
               </div>
               <div className="flex items-baseline gap-4 mb-3">
@@ -81,7 +97,7 @@ export function CasesPreview({ cases }: CasesPreviewProps) {
                 {featured.description}
               </p>
               <span className="link-draw font-mono text-xs uppercase tracking-[0.18em] text-primary mt-5 inline-block">
-                Read the case →
+                {readLabel}
               </span>
             </Link>
           </motion.div>
@@ -98,7 +114,7 @@ export function CasesPreview({ cases }: CasesPreviewProps) {
                   <div className="relative aspect-[4/3] overflow-hidden mb-4 border border-border">
                     <Image
                       src={c.image}
-                      alt={`${c.title} — Rodi Digital case study`}
+                      alt={`${c.title} — ${caseAltSuffix}`}
                       fill
                       sizes="(max-width: 1024px) 45vw, 23vw"
                       className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"

@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "PEACHealth — Personalized Health Information Mobile App",
   description:
     "PEACHealth empowers individuals with personalized, expert-backed health information through a free mobile application, fostering informed decision-making and improved patient engagement.",
-  path: "/cases/peach",
+  route: "casePeach",
   keywords: [
     "health information app",
     "personalized health app",
@@ -90,9 +90,9 @@ export default function PeachCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "PEACHealth", path: "/cases/peach" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "PEACHealth", route: "casePeach" },
         ])}
       />
       <CaseStudyLayout
@@ -106,6 +106,12 @@ export default function PeachCasePage() {
         title: "Technology Stack",
         content:
           "Built with modern mobile development frameworks (e.g., React Native, Expo) and robust backend systems for seamless content delivery, personalization, and subscription management.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds cross-platform mobile apps for organisations that need to reach people on iOS and Android at once.",
+        linkLabel: "Mobile Development",
+        href: "/services/mobile",
       }}
       ctaTitle="Ready to Build Your Health Platform?"
       ctaSubtitle="Let's create a digital health platform that empowers users with personalized, expert-backed information."

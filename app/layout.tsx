@@ -8,7 +8,10 @@ import { PostHogProvider } from "@/components/PostHogProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { fontVariables } from "@/lib/fonts";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, siteGraph } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Rodi Digital is an AI development agency in 's-Hertogenbosch (Den Bosch), the Netherlands. We build AI-powered applications, AI agents, cross-platform mobile apps, and high-conversion websites.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -16,9 +19,9 @@ export const metadata: Metadata = {
     default: "Rodi Digital | AI, Mobile & Web Development Agency",
     template: "%s | Rodi Digital",
   },
-  description:
-    "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+  description: DESCRIPTION,
   keywords: [
+    "AI development agency",
     "AI development Netherlands",
     "mobile app development",
     "web development agency",
@@ -28,10 +31,8 @@ export const metadata: Metadata = {
     "custom software development",
   ],
   openGraph: {
-    title:
-      "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
-    description:
-      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+    title: "Rodi Digital | AI, Mobile & Web Development Agency",
+    description: DESCRIPTION,
     url: SITE_URL,
     siteName: "Rodi Digital",
     locale: "en_US",
@@ -39,10 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Rodi Digital | AI, Mobile & Web Development Agency in the Netherlands",
-    description:
-      "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
+    title: "Rodi Digital | AI, Mobile & Web Development Agency",
+    description: DESCRIPTION,
   },
   robots: {
     index: true,
@@ -62,56 +61,18 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Rodi Digital",
-  url: SITE_URL,
-  logo: `${SITE_URL}/rodi-digital-logo.svg`,
-  description:
-    "AI, Mobile & Web Development Agency in the Netherlands specializing in AI chatbots, cross-platform mobile apps, and high-conversion websites",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Stationsweg 19",
-    addressLocality: "'s-Hertogenbosch",
-    postalCode: "5211 TV",
-    addressCountry: "NL",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    email: "hello@rodi-digital.com",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/rodi-digital",
-    "https://github.com/rodi-digital",
-  ],
-  areaServed: ["NL", "EU", "US"],
-  serviceType: [
-    "AI Development",
-    "Mobile App Development",
-    "Web Development",
-    "Cross-platform Development",
-    "AI Chatbot Development",
-  ],
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={fontVariables}>
-      <head>
+      <body className="font-sans antialiased">
+        {/* JSON-LD is valid anywhere in the document; keeping it in <body>
+            avoids hand-rolling a <head> element in the App Router. */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
-      </head>
-      <body className="font-sans antialiased">
         <PostHogProvider>
           <GradientBackground>
             <Navigation />

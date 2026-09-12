@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   title: "Services — AI, Mobile & Web Development",
   description:
     "Rodi Digital builds AI-powered applications, cross-platform mobile apps, and high-conversion websites. Explore our full range of digital development services.",
-  path: "/services",
+  route: "services",
   keywords: [
     "AI development services",
     "mobile app development",
@@ -79,8 +79,8 @@ export default function ServicesPage() {
         data={[
           faqPageSchema(servicesFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
+            { name: "Home", route: "home" },
+            { name: "Services", route: "services" },
           ]),
         ]}
       />

@@ -6,20 +6,31 @@ import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const COPY = {
+  address: "Address",
+  email: "Email",
+  country: "The Netherlands",
+  location: "Location",
+  whatsappAlt:
+    "Contact Rodi Digital via WhatsApp — AI development agency, 's-Hertogenbosch",
+  mapTitle: "Rodi Digital office location, Stationsweg 19, 's-Hertogenbosch",
+};
+
 export function ContactContent() {
+  const copy = COPY;
   const contactInfo = [
     {
-      title: "ADDRESS",
+      title: copy.address,
       icon: MapPin,
       content: (
         <div>
           <p>Stationsweg 19,</p>
-          <p>5211 TV 's-Hertogenbosch, The Netherlands</p>
+          <p>5211 TV &apos;s-Hertogenbosch, {copy.country}</p>
         </div>
       ),
     },
     {
-      title: "EMAIL",
+      title: copy.email,
       icon: Mail,
       content: (
         <a
@@ -67,7 +78,7 @@ export function ContactContent() {
             <div className="relative h-32 w-32 mx-auto rounded-full border border-border flex items-center justify-center glow">
               <Image
                 src="/images/WhatsappLogoGreen.svg"
-                alt="Contact Rodi Digital via WhatsApp - AI and Mobile App Development"
+                alt={copy.whatsappAlt}
                 width={96}
                 height={96}
                 className="object-contain"
@@ -80,7 +91,7 @@ export function ContactContent() {
             >
               <Image
                 src="/images/WhatsAppButtonGreenMedium.png"
-                alt="WhatsApp Contact Button - Rodi Digital Development Agency Netherlands"
+                alt={copy.whatsappAlt}
                 width={300}
                 height={60}
                 className="rounded-full"
@@ -100,7 +111,7 @@ export function ContactContent() {
       >
         <div className="eyebrow mb-4 flex items-center gap-3">
           <span className="h-px w-10 bg-primary" />
-          § Location — 51.6901° N · 5.3028° E
+          § {copy.location} — 51.6901° N · 5.3028° E
         </div>
         <div className="border border-border overflow-hidden" style={{ height: "420px" }}>
           <iframe
@@ -111,7 +122,7 @@ export function ContactContent() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Rodi Digital Office Location"
+            title={copy.mapTitle}
           />
         </div>
       </motion.div>

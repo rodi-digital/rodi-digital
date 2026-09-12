@@ -6,14 +6,14 @@ import {
   pageMetadata,
   faqPageSchema,
   breadcrumbSchema,
-  localBusinessSchema,
+  contactPageSchema,
 } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact Rodi Digital — Start Your Project",
   description:
-    "Get in touch with Rodi Digital to discuss your next digital project. Based in 's-Hertogenbosch, Netherlands, serving clients worldwide. Email hello@rodi-digital.com.",
-  path: "/contact",
+    "Get in touch with Rodi Digital, an AI development agency in 's-Hertogenbosch (Den Bosch), the Netherlands, serving clients worldwide. Email hello@rodi-digital.com.",
+  route: "contact",
   keywords: [
     "contact Rodi Digital",
     "hire a development agency",
@@ -31,7 +31,7 @@ const contactFAQs = [
   {
     question: "Where is Rodi Digital located?",
     answer:
-      "Rodi Digital is located in the city of 's-Hertogenbosch in The Netherlands. Their full address is Stationsweg 19, 5211 TV 's-Hertogenbosch, which is in the southern part of the Netherlands. Even though that's their physical location, remember that they work with clients all over. So if you're not nearby, that's perfectly okay – they collaborate with companies across Europe and worldwide. The team is accustomed to communicating remotely via email, video calls, and other online collaboration tools. If you are nearby or visiting, you could potentially arrange an in-person meeting at their office, but it's not necessary for starting a project.",
+      "Rodi Digital is located in 's-Hertogenbosch \u2014 commonly known as Den Bosch \u2014 in The Netherlands. Their full address is Stationsweg 19, 5211 TV 's-Hertogenbosch, which is in the southern part of the Netherlands. Even though that's their physical location, remember that they work with clients all over. So if you're not nearby, that's perfectly okay – they collaborate with companies across Europe and worldwide. The team is accustomed to communicating remotely via email, video calls, and other online collaboration tools. If you are nearby or visiting, you could potentially arrange an in-person meeting at their office, but it's not necessary for starting a project.",
   },
   {
     question: "Do I need to be in the Netherlands to work with Rodi Digital?",
@@ -51,11 +51,11 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <JsonLd
         data={[
-          localBusinessSchema,
+          contactPageSchema(),
           faqPageSchema(contactFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Contact", path: "/contact" },
+            { name: "Home", route: "home" },
+            { name: "Contact", route: "contact" },
           ]),
         ]}
       />

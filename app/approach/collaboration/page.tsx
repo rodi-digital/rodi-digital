@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
   title: "Collaboration — Building With You, Not For You",
   description:
     "Rodi Digital's collaborative development approach: frequent updates, live demos, short syncs, and an open feedback loop so you co-create your product with the team.",
-  path: "/approach/collaboration",
+  route: "approachCollaboration",
   keywords: [
     "collaborative software development",
     "client partnership development",
@@ -78,9 +78,9 @@ export default function CollaborationPage() {
         data={[
           faqPageSchema(collaborationFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Approach", path: "/approach" },
-            { name: "Collaboration", path: "/approach/collaboration" },
+            { name: "Home", route: "home" },
+            { name: "Approach", route: "approach" },
+            { name: "Collaboration", route: "approachCollaboration" },
           ]),
         ]}
       />

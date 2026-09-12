@@ -5,15 +5,17 @@ import { DetailedServicesGrid } from "@/components/ui/detailed-services-grid";
 import { FAQSection } from "@/components/ui/faq-section";
 import { CasesPreview } from "@/components/ui/cases-preview";
 import { JsonLd } from "@/components/ui/json-ld";
-import { pageMetadata, faqPageSchema, SITE_URL } from "@/lib/seo";
+import { pageMetadata, faqPageSchema } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Rodi Digital | AI, Mobile & Web Development Agency",
   description:
-    "We help startups and enterprises build AI chatbots, cross-platform mobile apps, and high-conversion websites. Based in the Netherlands, serving clients worldwide.",
-  path: "/",
+    "Rodi Digital is an AI development agency in 's-Hertogenbosch (Den Bosch), the Netherlands. We build AI-powered applications, AI agents, cross-platform mobile apps, and high-conversion websites.",
+  route: "home",
   keywords: [
+    "AI development agency",
     "AI development Netherlands",
+    "AI bureau Den Bosch",
     "mobile app development",
     "web development agency",
     "cross-platform apps",
@@ -21,13 +23,6 @@ export const metadata = pageMetadata({
     "Netherlands digital agency",
   ],
 });
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Rodi Digital",
-  url: SITE_URL,
-};
 
 const services = [
   {
@@ -97,7 +92,7 @@ const homeFAQs = [
   {
     question: "Where is Rodi Digital located?",
     answer:
-      "Rodi Digital is headquartered in 's-Hertogenbosch, The Netherlands. Their office address is Stationsweg 19, 5211 TV 's-Hertogenbosch, and while they operate from the Netherlands, they collaborate with clients internationally. In fact, Rodi Digital proudly serves companies across Europe and worldwide, not just locally, so you can easily work with them even if you're not in the Netherlands.",
+      "Rodi Digital is an AI development agency headquartered in 's-Hertogenbosch \u2014 commonly known as Den Bosch \u2014 in the Netherlands. Their office address is Stationsweg 19, 5211 TV 's-Hertogenbosch, and while they operate from the Netherlands, they collaborate with clients internationally. In fact, Rodi Digital proudly serves companies across Europe and worldwide, not just locally, so you can easily work with them even if you're not in the Netherlands.",
   },
 ];
 
@@ -142,7 +137,7 @@ const featuredCases = [
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      <JsonLd data={[websiteSchema, faqPageSchema(homeFAQs)]} />
+      <JsonLd data={faqPageSchema(homeFAQs)} />
       <HomeHero
         title="Apps, AI, and Websites Built with You"
         subtitle={[

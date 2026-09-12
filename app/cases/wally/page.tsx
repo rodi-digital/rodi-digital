@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Wally — AI Assistant for Accounting Firms",
   description:
     "Wally is an AI assistant for accounting firms that integrates with Outlook, provides Belgian tax expertise, performs fiscal calculations, and analyzes documents.",
-  path: "/cases/wally",
+  route: "caseWally",
   keywords: [
     "AI assistant for accountants",
     "accounting AI",
@@ -76,9 +76,9 @@ export default function WallyCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "Wally", path: "/cases/wally" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "Wally", route: "caseWally" },
         ])}
       />
       <CaseStudyLayout
@@ -92,6 +92,12 @@ export default function WallyCasePage() {
         title: "Technology Stack",
         content:
           "Built with AI/LLM technology integrated with Microsoft Outlook and Office 365, featuring secure document processing, tax calculation engines, and natural language interfaces designed for accounting professionals.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds AI-powered applications for businesses — conversational AI grounded in a client's own documents and systems.",
+        linkLabel: "AI-Powered Applications",
+        href: "/services/ai-enabled-applications",
       }}
       ctaTitle="Ready to Transform Your Accounting Workflow?"
       ctaSubtitle="Let's build an AI assistant that integrates seamlessly with your existing tools and makes complex tasks simple."

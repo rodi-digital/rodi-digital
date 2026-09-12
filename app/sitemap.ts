@@ -1,33 +1,30 @@
 import { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
+import { routes, type RouteKey } from "@/lib/routes";
 
-const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
-  { path: "", priority: 1, changeFrequency: "monthly" },
-  { path: "/services", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/services/ai-enabled-applications", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/services/mobile", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/services/web", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/approach", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/approach/analytics", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/approach/collaboration", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/cases", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/cases/wally", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/iprhq", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/peach", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/diffgraph", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/rodi", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/rodi-sites", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/trai", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/cases/loop", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
-];
+/**
+ * Derived from the route map, so a new page is in the sitemap the moment it has
+ * a route — no second list to forget to update.
+ */
+const PRIORITY: Partial<Record<RouteKey, number>> = {
+  home: 1,
+  services: 0.9,
+  blog: 0.9,
+  cases: 0.8,
+  contact: 0.8,
+};
+
+const CHANGE_FREQUENCY: Partial<
+  Record<RouteKey, MetadataRoute.Sitemap[number]["changeFrequency"]>
+> = { contact: "yearly" };
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return routes.map((r) => ({
-    url: `${SITE_URL}${r.path}`,
+
+  return (Object.keys(routes) as RouteKey[]).map((key) => ({
+    url: `${SITE_URL}${routes[key]}`,
     lastModified: now,
-    changeFrequency: r.changeFrequency,
-    priority: r.priority,
+    changeFrequency: CHANGE_FREQUENCY[key] ?? ("monthly" as const),
+    priority: PRIORITY[key] ?? (key.startsWith("blog") ? 0.7 : 0.75),
   }));
 }

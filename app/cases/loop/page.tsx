@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Loop Sleep — AI Sleep Companion for Loop Earplugs",
   description:
     "Loop Sleep is an intelligent sleep companion for Loop Earplugs: conversational onboarding, AI-generated sleep rituals, and persistent storytelling. Built while part of the team at Nimble.",
-  path: "/cases/loop",
+  route: "caseLoop",
   keywords: [
     "AI sleep app",
     "Loop Earplugs",
@@ -77,9 +77,9 @@ export default function LoopCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "Loop Sleep", path: "/cases/loop" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "Loop Sleep", route: "caseLoop" },
         ])}
       />
       <CaseStudyLayout
@@ -93,6 +93,12 @@ export default function LoopCasePage() {
         title: "Technology & Approach",
         content:
           "AI-generated audio with streaming text-to-speech (audio begins playing while the rest is generated), adaptive soundscapes with layered noise textures, conversational AI onboarding, persistent user profiling, and an evidence-based knowledge layer (CBT-I patterns, breathing protocols, sleep hygiene). Built as a focused V1.0 in four weeks with a ruthlessly scoped must-have list — every feature that didn't make the launch window was explicitly deferred, not dropped, shaping a team and codebase ready to move fast in the next phase.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds AI-powered applications for businesses — conversational onboarding and AI-generated content inside a consumer mobile app.",
+        linkLabel: "AI-Powered Applications",
+        href: "/services/ai-enabled-applications",
       }}
       ctaTitle="Ready to Build an Intelligent Companion?"
       ctaSubtitle="Let's build a digital product that turns a ritual into a habit — using AI where it actually adds value, and learning from real users before scaling."

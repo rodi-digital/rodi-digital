@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Rodi Sites Case Study | Affordable Website Subscriptions for SMBs",
   description:
     "How Rodi Digital built Rodi Sites — a subscription-based website platform delivering professional, SEO-optimized websites for Dutch small businesses from €75/month with no upfront costs.",
-  path: "/cases/rodi-sites",
+  route: "caseRodiSites",
   keywords: [
     "website subscription service",
     "affordable business websites",
@@ -78,9 +78,9 @@ export default function RodiSitesCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "Rodi Sites", path: "/cases/rodi-sites" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "Rodi Sites", route: "caseRodiSites" },
         ])}
       />
       <CaseStudyLayout
@@ -94,6 +94,12 @@ export default function RodiSitesCasePage() {
         title: "Technology Stack",
         content:
           "Built with Next.js 15 for static site generation and edge-optimized performance, Keystatic CMS for headless content management, TailwindCSS for responsive mobile-first styling, and structured data markup for rich search results. The platform leverages React 19, TypeScript for type safety, and Markdoc for content authoring. Deployed on premium hosting infrastructure with 99.9% uptime SLA, automated security updates, and Google Analytics integration for client reporting.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds web platforms — fast, SEO-ready sites on a foundation that scales past the first customer.",
+        linkLabel: "Web Development",
+        href: "/services/web",
       }}
       ctaTitle="Want a Website Platform Like This?"
       ctaSubtitle="Let's build a scalable, subscription-based digital product that generates recurring revenue and delivers real value."

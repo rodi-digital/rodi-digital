@@ -17,12 +17,14 @@ interface MinimalListSectionProps {
   title: string;
   description: string;
   items: ListItem[];
+  eyebrow?: string;
 }
 
 export function MinimalListSection({
   title,
   description,
   items,
+  eyebrow = "§ Expertise",
 }: MinimalListSectionProps) {
   return (
     <section className="py-24 md:py-32 border-t border-border">
@@ -37,7 +39,7 @@ export function MinimalListSection({
           <div>
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              § Expertise
+              {eyebrow}
             </div>
             <h2 className="font-display text-5xl md:text-6xl text-foreground tracking-tight">
               {title}

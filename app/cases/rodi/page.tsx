@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Rodi — Rider-First Cycling App with Route Guidance",
   description:
     "Rodi is a free, privacy-focused bike computer app offering seamless route guidance, comprehensive performance tracking, and Strava integration — no ads or subscriptions.",
-  path: "/cases/rodi",
+  route: "caseRodi",
   keywords: [
     "cycling app",
     "bike computer app",
@@ -91,9 +91,9 @@ export default function RodiCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "Rodi", path: "/cases/rodi" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "Rodi", route: "caseRodi" },
         ])}
       />
       <CaseStudyLayout
@@ -107,6 +107,12 @@ export default function RodiCasePage() {
         title: "Technology Stack",
         content:
           "Built with React Native and Expo for iOS and Android, using native location and mapping capabilities for reliable on-bike guidance. The content pipeline integrates with Notion for fast publishing. Analytics and in-app instrumentation support continuous improvement across navigation and ride flows.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds cross-platform mobile apps — one codebase, native performance, built to be used every day.",
+        linkLabel: "Mobile Development",
+        href: "/services/mobile",
       }}
       ctaTitle="Want an app riders love to use?"
       ctaSubtitle="Let’s design and build a focused, reliable experience that ships fast and gets better with every release."

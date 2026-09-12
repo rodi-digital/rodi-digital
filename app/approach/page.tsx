@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   title: "Our Approach — Data-Driven, Collaborative Development",
   description:
     "How Rodi Digital builds digital products: analytics embedded at every step and close collaboration with clients, so every decision is backed by real data and user feedback.",
-  path: "/approach",
+  route: "approach",
   keywords: [
     "data-driven development",
     "collaborative software development",
@@ -72,8 +72,8 @@ export default function ApproachPage() {
         data={[
           faqPageSchema(approachFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Approach", path: "/approach" },
+            { name: "Home", route: "home" },
+            { name: "Approach", route: "approach" },
           ]),
         ]}
       />
