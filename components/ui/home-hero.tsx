@@ -10,9 +10,18 @@ interface HomeHeroProps {
   subtitle: string[];
   ctaText: string;
   ctaHref: string;
+  eyebrow?: string;
+  scrollHint?: string;
 }
 
-export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
+export function HomeHero({
+  title,
+  subtitle,
+  ctaText,
+  ctaHref,
+  eyebrow = "§01 / Index — Digital Product Studio",
+  scrollHint = "Scroll to explore",
+}: HomeHeroProps) {
   const words = title.split(" ");
   const midpoint = Math.ceil(words.length / 2);
   const firstLine = words.slice(0, midpoint).join(" ");
@@ -41,7 +50,7 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
               className="eyebrow mb-8 flex items-center gap-3"
             >
               <span className="h-px w-10 bg-primary" />
-              <span>§01 / Index — Digital Product Studio</span>
+              <span>{eyebrow}</span>
             </motion.div>
 
             <motion.h1
@@ -98,7 +107,7 @@ export function HomeHero({ title, subtitle, ctaText, ctaHref }: HomeHeroProps) {
         transition={{ delay: 1.4, duration: 1 }}
         className="absolute bottom-8 left-4 sm:left-6 lg:left-10 eyebrow flex items-center gap-3"
       >
-        <span className="inline-block animate-pulse">↓</span> Scroll to explore
+        <span className="inline-block animate-pulse">↓</span> {scrollHint}
       </motion.div>
     </section>
   );

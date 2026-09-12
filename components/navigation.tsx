@@ -7,6 +7,49 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { fadeIn } from "@/lib/scroll-animations";
+import { path as routePath, type RouteKey } from "@/lib/routes";
+
+const NAV: {
+  name: string;
+  route: RouteKey;
+  children?: { name: string; route: RouteKey }[];
+}[] = [
+  {
+    name: "Approach",
+    route: "approach",
+    children: [
+      { name: "Analytics", route: "approachAnalytics" },
+      { name: "Collaboration", route: "approachCollaboration" },
+    ],
+  },
+  {
+    name: "Services",
+    route: "services",
+    children: [
+      { name: "AI-Powered Applications", route: "servicesAi" },
+      { name: "Mobile", route: "servicesMobile" },
+      { name: "Web", route: "servicesWeb" },
+    ],
+  },
+  {
+    name: "Cases",
+    route: "cases",
+    children: [
+      { name: "IPRHQ", route: "caseIprhq" },
+      { name: "DiffGraph", route: "caseDiffgraph" },
+      { name: "Wally", route: "caseWally" },
+      { name: "PEACHealth", route: "casePeach" },
+      { name: "Rodi", route: "caseRodi" },
+      { name: "Trai", route: "caseTrai" },
+      { name: "Rodi Sites", route: "caseRodiSites" },
+      { name: "Loop Sleep", route: "caseLoop" },
+    ],
+  },
+  { name: "Blog", route: "blog" },
+];
+
+const CTA = "Let\u2019s Chat";
+const LOGO_ALT = "Rodi Digital — AI development agency, 's-Hertogenbosch";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,39 +83,14 @@ export function Navigation() {
     }
   };
 
-  const navigation = [
-    {
-      name: "Approach",
-      href: "/approach",
-      children: [
-        { name: "Analytics", href: "/approach/analytics" },
-        { name: "Collaboration", href: "/approach/collaboration" },
-      ],
-    },
-    {
-      name: "Services",
-      href: "/services",
-      children: [
-        { name: "AI-Powered Applications", href: "/services/ai-enabled-applications" },
-        { name: "Mobile", href: "/services/mobile" },
-        { name: "Web", href: "/services/web" },
-      ],
-    },
-    {
-      name: "Cases",
-      href: "/cases",
-      children: [
-        { name: "IPRHQ", href: "/cases/iprhq" },
-        { name: "DiffGraph", href: "/cases/diffgraph" },
-        { name: "Wally", href: "/cases/wally" },
-        { name: "PEACHealth", href: "/cases/peach" },
-        { name: "Rodi", href: "/cases/rodi" },
-        { name: "Trai", href: "/cases/trai" },
-        { name: "Rodi Sites", href: "/cases/rodi-sites" },
-        { name: "Loop Sleep", href: "/cases/loop" },
-      ],
-    },
-  ];
+  const navigation = NAV.map((item) => ({
+    name: item.name,
+    href: routePath(item.route),
+    children: item.children?.map((c) => ({
+      name: c.name,
+      href: routePath(c.route),
+    })),
+  }));
 
   return (
     <motion.nav
@@ -91,12 +109,12 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <motion.div variants={fadeIn} initial="hidden" animate="visible" custom={1}>
-            <Link href="/" className="flex items-center group">
+            <Link href={routePath("home")} className="flex items-center group">
               <Image
                 src="/rodi-digital-logo.svg"
                 width={scrolled ? 90 : 130}
                 height={scrolled ? 39 : 56}
-                alt="Rodi Digital — AI, Mobile & Web Development Agency Netherlands"
+                alt={LOGO_ALT}
                 className="transition-all duration-300"
                 priority
               />
@@ -188,11 +206,11 @@ export function Navigation() {
               className="ml-3"
             >
               <Link
-                href="/contact"
+                href={routePath("contact")}
                 className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-[0.18em] transition-all duration-300 hover:shadow-[0_0_24px_-4px_hsl(var(--primary))]"
               >
                 <span className="h-1.5 w-1.5 bg-primary-foreground/80 rounded-full" />
-                Let&apos;s Chat
+                {CTA}
               </Link>
             </motion.div>
           </div>
@@ -253,11 +271,11 @@ export function Navigation() {
               </motion.div>
             ))}
             <Link
-              href="/contact"
+              href={routePath("contact")}
               className="mt-4 flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-[0.18em]"
               onClick={() => setIsOpen(false)}
             >
-              Let&apos;s Chat →
+              {CTA} →
             </Link>
           </div>
         </motion.div>

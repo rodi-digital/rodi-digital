@@ -32,7 +32,7 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", marginTop: 56, fontSize: 24, color: "#a89dff", gap: 24, letterSpacing: 1 }}>
           <span>rodi-digital.com</span>
           <span>·</span>
-          <span>'s-Hertogenbosch, NL</span>
+          <span>&apos;s-Hertogenbosch, NL</span>
         </div>
       </div>
     ),

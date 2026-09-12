@@ -1,40 +1,67 @@
 # Rodi Digital
 
-> Digital agency specializing in AI-enabled applications, mobile development, and web platforms. We create digital products driven by analytics and built through close collaboration with our clients.
+> Rodi Digital is an AI development agency in 's-Hertogenbosch (Den Bosch), the Netherlands. We build AI-powered applications, AI agents, conversational AI, intelligent search, and process automation, alongside cross-platform mobile apps and web platforms.
 
-## About Us
+## Entity
 
-Rodi Digital is a modern digital agency that combines cutting-edge technology with data-driven development practices. We specialize in building mobile apps, web applications, and AI-powered platforms that deliver measurable business value through collaborative partnerships.
+- **Name**: Rodi Digital
+- **Type**: AI development agency / AI, mobile & web development agency
+- **Location**: Stationsweg 19, 5211 TV 's-Hertogenbosch (Den Bosch), Noord-Brabant, Netherlands
+- **Coordinates**: 51.6901° N, 5.3028° E
+- **Email**: hello@rodi-digital.com
+- **VAT**: NL867887370B01
+- **Serves**: 's-Hertogenbosch and Noord-Brabant, the Netherlands, Europe, and the United States
+- **Languages**: English and Dutch (spoken; the site is in English)
+- **LinkedIn**: https://www.linkedin.com/company/rodi-digital
+- **GitHub**: https://github.com/rodi-digital
 
-## Technologies & Expertise
+## Expertise
 
-- **AI & Machine Learning**: Large Language Models (LLMs), intelligent automation, and advanced AI insights
-- **Mobile Development**: React Native and Expo for cross-platform mobile applications
-- **Web Development**: Modern web technologies for fast, responsive applications
-- **Analytics**: Data-driven insights embedded throughout the development process
-- **Collaboration**: Close partnership approach with clients throughout development
+- **AI development**: Large Language Models in production software, retrieval over a client's own documents, structured output, evaluation sets, cost and latency management, human approval steps.
+- **AI agents**: Systems that look things up, decide, act inside existing systems, and report back — with permissions, source attribution, and approval gates.
+- **Conversational AI**: Chat interfaces grounded in a client's own documents and systems, with source citation and handover to a human.
+- **Intelligent search**: Natural-language search across contracts, case files, manuals, and email, answering with a pointer to the source.
+- **Process automation**: Document intake, mailbox triage, data transfer between systems, summarisation, signal ranking, and exception detection.
+- **Mobile development**: React Native and Expo for cross-platform iOS and Android applications.
+- **Web development**: SaaS platforms, e-commerce, and company websites.
+- **Analytics**: Product analytics embedded from the first release, used to decide what to build next.
+
+## Case studies
+
+- [Wally](https://www.rodi-digital.com/cases/wally): AI assistant for accounting firms. Searches the Outlook inbox, answers Belgian VAT, corporate tax, and personal income tax questions backed by official sources, performs fiscal calculations, and analyses invoices, contracts, and tax documents.
+- [IPRHQ](https://www.rodi-digital.com/cases/iprhq): The first integrated platform unifying IP clearance, search, watch, enforcement, portfolio management, and monitoring, with AI-powered risk scoring, a Microsoft Word add-in, and a Chrome side app.
+- [Loop Sleep](https://www.rodi-digital.com/cases/loop): Sleep companion for Loop Earplugs with conversational onboarding, AI-generated sleep rituals, and a sleep journal. Built while part of the team at Nimble.
+- [DiffGraph](https://www.rodi-digital.com/cases/diffgraph): Visualises architectural change in every pull request with interactive dependency graphs, catching breaking changes before they ship.
+- [Trai](https://www.rodi-digital.com/cases/trai): AI-powered triathlon training plan generator with Strava integration and adaptive scheduling.
+- [PEACHealth](https://www.rodi-digital.com/cases/peach): Free mobile application giving people personalised, expert-backed health information.
+- [Rodi](https://www.rodi-digital.com/cases/rodi): Privacy-focused cycling app with route guidance, performance tracking, and Strava integration. No ads, no subscriptions.
+- [Rodi Sites](https://www.rodi-digital.com/cases/rodi-sites): Subscription website platform delivering professional, SEO-ready sites for Dutch small businesses from €75/month.
+- [All case studies](https://www.rodi-digital.com/cases)
 
 ## Services
 
-- [AI-Enabled Applications](https://www.rodi-digital.com/services/ai-enabled-applications): Harness the transformative power of Large Language Models (LLMs) to unlock new possibilities, intelligent automation, and advanced insights for your business.
-- [Mobile Development](https://www.rodi-digital.com/services/mobile): Deliver fast, data-driven, and cost-effective mobile applications with our expertise in React Native and Expo for seamless cross-platform development.
-- [Web Development](https://www.rodi-digital.com/services/web): Crafting fast, responsive, and visually stunning web platforms precisely tailored to your unique business needs.
-- [All Services](https://www.rodi-digital.com/services): Complete overview of our digital development services and capabilities.
+- [AI-Powered Applications](https://www.rodi-digital.com/services/ai-enabled-applications): Custom LLM integration, natural language processing, AI automation workflows, AI-powered search, and customer support intelligence.
+- [Mobile Development](https://www.rodi-digital.com/services/mobile): Cross-platform iOS and Android applications with React Native and Expo.
+- [Web Development](https://www.rodi-digital.com/services/web): Fast, responsive web platforms, SaaS products, and e-commerce.
+- [All Services](https://www.rodi-digital.com/services)
+
+## Blog
+
+- [What AI development actually costs](https://www.rodi-digital.com/blog/what-ai-development-costs): The three factors that drive the price, and the running cost that scales with usage.
+- [What is an AI agent, and when do you need one?](https://www.rodi-digital.com/blog/what-is-an-ai-agent): A chatbot answers; an agent acts. Why boundaries matter more than autonomy.
+- [Building an AI chatbot that doesn't make things up](https://www.rodi-digital.com/blog/building-an-ai-chatbot-that-works): Grounding, source citation, and making "I don't know" a valid answer.
+- [Building an AI app: what a demo doesn't tell you](https://www.rodi-digital.com/blog/building-an-ai-app): Cost per user, offline behaviour, and store privacy requirements.
+- [AI automation or RPA: which one does your process need?](https://www.rodi-digital.com/blog/ai-automation-or-rpa): A practical test for telling rule-based and model-based automation apart.
+- [How to choose an AI agency](https://www.rodi-digital.com/blog/choosing-an-ai-agency): Five questions that reveal whether an agency has shipped AI into production.
+- [All articles](https://www.rodi-digital.com/blog)
 
 ## Approach
 
-- [How We Work](https://www.rodi-digital.com/approach): Our methodology combining close collaboration with deep, data-driven insights to create exceptional digital products.
-- [Analytics at the Core](https://www.rodi-digital.com/approach/analytics): We go beyond traditional dashboards, embedding analytics into every layer of product development to drive continuous growth and informed decision-making.
-- [Collaboration](https://www.rodi-digital.com/approach/collaboration): We don't just build for you; we build with you. Our collaborative approach ensures a seamless partnership throughout your digital product development journey.
-
-## Case Studies
-
-- [Portfolio Overview](https://www.rodi-digital.com/cases): Explore our portfolio of successful digital products and the measurable impact we've delivered for our clients.
-- [Peach Case Study](https://www.rodi-digital.com/cases/peach): Detailed case study showcasing our work and results.
-- [Rodi Case Study](https://www.rodi-digital.com/cases/rodi): In-depth look at our internal project development and outcomes.
-- [TRAI Case Study](https://www.rodi-digital.com/cases/trai): Comprehensive analysis of project development and business impact.
+- [How We Work](https://www.rodi-digital.com/approach): Close collaboration combined with data-driven insight.
+- [Analytics at the Core](https://www.rodi-digital.com/approach/analytics): Analytics embedded into every layer of product development.
+- [Collaboration](https://www.rodi-digital.com/approach/collaboration): We don't just build for you; we build with you.
 
 ## Optional
 
-- [Home](https://www.rodi-digital.com): Main landing page with overview of services and value proposition.
-- [Contact](https://www.rodi-digital.com/contact): Get in touch to start your digital product development journey.
+- [Home](https://www.rodi-digital.com)
+- [Contact](https://www.rodi-digital.com/contact)

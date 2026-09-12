@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Trai — AI-Powered Triathlon Training Plan Generator",
   description:
     "Trai is an AI-powered triathlon training plan generator that delivers personalized, adaptive training schemas, optimizing performance and simplifying planning for athletes.",
-  path: "/cases/trai",
+  route: "caseTrai",
   keywords: [
     "AI training plan generator",
     "triathlon training app",
@@ -80,9 +80,9 @@ export default function TraiCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "Trai", path: "/cases/trai" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "Trai", route: "caseTrai" },
         ])}
       />
       <CaseStudyLayout
@@ -92,6 +92,12 @@ export default function TraiCasePage() {
       solution="Trai leverages AI to generate personalized, adaptive training plans for triathletes, taking into account their unique requirements and performance data."
       keyFeatures={keyFeatures}
       impact={impactFeatures}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds AI-powered applications for businesses — generative AI that turns real user data into personalised output.",
+        linkLabel: "AI-Powered Applications",
+        href: "/services/ai-enabled-applications",
+      }}
       ctaTitle="Ready to Build Your AI Platform?"
       ctaSubtitle="Let's create an intelligent, AI-powered platform that adapts and evolves with your users' needs."
       faqs={traiFAQs}

@@ -15,6 +15,7 @@ interface FinalCTAProps {
     text: string;
     href: string;
   };
+  eyebrow?: string;
 }
 
 export function FinalCTA({
@@ -22,6 +23,7 @@ export function FinalCTA({
   subtitle,
   primaryCTA,
   secondaryCTA,
+  eyebrow,
 }: FinalCTAProps) {
   return (
     <section className="py-32 md:py-48 border-t border-border relative overflow-hidden">
@@ -35,7 +37,7 @@ export function FinalCTA({
       >
         <div className="eyebrow mb-8 flex items-center justify-center gap-3">
           <span className="h-px w-10 bg-primary" />
-          § Let&apos;s Build
+          {eyebrow ?? "§ Let’s Build"}
           <span className="h-px w-10 bg-primary" />
         </div>
         <h2 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground tracking-tight leading-[0.95] mb-10">

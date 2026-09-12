@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
   title: "Analytics at the Core — Data-Driven Product Development",
   description:
     "How Rodi Digital embeds analytics into every step of product development — tracking from day one, built-in measurement, and data-backed recommendations for continuous growth.",
-  path: "/approach/analytics",
+  route: "approachAnalytics",
   keywords: [
     "product analytics",
     "data-driven product development",
@@ -101,9 +101,9 @@ export default function AnalyticsPage() {
         data={[
           faqPageSchema(analyticsFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Approach", path: "/approach" },
-            { name: "Analytics", path: "/approach/analytics" },
+            { name: "Home", route: "home" },
+            { name: "Approach", route: "approach" },
+            { name: "Analytics", route: "approachAnalytics" },
           ]),
         ]}
       />

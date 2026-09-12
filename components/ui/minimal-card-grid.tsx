@@ -18,6 +18,7 @@ interface MinimalCardGridProps {
   description: string;
   cards: Card[];
   columns?: "2" | "3";
+  eyebrow?: string;
 }
 
 export function MinimalCardGrid({
@@ -25,6 +26,7 @@ export function MinimalCardGrid({
   description,
   cards,
   columns = "3",
+  eyebrow = "§ Detail",
 }: MinimalCardGridProps) {
   const gridCols =
     columns === "2" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
@@ -42,7 +44,7 @@ export function MinimalCardGrid({
           <div>
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              § Detail
+              {eyebrow}
             </div>
             <h2 className="font-display text-5xl md:text-6xl text-foreground tracking-tight">
               {title}

@@ -20,6 +20,7 @@ interface FAQSectionProps {
   subtitle?: string;
   faqs: FAQItem[];
   className?: string;
+  eyebrow?: string;
 }
 
 export function FAQSection({
@@ -27,6 +28,7 @@ export function FAQSection({
   subtitle,
   faqs,
   className = "",
+  eyebrow = "§ FAQ",
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -47,7 +49,7 @@ export function FAQSection({
           >
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              § FAQ
+              {eyebrow}
             </div>
             {title && (
               <h2 className="font-display text-4xl md:text-5xl text-foreground tracking-tight mb-6">

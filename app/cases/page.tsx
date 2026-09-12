@@ -9,7 +9,7 @@ export const metadata = pageMetadata({
   title: "Case Studies — AI, Mobile & Web Projects",
   description:
     "Explore Rodi Digital's portfolio: AI assistants, cross-platform mobile apps, and high-conversion websites built for clients across health, sport, legal, and accounting.",
-  path: "/cases",
+  route: "cases",
   keywords: [
     "software development case studies",
     "AI app portfolio",
@@ -114,8 +114,8 @@ export default function CasesPage() {
         data={[
           faqPageSchema(casesFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Case Studies", path: "/cases" },
+            { name: "Home", route: "home" },
+            { name: "Case Studies", route: "cases" },
           ]),
         ]}
       />

@@ -25,9 +25,14 @@ interface Service {
 interface ServiceGridProps {
   services: Service[];
   imageVariant?: "transparent" | "photo";
+  ctaLabel?: string;
 }
 
-export function ServiceGrid({ services, imageVariant = "photo" }: ServiceGridProps) {
+export function ServiceGrid({
+  services,
+  imageVariant = "photo",
+  ctaLabel = "Learn More",
+}: ServiceGridProps) {
   const isTransparent = imageVariant === "transparent";
   return (
     <section className="py-24 md:py-32 border-t border-border">
@@ -62,7 +67,7 @@ export function ServiceGrid({ services, imageVariant = "photo" }: ServiceGridPro
                   {service.description}
                 </p>
                 <Button href={service.href} className="w-full sm:w-auto">
-                  Learn More
+                  {ctaLabel}
                 </Button>
               </motion.div>
               <motion.div

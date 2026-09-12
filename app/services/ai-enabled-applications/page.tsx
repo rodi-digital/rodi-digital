@@ -3,6 +3,7 @@ import { MinimalCardGrid } from "@/components/ui/minimal-card-grid";
 import { MinimalListSection } from "@/components/ui/minimal-list-section";
 import { FinalCTA } from "@/components/ui/final-cta";
 import { FAQSection } from "@/components/ui/faq-section";
+import { CasesPreview } from "@/components/ui/cases-preview";
 import { JsonLd } from "@/components/ui/json-ld";
 import {
   pageMetadata,
@@ -15,7 +16,7 @@ export const metadata = pageMetadata({
   title: "AI-Powered Applications & LLM Development",
   description:
     "Custom AI-powered applications, LLM integrations, conversational agents, and intelligent search built by Rodi Digital to automate work and improve customer experience.",
-  path: "/services/ai-enabled-applications",
+  route: "servicesAi",
   keywords: [
     "AI application development",
     "LLM integration",
@@ -87,6 +88,45 @@ const llmBackedApplicationsCards = [
   },
 ];
 
+/** The proof behind the claims above — every one of these is an AI build. */
+const aiCases = [
+  {
+    title: "Wally",
+    description:
+      "AI assistant for accounting firms that searches Outlook, answers tax questions backed by official sources, and analyses invoices and contracts.",
+    href: "/cases/wally",
+    image: "/images/cases/wally.png",
+  },
+  {
+    title: "IPRHQ",
+    description:
+      "One platform for IP clearance, search, watch, enforcement and portfolio management, with AI risk scoring that ranks threats by relevance.",
+    href: "/cases/iprhq",
+    image: "/images/cases/iprhq.png",
+  },
+  {
+    title: "Loop Sleep",
+    description:
+      "Sleep companion for Loop Earplugs with conversational onboarding and AI-generated sleep rituals. Built while part of the team at Nimble.",
+    href: "/cases/loop",
+    image: "/images/cases/loop.png",
+  },
+  {
+    title: "Trai",
+    description:
+      "AI-generated triathlon training plans that adapt to an athlete's Strava data and availability.",
+    href: "/cases/trai",
+    image: "/images/cases/trai.png",
+  },
+  {
+    title: "DiffGraph",
+    description:
+      "Surfaces architectural change in every pull request through interactive dependency graphs, catching breaking changes before they ship.",
+    href: "/cases/diffgraph",
+    image: "/images/cases/diffgraph.png",
+  },
+];
+
 const aiFAQs = [
   {
     question: "What are AI-powered applications?",
@@ -124,14 +164,14 @@ export default function AIPoweredApplicationsPage() {
             name: "AI-Powered Applications",
             description:
               "Custom AI-powered applications, LLM integrations, conversational agents, intelligent search, and process automation.",
-            path: "/services/ai-enabled-applications",
-            category: "AI Development",
+            route: "servicesAi",
+                      category: "AI Development",
           }),
           faqPageSchema(aiFAQs),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "AI-Powered Applications", path: "/services/ai-enabled-applications" },
+            { name: "Home", route: "home" },
+            { name: "Services", route: "services" },
+            { name: "AI-Powered Applications", route: "servicesAi" },
           ]),
         ]}
       />
@@ -151,6 +191,12 @@ export default function AIPoweredApplicationsPage() {
         title="Our Expertise"
         description="Most teams know AI could help but don't know where to start. We build custom applications around your business, not the other way around. Every tool is designed to fit naturally into your workflows and deliver measurable results."
         items={expertiseCards}
+      />
+
+      <CasesPreview
+        eyebrow="§ Proof"
+        title="AI We've Shipped"
+        cases={aiCases}
       />
 
       <FAQSection

@@ -17,6 +17,7 @@ interface TwoColumnSectionProps {
     href: string;
   };
   children?: ReactNode;
+  eyebrow?: string;
 }
 
 export function TwoColumnSection({
@@ -25,6 +26,7 @@ export function TwoColumnSection({
   primaryCTA,
   secondaryCTA,
   children,
+  eyebrow = "§ Approach",
 }: TwoColumnSectionProps) {
   return (
     <section className="py-24 md:py-32 border-t border-border">
@@ -39,7 +41,7 @@ export function TwoColumnSection({
           >
             <div className="eyebrow mb-5 flex items-center gap-3">
               <span className="h-px w-10 bg-primary" />
-              § Approach
+              {eyebrow}
             </div>
             <h2 className="font-display text-5xl md:text-6xl text-foreground tracking-tight leading-[0.95]">
               {title}

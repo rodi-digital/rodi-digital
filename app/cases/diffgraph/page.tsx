@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "DiffGraph — Visualize Architectural Changes in Pull Requests",
   description:
     "DiffGraph visualizes architectural changes in every pull request with interactive dependency graphs, catching breaking changes before they ship and improving code review workflows.",
-  path: "/cases/diffgraph",
+  route: "caseDiffgraph",
   keywords: [
     "dependency graph visualization",
     "code review tool",
@@ -72,9 +72,9 @@ export default function DiffGraphCasePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/cases" },
-          { name: "DiffGraph", path: "/cases/diffgraph" },
+          { name: "Home", route: "home" },
+          { name: "Case Studies", route: "cases" },
+          { name: "DiffGraph", route: "caseDiffgraph" },
         ])}
       />
       <CaseStudyLayout
@@ -88,6 +88,12 @@ export default function DiffGraphCasePage() {
         title: "Technology Stack",
         content:
           "Built as a GitHub/GitLab integration that analyzes code changes, generates dependency graphs using Mermaid, and posts interactive visualizations directly in pull request comments. The platform uses static analysis to map architectural dependencies and changes.",
+      }}
+      relatedService={{
+        statement:
+          "This is an example of how Rodi Digital builds AI-powered applications for businesses — automated analysis that surfaces what matters before it reaches production.",
+        linkLabel: "AI-Powered Applications",
+        href: "/services/ai-enabled-applications",
       }}
       ctaTitle="Ready to Elevate Your Code Review Process?"
       ctaSubtitle="Let's build a tool that helps your team catch architectural issues before they become costly problems."
