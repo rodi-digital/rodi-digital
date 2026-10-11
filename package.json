@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
